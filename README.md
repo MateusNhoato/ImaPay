@@ -52,6 +52,12 @@ Projeto Ímã Pay, do grupo Code Breakers da turma Sharp Coders.
 **Victor Hugo Magalhães Rodrigues**  | 📍 Brasília - DF
 <a href="https://github.com/victorhugomr"><img src="https://logosmarcas.net/wp-content/uploads/2020/12/GitHub-Logo.png" width="80px"></a>| <a href="https://www.linkedin.com/in/victorhugomr/"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="40px"> </a>
 
+<img src="https://avatars.githubusercontent.com/u/76796031?v=4" width="124">| Natural de Teresina no Piauí, tem 28 anos. Trabalha como técnico de informática em um pequena empresa de automação comercial. Como hobbies, gosta de assistir serie e filmes e jogos de video game (principalmente jogos de corrida).
+--|--
+**Vicente Francisco de Carvalho Neto**  | 📍 Teresina - PI
+<a href="https://github.com/Vicentecarvalho-3600"><img src="https://logosmarcas.net/wp-content/uploads/2020/12/GitHub-Logo.png" width="80px"></a>| <a href="https://www.linkedin.com/in/vicente-carvalho-6172b6203/"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="40px"> </a>
+
+
 ### Banco de Dados
 
 <img src="https://avatars.githubusercontent.com/u/107959293?v=4" width="124">| Formado em gestão comercial, mas atualmente trabalha como analista de suporte de TI. Está migrando para a área de desenvolvimento. 
@@ -64,6 +70,11 @@ Projeto Ímã Pay, do grupo Code Breakers da turma Sharp Coders.
 **Vanderlândio Zeferino Da Rocha**  | 📍 Caruaru - PE
 <a href="https://github.com/Vandorc-Dev"><img src="https://logosmarcas.net/wp-content/uploads/2020/12/GitHub-Logo.png" width="80px"></a>| <a href="https://www.linkedin.com/in/vanderlandio-rocha/"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="40px"> </a>
 
+<img src="https://avatars.githubusercontent.com/u/65512201?v=4" width="124">| Em migração de carreira para TI, cursando Analise e desenvolvimento de sistemas. 
+Com experiencia em frontend e buscando conhecimentos em backend para se tornar fullstack. Gosta de sneakers, basquete e musica.
+--|--
+**Lucas Andrade de Sá Nascimento**  | 📍 São Paulo - SP
+<a href="https://github.com/Lucas-andrade-nascimento"><img src="https://logosmarcas.net/wp-content/uploads/2020/12/GitHub-Logo.png" width="80px"></a>| <a href="https://www.linkedin.com/in/lucas-as-nascimento/"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="40px"> </a>
 
 ### Monitor
 
