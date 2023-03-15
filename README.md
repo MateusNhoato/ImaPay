@@ -70,11 +70,21 @@ Projeto Ímã Pay, do grupo Code Breakers da turma Sharp Coders.
 **Vanderlândio Zeferino Da Rocha**  | 📍 Caruaru - PE
 <a href="https://github.com/Vandorc-Dev"><img src="https://logosmarcas.net/wp-content/uploads/2020/12/GitHub-Logo.png" width="80px"></a>| <a href="https://www.linkedin.com/in/vanderlandio-rocha/"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="40px"> </a>
 
-<img src="https://avatars.githubusercontent.com/u/65512201?v=4" width="124">| Em migração de carreira para TI, cursando Analise e desenvolvimento de sistemas. 
-Com experiencia em frontend e buscando conhecimentos em backend para se tornar fullstack. Gosta de sneakers, basquete e musica.
---|--
-**Lucas Andrade de Sá Nascimento**  | 📍 São Paulo - SP
-<a href="https://github.com/Lucas-andrade-nascimento"><img src="https://logosmarcas.net/wp-content/uploads/2020/12/GitHub-Logo.png" width="80px"></a>| <a href="https://www.linkedin.com/in/lucas-as-nascimento/"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="40px"> </a>
+<table>
+  <tr>
+    <td><img src="https://avatars.githubusercontent.com/u/65512201?v=4" width="124"></td>
+    <td>Em migração de carreira para TI, cursando Analise e desenvolvimento de sistemas. 
+Com experiencia em frontend e buscando conhecimentos em backend para se tornar fullstack. Gosta de sneakers, basquete e musica.</td>
+  </tr>
+  <tr>
+    <td><bold>Lucas Andrade de Sá Nascimento</bold></td>
+    <td>📍 São Paulo - SP</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/Lucas-andrade-nascimento"><img src="https://logosmarcas.net/wp-content/uploads/2020/12/GitHub-Logo.png" width="80px"></a> </td>
+    <td><a href="https://www.linkedin.com/in/lucas-as-nascimento/"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="40px"> </a></td>
+  </tr>
+</table>
 
 ### Monitor
 
