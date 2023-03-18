@@ -37,10 +37,10 @@ Projeto Ímã Pay, do grupo Code Breakers da turma Sharp Coders.
 **Thiago Ribeiro nebuloni**  | 📍 São Paulo - SP
 <a href="https://github.com/thiagonebuloni"><img src="https://logosmarcas.net/wp-content/uploads/2020/12/GitHub-Logo.png" width="80px"></a>| <a href="https://www.linkedin.com/in/thiago-nebuloni-51446593/"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="40px"> </a>
 
-<img src="https://avatars.githubusercontent.com/u/99846145?v=4" width="124">| Tem 21 anos, atualmente cursa Análise e desenvolvimento de Sistemas e trabalha na área de TI no grupo Enseg. Estuda para entrar na área da programação, com maior interesse no Back end.  
+<img src="https://avatars.githubusercontent.com/u/114167212?v=4" width="124">| Sou Thiago, tenho 29 anos, moro no Rio de Janeiro, tenho esposa e um filho, sou uma pessoa determinada, sou pró ativo, observador, e gosto de estar em constante crescimento, pessoal e profissional, sempre em busca de melhorar.
 --|--
-**Mattheus Henrique da Silva Macedo de Souza**  | 📍 Rio de Janeiro - RJ
-<a href="https://github.com/mtssouza05"><img src="https://logosmarcas.net/wp-content/uploads/2020/12/GitHub-Logo.png" width="80px"></a>| <a href="https://www.linkedin.com/in/mattheus-henrique-souza-b89701227/"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="40px"> </a>
+**Thiago Maia Fioravanti de Almeida**  | 📍 Rio de Janeiro - RJ
+<a href="https://github.com/TmFioravanti"><img src="https://logosmarcas.net/wp-content/uploads/2020/12/GitHub-Logo.png" width="80px"></a>| <a href="https://www.linkedin.com/in/thiago-maia-fioravanti-de-almeida-28a078149/"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="40px"> </a>
 
 <img src="https://avatars.githubusercontent.com/u/77303886?v=4" width="124">| Formado em ciência da computação, entusiasta da área de informática, mexendo com tecnologia, hardwares e softwares, a mais de 15 anos, buscando profissionalização na área, com objetivo de especialização em inteligência artificial 
 --|--
