@@ -37,10 +37,10 @@ Projeto Ímã Pay, do grupo Code Breakers da turma Sharp Coders.
 **Thiago Ribeiro nebuloni**  | 📍 São Paulo - SP
 <a href="https://github.com/thiagonebuloni"><img src="https://logosmarcas.net/wp-content/uploads/2020/12/GitHub-Logo.png" width="80px"></a>| <a href="https://www.linkedin.com/in/thiago-nebuloni-51446593/"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="40px"> </a>
 
-<img src="https://avatars.githubusercontent.com/u/99846145?v=4" width="124">| Tem 21 anos, atualmente cursa Análise e desenvolvimento de Sistemas e trabalha na área de TI no grupo Enseg. Estuda para entrar na área da programação, com maior interesse no Back end.  
+<img src="https://avatars.githubusercontent.com/u/114167212?v=4" width="124">| Sou Thiago, tenho 29 anos, moro no Rio de Janeiro, tenho esposa e um filho, sou uma pessoa determinada, sou pró ativo, observador, e gosto de estar em constante crescimento, pessoal e profissional, sempre em busca de melhorar.
 --|--
-**Mattheus Henrique da Silva Macedo de Souza**  | 📍 Rio de Janeiro - RJ
-<a href="https://github.com/mtssouza05"><img src="https://logosmarcas.net/wp-content/uploads/2020/12/GitHub-Logo.png" width="80px"></a>| <a href="https://www.linkedin.com/in/mattheus-henrique-souza-b89701227/"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="40px"> </a>
+**Thiago Maia Fioravanti de Almeida**  | 📍 Rio de Janeiro - RJ
+<a href="https://github.com/TmFioravanti"><img src="https://logosmarcas.net/wp-content/uploads/2020/12/GitHub-Logo.png" width="80px"></a>| <a href="https://www.linkedin.com/in/thiago-maia-fioravanti-de-almeida-28a078149/"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="40px"> </a>
 
 <img src="https://avatars.githubusercontent.com/u/77303886?v=4" width="124">| Formado em ciência da computação, entusiasta da área de informática, mexendo com tecnologia, hardwares e softwares, a mais de 15 anos, buscando profissionalização na área, com objetivo de especialização em inteligência artificial 
 --|--
@@ -51,6 +51,12 @@ Projeto Ímã Pay, do grupo Code Breakers da turma Sharp Coders.
 --|--
 **Victor Hugo Magalhães Rodrigues**  | 📍 Brasília - DF
 <a href="https://github.com/victorhugomr"><img src="https://logosmarcas.net/wp-content/uploads/2020/12/GitHub-Logo.png" width="80px"></a>| <a href="https://www.linkedin.com/in/victorhugomr/"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="40px"> </a>
+
+<img src="https://avatars.githubusercontent.com/u/76796031?v=4" width="124">| Natural de Teresina no Piauí, tem 28 anos. Trabalha como técnico de informática em um pequena empresa de automação comercial. Como hobbies, gosta de assistir serie e filmes e jogos de video game (principalmente jogos de corrida).
+--|--
+**Vicente Francisco de Carvalho Neto**  | 📍 Teresina - PI
+<a href="https://github.com/Vicentecarvalho-3600"><img src="https://logosmarcas.net/wp-content/uploads/2020/12/GitHub-Logo.png" width="80px"></a>| <a href="https://www.linkedin.com/in/vicente-carvalho-6172b6203/"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="40px"> </a>
+
 
 ### Banco de Dados
 
@@ -64,6 +70,21 @@ Projeto Ímã Pay, do grupo Code Breakers da turma Sharp Coders.
 **Vanderlândio Zeferino Da Rocha**  | 📍 Caruaru - PE
 <a href="https://github.com/Vandorc-Dev"><img src="https://logosmarcas.net/wp-content/uploads/2020/12/GitHub-Logo.png" width="80px"></a>| <a href="https://www.linkedin.com/in/vanderlandio-rocha/"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="40px"> </a>
 
+<table>
+  <tr>
+    <td><img src="https://avatars.githubusercontent.com/u/65512201?v=4" width="124"></td>
+    <td>Em migração de carreira para TI, cursando Analise e desenvolvimento de sistemas. 
+Com experiencia em frontend e buscando conhecimentos em backend para se tornar fullstack. Gosta de sneakers, basquete e musica.</td>
+  </tr>
+  <tr>
+    <td><bold>Lucas Andrade de Sá Nascimento</bold></td>
+    <td>📍 São Paulo - SP</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/Lucas-andrade-nascimento"><img src="https://logosmarcas.net/wp-content/uploads/2020/12/GitHub-Logo.png" width="80px"></a> </td>
+    <td><a href="https://www.linkedin.com/in/lucas-as-nascimento/"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="40px"> </a></td>
+  </tr>
+</table>
 
 ### Monitor
 
