@@ -1,0 +1,434 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --background: #fafafa;      
+    --backgrondGradient:background: rgb(178, 177, 121);
+    --primarycolor: #00376E;    /*Cor de 20% do site (Destaques)*/
+    --secondarycolor: #E6BA5C;     /*Cor de 10% do site (Detalhes)*/
+    --auxcolor: #862020;             
+    --lettercolor: #181617;       
+    --form: #28292959;
+
+
+    /*border: 1px solid #000;*/
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    flex-direction: row;
+    background: var(--background);
+   /* background: linear-gradient(38deg,rgba(178, 177, 121, 1) 0%,rgba(220, 210, 200, 1) 44%,rgba(235, 235, 235, 1) 100%);*/
+    background-size: cover;
+    background-attachment: fixed;
+    /*overflow: hidden;*/
+}
+
+.main { 
+    height: auto;
+    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    
+}
+
+.bank-logo {
+    margin: 10% auto 5% auto;
+    width: 36%;
+    display: flex;
+    align-items: center;
+}
+
+.initial-tile {
+    text-align: center;
+    padding: 2%;
+    font-family:'Open Sans', sans-serif;
+    font-size: 1.8em;
+}
+
+.slogan {
+    text-align: center;
+    font-family:'Lato', sans-serif;
+    font-size: 1.2em;
+    color:var(--secondarycolor);
+    margin-top: 2%;
+}
+
+.form {
+    width: 80%;
+    margin-top: 2em;
+    display: inline-block;
+    align-items: center;
+    margin-bottom: -3em;
+}
+
+.form div {
+    width: 100%;    
+    margin-top: 1.5em;
+}
+
+.form-data {
+    align-items: center;
+    width: 100%;
+}
+ 
+input {
+    display: inline-block;
+    width: 100%;
+    padding: 1em;
+    border: none;
+    border-bottom: solid var(--form) 0.5px;
+    flex: 1;
+    font-family:'Lato', sans-serif;
+    font-size: 0.95em;
+    font-weight: bold;
+    color: var(--form);
+    background-color: rgba(100, 148, 237, 0);
+}
+
+input:focus {
+    outline: none;
+    padding-left: 1em;
+}
+
+input::placeholder {
+color: var(--lettercolor);
+}
+
+.low-div {
+    margin-top: 6em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.create-account-button {
+    width: 80%;
+    margin-top: 5%;
+    border-radius: 2em;
+    background-color: var(--primarycolor);
+    border: none;
+    font-family:'Open Sans', sans-serif;
+    font-size: 1.1em;
+    font-weight: bold;
+    letter-spacing: 0.20em;
+    justify-content: center;
+    color:var(--background);
+    cursor: pointer;
+}
+
+.create-account-button:hover {
+    background-color: var(--secondarycolor);
+    color:var(--background);
+}
+
+.login-account-link {
+    margin-top: 5%;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2em;
+    color: var(--lettercolor);
+    margin-bottom: 10%;
+}
+
+.login-account-link a:link {
+    color: var(--tertiarycolor);
+}
+
+.login-account-link a:hover {
+    color: var(--secondarycolor);
+}
+
+.code-breakers {
+    display: block;
+    position: fixed;
+    width: 200px;
+    height: 30px;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    font-size: 12px;
+    color: var(--lettercolor);
+    font-family:'Montserrat', sans-serif;
+    font-weight: bolder;
+    text-decoration: none;
+    cursor: default;
+}
+
+.main-image {
+    display: block;
+    background-image: url("./img/register-image.png");
+    background-size: cover;
+    width: 65%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.main-image p {
+    width: 50%;
+    display: block;
+    position: fixed;
+    flex-direction: row-reverse;
+
+}
+
+.slogan-upper {
+    width: 30%;
+    text-align: justify; 
+    margin: 38.5% 10% 10% 10%;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 2vw;
+    color: #ffffff;
+    box-shadow: #139bc9;
+    text-shadow: 1px 1.2px #000#376865;
+}
+
+.slogan-down {
+  
+    text-align: right;
+    margin: 45.5% 10% 0 10%;
+    font-family: 'helvetica', sans-serif;
+    font-style: italic;
+    font-size: 1vw;
+    color: #ffffff;
+}
+
+.login {
+    margin-top: 10%;
+    width: 80%;
+}
+
+.login input {
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.login-low-div {
+    margin-top: 2em;
+    width: 80%;
+}
+
+.login-button {
+    width: 100%;
+    margin-top: 0;
+    border-radius: 2em;
+    background-color: #a0311e00;
+    border: none;
+    font-family:'Open Sans', sans-serif;
+    font-size: 0.5em;
+    font-weight: bold;
+    letter-spacing: 0.35em;
+    justify-content: center;
+    color: #222521;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background-color: #afac08;
+    color: #830d0d;
+}
+
+.login-low-div h4 {
+    width: 50%;
+    display: flex;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.1em;
+    color: #2e1702;
+    margin-bottom: 10%;
+    margin-top: 3%;
+}
+
+.login-low-div a:link {
+    color: #b3855b;
+}
+
+.slogin-low-div a:hover {
+    color: #000;
+}
+
+.signin-link {
+    float: left;
+    padding-left: 6%;
+   
+}
+
+.signup-link {
+    justify-content: right;
+    padding-right: 6%;
+}
+
+.login-button {
+    width: 100%;
+    margin-top: 5%;
+    border-radius: 2em;
+    background-color: var(--secondarycolor);
+    border: none;
+    font-family:'Open Sans', sans-serif;
+    font-size: 1.1em;
+    font-weight: bold;
+    letter-spacing: 0.20em;
+    justify-content: center;
+    color:var(--background);
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background-color: var(--auxcolor);
+    color:var(--background);
+}
+
+Conversar em Front-end
+
+
+@media screen and (width: 1280px) {
+    
+    .create-account-button {
+        margin:auto;
+        justify-content: center;
+        text-align: center;
+        margin-top: 10%;
+    }
+}
+
+@media screen and (min-width: 913px) {
+    
+    label {
+        margin-bottom: 1em;
+        justify-content: left;
+        width: 80%;
+    }
+
+    input {         
+        width: 80%;
+        height: 80%;
+        margin-right: 0;
+    }
+    
+    .create-account-button {
+        margin:auto;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 912px) {
+    
+    .main {
+        width: 100%;    
+    }
+
+    .bank-logo {
+        margin-top: 30%;
+    }
+    
+    .initial-tile {
+        margin-top: 10%;
+    }
+    
+    .form {
+        margin-top: 10%;
+    }
+    
+    .form div {
+        margin-bottom: 5%;
+    }
+    
+    input {
+        margin-left: 2.2em; 
+    }
+
+    .create-account-button {
+        justify-self: center;
+        text-align: center;
+        margin:auto;
+        margin-top: 40%;
+    }
+
+    .main-image {
+        display: none;
+      }  
+}
+
+@media screen and (max-width: 820px) {
+    
+    .bank-logo {
+        margin-top: 10%;
+    }
+    
+    input {
+        margin-left: 2.2em; 
+    }
+    
+    .create-account-button {
+        margin:auto;
+        justify-content: center;
+        text-align: center;
+        margin-top: 30%;
+    }
+}
+
+@media screen and (width: 375px) {
+    
+    .main {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .bank-logo {
+        margin-top: 40%;
+    }
+    
+    input {
+        margin-left: 2.2em; 
+    }
+    
+    .create-account-button{
+        justify-self: center;
+        text-align: center;
+        margin:auto;
+        margin-top: 20%;
+    }
+    
+    .main-image {
+        display: none;
+      }
+}
+
+@media screen and (width: 280px) {
+    
+    .main {
+        width: 100%;
+    }
+    
+    label {
+        display: flex;
+        margin-bottom: 1em;
+        justify-content: left;
+        width: 80%;
+    }
+    
+    input {
+        display: flex;
+        width: 80%;
+    }
+
+    .create-account-button {
+        margin:auto;
+        justify-content: center;
+        text-align: center;
+        margin-top: 10%;
+    }
+
+    .main-image {
+        display: none;
+      }
+}
