@@ -3,15 +3,14 @@
     padding: 0;
     box-sizing: border-box;
     --background: #fafafa;      
-    --backgrondGradient:background: rgb(178, 177, 121);
-    --primarycolor: #00376E;    /*Cor de 20% do site (Destaques)*/
-    --secondarycolor: #E6BA5C;     /*Cor de 10% do site (Detalhes)*/
-    --auxcolor: #862020;             
-    --lettercolor: #181617;       
-    --form: #28292959;
-
-
-    /*border: 1px solid #000;*/
+    --background-gradient:background: rgb(178, 177, 121);
+    --primary-color: #00376E;    /*Cor de 20% do site (Destaques)*/
+    --secondary-color: #E6BA5C;     /*Cor de 10% do site (Detalhes)*/
+    --tertiary-color: #f0f7ff;
+    --aux-color: #862020;             
+    --letter-color: #181617;       
+    --form: #1b1b1b59;
+    /* border: 1px solid #000; */
 }
 
 html, body {
@@ -21,10 +20,9 @@ html, body {
 body {
     flex-direction: row;
     background: var(--background);
-   /* background: linear-gradient(38deg,rgba(178, 177, 121, 1) 0%,rgba(220, 210, 200, 1) 44%,rgba(235, 235, 235, 1) 100%);*/
+    background: linear-gradient(38deg,rgb(51, 87, 141) 0%,rgb(169, 184, 206) 34%,rgba(235, 235, 235, 1) 100%);
     background-size: cover;
     background-attachment: fixed;
-    /*overflow: hidden;*/
 }
 
 .main { 
@@ -45,7 +43,7 @@ body {
     align-items: center;
 }
 
-.initial-tile {
+.initial-title {
     text-align: center;
     padding: 2%;
     font-family:'Open Sans', sans-serif;
@@ -56,14 +54,18 @@ body {
     text-align: center;
     font-family:'Lato', sans-serif;
     font-size: 1.2em;
-    color:var(--secondarycolor);
-    margin-top: 2%;
+    color:var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    margin-top: -5%;
+    padding: 1em;    
 }
 
 .form {
     width: 80%;
     margin-top: 2em;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     margin-bottom: -3em;
 }
@@ -73,11 +75,6 @@ body {
     margin-top: 1.5em;
 }
 
-.form-data {
-    align-items: center;
-    width: 100%;
-}
- 
 input {
     display: inline-block;
     width: 100%;
@@ -88,7 +85,7 @@ input {
     font-family:'Lato', sans-serif;
     font-size: 0.95em;
     font-weight: bold;
-    color: var(--form);
+    color: var(--letter-color);
     background-color: rgba(100, 148, 237, 0);
 }
 
@@ -98,51 +95,31 @@ input:focus {
 }
 
 input::placeholder {
-color: var(--lettercolor);
+color: var(--letter-color);
 }
 
 .low-div {
     margin-top: 6em;
-    width: 100%;
+    width: 80%;
     display: flex;
     flex-direction: column;
 }
 
-.create-account-button {
-    width: 80%;
-    margin-top: 5%;
-    border-radius: 2em;
-    background-color: var(--primarycolor);
-    border: none;
-    font-family:'Open Sans', sans-serif;
-    font-size: 1.1em;
-    font-weight: bold;
-    letter-spacing: 0.20em;
-    justify-content: center;
-    color:var(--background);
-    cursor: pointer;
-}
-
-.create-account-button:hover {
-    background-color: var(--secondarycolor);
-    color:var(--background);
-}
-
-.login-account-link {
+.link {
     margin-top: 5%;
     text-align: center;
     font-family: 'Lato', sans-serif;
     font-size: 1.2em;
-    color: var(--lettercolor);
+    color: var(--letter-color);
     margin-bottom: 10%;
 }
 
-.login-account-link a:link {
-    color: var(--tertiarycolor);
+.link a:link {
+    color: var(--primary-color);
 }
 
-.login-account-link a:hover {
-    color: var(--secondarycolor);
+.link a:hover {
+    color: var(--secondary-color);
 }
 
 .code-breakers {
@@ -154,7 +131,7 @@ color: var(--lettercolor);
     left: 0;
     padding: 10px;
     font-size: 12px;
-    color: var(--lettercolor);
+    color: var(--letter-color);
     font-family:'Montserrat', sans-serif;
     font-weight: bolder;
     text-decoration: none;
@@ -212,29 +189,19 @@ color: var(--lettercolor);
     margin-top: 5%;
 }
 
+
+.login-account-link {
+    width: 100%;
+    margin-top: 0.8em;
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+
+
 .login-low-div {
     margin-top: 2em;
-    width: 80%;
-}
-
-.login-button {
-    width: 100%;
-    margin-top: 0;
-    border-radius: 2em;
-    background-color: #a0311e00;
-    border: none;
-    font-family:'Open Sans', sans-serif;
-    font-size: 0.5em;
-    font-weight: bold;
-    letter-spacing: 0.35em;
-    justify-content: center;
-    color: #222521;
-    cursor: pointer;
-}
-
-.login-button:hover {
-    background-color: #afac08;
-    color: #830d0d;
+    width: 80%;  
 }
 
 .login-low-div h4 {
@@ -242,63 +209,57 @@ color: var(--lettercolor);
     display: flex;
     font-family: 'Lato', sans-serif;
     font-size: 1.1em;
-    color: #2e1702;
+    color: var(--letter-color);
     margin-bottom: 10%;
     margin-top: 3%;
 }
 
 .login-low-div a:link {
-    color: #b3855b;
+    color: var(--letter-color);
 }
 
-.slogin-low-div a:hover {
-    color: #000;
+.login-low-div a:hover {
+    color: var(--primary-color);
 }
 
 .signin-link {
     float: left;
-    padding-left: 6%;
+    padding-left: 10%;
+    color: var(--primary-color);
    
 }
 
 .signup-link {
     justify-content: right;
-    padding-right: 6%;
+    padding-right: 10%;
 }
 
 .login-button {
-    width: 100%;
-    margin-top: 5%;
-    border-radius: 2em;
-    background-color: var(--secondarycolor);
+    width: 80%;
+    height: 3em;
+    margin: auto;
     border: none;
+    border-radius: 50px; 
+    background-color: var(--primary-color);
     font-family:'Open Sans', sans-serif;
-    font-size: 1.1em;
+    font-size: 0.8em;
     font-weight: bold;
-    letter-spacing: 0.20em;
+    letter-spacing: 0.35em; 
+    display: flex;
     justify-content: center;
-    color:var(--background);
+    align-items: center;
+    color: var(--tertiary-color); 
     cursor: pointer;
 }
 
 .login-button:hover {
-    background-color: var(--auxcolor);
-    color:var(--background);
+    background-color: var(--secondary-color);
+    color:var(--letter-color);
 }
 
-Conversar em Front-end
 
 
-@media screen and (width: 1280px) {
-    
-    .create-account-button {
-        margin:auto;
-        justify-content: center;
-        text-align: center;
-        margin-top: 10%;
-    }
-}
-
+/*
 @media screen and (min-width: 913px) {
     
     label {
@@ -330,7 +291,7 @@ Conversar em Front-end
         margin-top: 30%;
     }
     
-    .initial-tile {
+    .initial-title {
         margin-top: 10%;
     }
     
@@ -350,7 +311,7 @@ Conversar em Front-end
         justify-self: center;
         text-align: center;
         margin:auto;
-        margin-top: 40%;
+        margin-top: 10%;
     }
 
     .main-image {
@@ -431,4 +392,4 @@ Conversar em Front-end
     .main-image {
         display: none;
       }
-}
+} */
