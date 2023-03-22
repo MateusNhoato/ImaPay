@@ -25,6 +25,25 @@ body {
     background-attachment: fixed;
 }
 
+form div {
+    position: relative;
+}
+
+form label {
+    top: 30px;
+    left: 15px;
+    position: absolute;
+    transition: top .3s, left .3s;
+    font-family: 'Lato', sans-serif;
+}
+
+.label-transition {
+    top: 11px;
+    font-size: 14px;
+    color: gray;
+    left: 0;
+}
+
 .main { 
     height: auto;
     display: block;
