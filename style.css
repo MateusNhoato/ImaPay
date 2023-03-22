@@ -173,7 +173,9 @@ input:focus {
 .slogan-upper {
     width: 30%;
     text-align: justify; 
-    margin: 38.5% 10% 10% 10%;
+    
+    position: fixed;
+    margin: 38.5% 10% 0 10%;
     font-family: 'Playfair Display', serif;
     font-style: italic;
     font-size: 2vw;
@@ -308,7 +310,6 @@ a {
   text-decoration: none;
 }
 
-/*
 @media screen and (min-width: 913px) {
     
     label {
@@ -316,16 +317,17 @@ a {
         justify-content: left;
         width: 80%;
     }
-
+    
     input {         
         width: 80%;
         height: 80%;
         margin-right: 0;
     }
     
-    .create-account-button {
-        margin:auto;
-        justify-content: center;
+    .login-account-link {
+        width: 100%;
+        margin-top: 0.8em;
+        margin-bottom: 2em;
         text-align: center;
     }
 }
@@ -335,7 +337,7 @@ a {
     .main {
         width: 100%;    
     }
-
+    
     .bank-logo {
         margin-top: 30%;
     }
@@ -355,18 +357,20 @@ a {
     input {
         margin-left: 2.2em; 
     }
-
-    .create-account-button {
+    
+    .login-account-link {
         justify-self: center;
         text-align: center;
         margin:auto;
+        margin-bottom: 2em;
         margin-top: 10%;
     }
-
+    
     .main-image {
         display: none;
-      }  
+    }  
 }
+
 
 @media screen and (max-width: 820px) {
     
@@ -378,11 +382,12 @@ a {
         margin-left: 2.2em; 
     }
     
-    .create-account-button {
+    .login-account-link {
         margin:auto;
         justify-content: center;
         text-align: center;
-        margin-top: 30%;
+        margin-top: 10%;
+        margin-bottom: 2em;
     }
 }
 
@@ -401,7 +406,7 @@ a {
         margin-left: 2.2em; 
     }
     
-    .create-account-button{
+    .login-account-link {
         justify-self: center;
         text-align: center;
         margin:auto;
@@ -428,10 +433,11 @@ a {
     
     input {
         display: flex;
+        font-size: 0.95em;
         width: 80%;
     }
 
-    .create-account-button {
+    .login-account-link {
         margin:auto;
         justify-content: center;
         text-align: center;
@@ -441,4 +447,4 @@ a {
     .main-image {
         display: none;
       }
-} */
+}
