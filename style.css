@@ -310,6 +310,16 @@ a {
   text-decoration: none;
 }
 
+
+#up-div{
+    margin-top: 20%;
+}
+
+#btn-recuperar{
+    text-decoration: none;
+}
+
+
 @media screen and (min-width: 913px) {
     
     label {
