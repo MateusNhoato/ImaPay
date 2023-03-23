@@ -1,53 +1,52 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
-<head>
-	<title>Imã Pay Cadastro</title>
-    <link rel="icon" href="img/logo-tab.png" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dosis:wght@200&family=Exo:wght@200&family=Lato:wght@100;300&family=Montserrat:wght@200;300&family=Open+Sans:wght@300&family=Playfair+Display:ital@1&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
-</head>
-<body>
-
-	<div class="main">
-		<div class="up-div">
-			<header>
-				<img class="bank-logo" src="img/Logotipo Oficial.png" height="10%" width="10%" />
-			</header>
-			<h1 class="initial-title">Entrar na sua conta</h1>
-			<h4 class="slogan">Entre na sua conta, e transforme sua vida financeira</h4>
-		</div>
-		
-        <div class="form-container">
-			<form>
-				<div>
-					<input class="form-data" type="text">
-					<label>E-mail</label>
+<html lang="pt-br">
+	<head>
+		<title>Imã Pay - Login</title>
+		<meta charset="utf-8">
+		<link rel="icon" type="image/x-icon" href="./assets/img/favicon.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+	    <link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dosis:wght@200&family=Exo:wght@200&family=Lato:wght@100;300&family=Montserrat:wght@200;300&family=Open+Sans:wght@300&family=Playfair+Display:ital@1&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<div class="main">
+			<div class="inputs-container">
+				<div class="up-div">
+					<img class="bank-logo" src="./assets/img/logo.png" height="10%" width="10%" />
+					<h1 class="initial-title">Entrar em sua conta</h1>
+					<h4 class="slogan">Entre em sua conta e transforme sua vida financeira</h4>
 				</div>
-				<div>
-					<input class="form-data" type="password">
-					<label>Senha</label>
-				</div>
-			</form>	
-        </div>   
+				
+		        <div class="form-container">
+					<form>
+						<div>
+							<input class="form-data" type="text" required>
+							<label>E-mail</label>
+						</div>
+						<div>
+							<input class="form-data" type="password" required>
+							<label>Senha</label>
+						</div>
+						<input type="submit" class="login-button" value="Login">
+					</form>	
+		        </div>
 
-		<div class="login-low-div">
-			<button class="login-button" type="submit"><strong>Login</strong></button>
-			<h4 class="signin-link"><a href="./esqueci-a-senha.html">Esqueceu a senha?</a></h4>
-            <h4 class="signup-link"><a href="./register.html">Cadastre-se</a></h4>			
-			<a href="https://github.com/MateusNhoato/ImaPay" target="_blank" class="code-breakers"><strong>&reg;Code Breakers - Team 01</strong></a>
-		</div> 
-	</div>	
+				<div class="login-low-div">
+					<a href="./assets/html/password-recovery.html">Esqueceu a senha?</a>
+	            	<a href="./assets/html/register.html">Cadastre-se</a>		
+				</div> 
+			</div>
 
-	<div class="main-image">
-		<p class="slogan-upper">"O sucesso não vem com o que fazemos ocasionalmente, mas sim com o que fazemos diariamente!"</p>
-        <p class="slogan-down">-- Dê o primeiro passo e invista seu dinheiro com o Poupa Imã!</p>
-	</div>
+			<div class="main-image">
+				<p class="slogan-upper">"O sucesso não vem com o que fazemos ocasionalmente, mas sim com o que fazemos diariamente!"</p>
+		        <p class="slogan-down">-- Dê o primeiro passo e invista seu dinheiro com o Poupa Imã!</p>
+			</div>
+		</div>	
 
-	<script type="text/javascript" src="./assets/js/script.js"></script>
+		<a href="https://github.com/MateusNhoato/ImaPay" target="_blank" class="code-breakers">&reg;Code Breakers</a>
 
-</body>
+		<script type="text/javascript" src="./assets/js/script.js"></script>
+	</body>
 </html>

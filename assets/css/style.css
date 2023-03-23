@@ -1,0 +1,260 @@
+:root {
+    --background: #fafafa;      
+    --primary-color: #00376E;
+    --secondary-color: #E6BA5C;
+    --tertiary-color: #f0f7ff;
+    --aux-color: #862020;             
+    --letter-color: #181617;       
+    --form: #1b1b1b59;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media (max-width: 1000px) {
+  div.login-low-div {
+    font-size: 15px;
+  }
+  h1.initial-title {
+    font-size: 25px;
+  }
+  h4.slogan {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 850px) {
+    div.main-image {
+        display: none;
+    }
+    div.inputs-container {
+        margin: auto;
+        width: 100%;
+    }
+    div input.form-data {
+        width: 60vw;
+    }
+    div input.login-button,
+    div input.register-button,
+    div input.password-recovery {
+        padding: 11px 18vw;
+    }
+    div.login-low-div {
+        width: 47vw;
+        font-size: 13px;
+    }
+}
+
+.main {
+    display: flex;
+    min-height: 100vh;
+}
+
+.inputs-container {
+    width: 35%;
+}
+
+.main-image {
+    width: 65%;
+    background-image: url(../img/login-image.jpg);
+    display: flex;
+    background-size: cover;
+    align-items: flex-end;
+    user-select: none;
+    flex-direction: column;
+    background-position: center;
+    justify-content: flex-end;
+}
+
+.register-img {
+    background-image: url(../img/register-image.jpg);
+}
+
+.slogan-upper {
+    text-align: justify;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 25px;
+    padding: 24px 37px 24px 126px;
+    color: white;
+}
+
+.slogan-down {
+    color: white;
+    font-family: 'helvetica', sans-serif;
+    margin: 0 37px 10px 0;
+    font-style: italic;
+}
+
+.up-div {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    text-align: center;
+    align-items: center;
+}
+
+img.bank-logo {
+    width: 170px;
+    margin: 30px 0 30px 0;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    margin: 74px auto 15px auto;
+}
+
+.login-low-div {
+    display: flex;
+    justify-content: space-between;
+    width: 25vw;
+    margin: auto;
+    color: var(--letter-color);
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+}
+
+.login-low-div p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.login-link {
+    text-decoration: none;
+}
+
+label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: top .3s, left .3s;
+    margin-left: 15px;
+    pointer-events: none;
+    font-family: 'Lato', sans-serif;
+    font-size: 17px;
+}
+
+form div {
+    position: relative;
+}
+
+input.form-data {
+    width: 29vw;
+    border: 0;
+    padding: 5px;
+    margin-bottom: 42px;
+    border-bottom: solid var(--form) 0.5px;
+}
+
+input.form-data:focus {
+    outline: none;
+}
+
+input.login-button,
+input.register-button,
+input.password-recovery {
+    display: block;
+    margin: auto;
+    border: 0;
+    color: var(--tertiary-color);
+    letter-spacing: 5px;
+    padding: 11px 11vw;
+    background-color: var(--primary-color);
+    border-radius: 19px;
+    cursor: pointer;
+}
+
+input.login-button:hover,
+input.register-button:hover,
+input.password-recovery:hover {
+    background-color: var(--secondary-color);
+    color: var(--letter-color);
+}
+
+input.register-button {
+    padding: 11px 9vw;
+}
+
+.slogan {
+    color: var(--primary-color);
+    font-family: 'Lato', sans-serif;
+    font-size: 19px;
+    margin-top: 8px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.initial-title {
+    font-family: 'Open Sans', sans-serif;
+}
+
+a.code-breakers {
+    text-decoration: none;
+    font-size: 12px;
+    display: block;
+    margin-top: 18px;
+    color: gray;
+    text-align: center;
+}
+
+.label-transition {
+    top: -8px;
+    left: -15px;
+    color: gray;
+    font-size: 11px;
+}
+
+.btn-back {
+    justify-content: flex-end;
+}
+
+.password-recovery-img {
+    background-image: url(../img/password-recovery-image.jpg);
+}
+
+.terms-conditions {
+    width: 100%;
+}
+
+.legal {
+    width: 90%;
+    height: 260px;
+    max-width: 600px;
+    margin: 54px auto 19px auto;
+    overflow-y: scroll;
+    box-shadow: 0 0 8px gray;
+    padding: 17px;
+}
+
+.div-checkbox {
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.accepted {
+    all: revert;
+}
+
+a.btn-advance {
+    background-color: #08376e;
+    margin: auto;
+    display: block;
+    width: fit-content;
+    margin-top: 25px;
+    padding: 8px;
+    border-radius: 9px;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    color: white;
+}
+
+a.btn-advance:hover {
+    background-color: #044ea6;
+}
+
+a.hidden {
+    display: none;
+}

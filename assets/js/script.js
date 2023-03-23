@@ -12,3 +12,14 @@ inputs.forEach(input => {
 			label.classList.remove('label-transition');
 	});
 });
+
+const legal = document.querySelector('.legal');
+
+legal?.addEventListener('scroll', event => {
+	const scrollValueRound = Math.ceil(event.target.scrollTop + event.target.offsetHeight);
+	const btn = document.querySelector('.btn-advance');
+
+	if(scrollValueRound >= event.target.scrollHeight) {
+		btn.classList.remove('hidden');
+	}
+});
