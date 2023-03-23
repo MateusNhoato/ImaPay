@@ -33,6 +33,7 @@ form label {
     position: absolute;
     transition: top .3s, left .3s;
     font-family: 'Lato', sans-serif;
+    font-size: 1.1em;
 }
 
 .label-transition {
@@ -64,18 +65,20 @@ form label {
     text-align: center;
     padding: 2%;
     font-family:'Open Sans', sans-serif;
-    font-size: 1.8em;
+    font-size: 1.5em;
 }
 
 .slogan {
     text-align: center;
     font-family:'Lato', sans-serif;
     font-size: 1.2em;
-    color:var(--primary-color);
+    color:#028383;
     display: flex;
     flex-direction: column;
-    margin-top: -5%;
+    margin-top: -1%;
     padding: 1em;    
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    
 }
 /*
 .form {
@@ -153,7 +156,7 @@ input:focus {
 
 .main-image {
     display: block;
-    background-image: url("./img/register-image.png");
+    background-image: url("./img/imagem\ \(32\).jpg");
     background-size: cover;
     width: 65%;
     height: 100%;
@@ -162,18 +165,39 @@ input:focus {
     right: 0;
 }
 
-.main-image p {
+.main-image2 {
+    display: block;
+    background-image: url("./img/imagem\ \(33\).jpg");
+    background-size: cover;
+    width: 65%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.main-image3 {
+    display: block;
+    background-image: url("./img/imagem\ \ \(15\).jpg");
+    background-size: cover;
+    width: 65%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+/* .main-image p {
     width: 50%;
     display: block;
     position: fixed;
     flex-direction: row-reverse;
 
-}
+} */
 
 .slogan-upper {
-    width: 30%;
+    width: 50%;
     text-align: justify; 
-    
     position: fixed;
     margin: 38.5% 10% 0 10%;
     font-family: 'Playfair Display', serif;
@@ -181,13 +205,13 @@ input:focus {
     font-size: 2vw;
     color: #ffffff;
     box-shadow: #139bc9;
-    text-shadow: 1px 1.2px #000#376865;
-}
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.65);}
 
 .slogan-down {
   
+    width: 50%;
     text-align: right;
-    margin: 45.5% 10% 0 10%;
+    margin: 70% 10% 0 10%;
     font-family: 'helvetica', sans-serif;
     font-style: italic;
     font-size: 1vw;
@@ -195,8 +219,13 @@ input:focus {
 }
 
 .form-container {
-    margin-top: 10%;
+    margin-top: 4%;
     width: 80%;
+    justify-content: center;
+    margin-left: 6.5em;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.98em;
+
 }
 
 .form-container input {
@@ -210,6 +239,9 @@ input:focus {
     margin-top: 0.8em;
     margin-bottom: 2em;
     text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1.1em;
 }
 
 
@@ -239,14 +271,14 @@ input:focus {
 
 .signin-link {
     float: left;
-    padding-left: 10%;
+    padding-left: 14%;
     color: var(--primary-color);
    
 }
 
 .signup-link {
     justify-content: right;
-    padding-right: 10%;
+    padding-right: 14%;
 }
 
 .login-button {
@@ -256,8 +288,8 @@ input:focus {
     border: none;
     border-radius: 50px; 
     background-color: var(--primary-color);
-    font-family:'Open Sans', sans-serif;
-    font-size: 0.8em;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.92em;
     font-weight: bold;
     letter-spacing: 0.35em; 
     display: flex;
@@ -265,6 +297,7 @@ input:focus {
     align-items: center;
     color: var(--tertiary-color); 
     cursor: pointer;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.35);
 }
 
 .login-button:hover {
@@ -308,6 +341,16 @@ input:focus {
 }
 a {
   text-decoration: none;
+}
+
+/* página esqueci a senha */
+
+#up-div{ 
+    margin-top: 20%;
+}
+
+#btn-recuperar{
+    text-decoration: none;
 }
 
 @media screen and (min-width: 913px) {
