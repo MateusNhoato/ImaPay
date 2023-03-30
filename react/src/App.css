@@ -1,0 +1,51 @@
+:root {
+    --background: #fafafa;      
+    --primary-color: #00376E;
+    --secondary-color: #E6BA5C;
+    --tertiary-color: #f0f7ff;
+    --aux-color: #862020;             
+    --letter-color: #181617;       
+    --form: #1b1b1b59;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@media (max-width: 1000px) {
+    div.login-low-div {
+      font-size: 15px;
+    }
+    h1.initial-title {
+      font-size: 25px;
+    }
+    h4.slogan {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 850px) {
+      div.main-image {
+          display: none;
+      }
+      div.inputs-container {
+          margin: auto;
+          width: 100%;
+      }
+      div input.form-data {
+          width: 60vw;
+      }
+      div input.login-button,
+      div input.register-button,
+      div input.password-recovery {
+          padding: 11px 18vw;
+      }
+      div.login-low-div {
+          width: 47vw;
+          font-size: 13px;
+      }
+  }
+  
