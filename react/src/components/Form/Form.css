@@ -1,0 +1,10 @@
+.form-container {
+    display: flex;
+    justify-content: center;
+    margin: 74px auto 15px auto;
+    width: 35%;
+}
+
+form div{
+    position: relative;
+}
