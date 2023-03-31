@@ -4,7 +4,7 @@ import './TopTitle.css';
 
 const TopTitle = (props) => {
     return (
-        <div >
+        <div className="up-div">
             <div className="title" style={props.styleTitle}>
                 {props.title}
             </div>

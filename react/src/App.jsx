@@ -17,14 +17,14 @@ const styleTopTitle = {
 }
 
 const styleSubtitle = {
-  left: '200px',
+  left: '94px',
   top: '49px',
   fontSize: '1.3rem',
 }
 
   return (
     <div>
-      <div >
+      <div>
         <TopTitle title="Bom dia, Ana!" subtitle="Saldo atual:" styleTitle={ styleTopTitle } styleSubtitle={ styleSubtitle } />
       </div>
       <Form buttonFunction={alertButton} buttonValue={'Clicar'}>
