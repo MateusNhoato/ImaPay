@@ -1,34 +1,65 @@
 import React from 'react';
 
-import Logo from '../../components/Logo/Logo.jsx';
+// import Logo from '../../components/Logo/Logo.jsx';
 import Button from '../../components/Button/Button.jsx';
 import TopTitle from '../../components/TopTitle/TopTitle.jsx';
 import InfoCardComponent from '../../components/InfoCardComponent/InfoCardComponent.jsx';
-import Table from '../../components/Table/Table.jsx';
+import InvestimentTable from '../../components/InvestimentTable/InvestimentTable.jsx';
 
 const BalancePage = () => {
+    const investimentData = [
+        {
+            type: 'CDI',
+            date: '10/02/2022',
+            details: 'Rendendo acima da margem',
+            performance: '1,9% ao mês',
+        },
+        {
+            type: 'CDI',
+            date: '10/03/2022',
+            details: 'Rendendo acima da margem',
+            performance: '1,9% ao mês',
+        },
+        {
+            type: 'CDI',
+            date: '10/05/2022',
+            details: 'Rendendo acima da margem',
+            performance: '1,9% ao mês',
+        },
+        {
+            type: 'CDI',
+            date: '10/08/2022',
+            details: 'Rendendo acima da margem',
+            performance: '1,9% ao mês',
+        },
+    ]
+
     return (
         <>
-            <Logo />
+            {/*<Logo />*/}
 
-            <Button
-                label='Transferência bancária'
-                width='330px'
-                backgroundColor='black'
-            />
-            <Button
-                label='Histórico de transações'
-                width='330px'
-                backgroundColor='black'
-            />
+            <div className='btn-div'>
+                <Button
+                    label={'Transferência bancária'}
+                    width={'50px'}
+                    backgroundColor={'blue'}
+                    click={() => location.href = 'https://google.com'}
+                />
+                <Button
+                    label={'Histórico de transações'}
+                    width={''}
+                    backgroundColor={''}
+                    click={() => {}}
+                />
+            </div>
 
             <TopTitle
                 title='Bom dia, Ana!'
                 subtitle='Saldo atual:'
-                styleTitle={''}
-                styleSubtitle={''}
-            />
-
+                styleTitle={{backgroundColor: 'red'}}
+                styleSubtitle={{}}
+            />           
+            
             <div>
                 <InfoCardComponent
                     title='Conta corrente'
@@ -44,9 +75,11 @@ const BalancePage = () => {
                 />
             </div>
 
-            <hr />
+            <hr />        
 
-            <Table />
+            <InvestimentTable
+                investimentData={investimentData}
+            />
         </>
     )
 }

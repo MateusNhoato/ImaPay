@@ -8,7 +8,12 @@ const Form = ({children, buttonFunction, buttonValue}) => {
             <div className='form-container'>
                 <form>
                     {children}
-                    <Button onClick={buttonFunction}>{buttonValue}</Button>
+                    <Button
+                        label={buttonValue}
+                        click={buttonFunction}
+                        width={'-webkit-fill-available'}
+                        backgroundColor={''}
+                    />
                 </form>
         </div>
     );

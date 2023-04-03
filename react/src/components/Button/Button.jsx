@@ -2,13 +2,13 @@ import React from 'react';
 
 import './Button.css'
 
-const Button = ({children, onClick}) => {
+const Button = ({label, width, backgroundColor, click}) => {
     return ( 
-        <div>
-            <button className="button" onClick={onClick}>
-                {children}
+        <>
+            <button className="button" style={{width, backgroundColor}} onClick={click}>
+                {label}
             </button>
-        </div>
+        </>
     );
 }
  
