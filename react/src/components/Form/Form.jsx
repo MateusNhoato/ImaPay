@@ -3,9 +3,22 @@ import Button from '../Button/Button'
 
 import './Form.css'
 
-const Form = ({children, buttonFunction, buttonValue}) => {
+const Form = ({children, buttonFunction, buttonValue, lowLinkValue, lowLinkRef}) => {
     return (
             <div className='form-container'>
+<<<<<<< HEAD
+                    <form>
+                        {children}
+                        <Button onClick={buttonFunction}>{buttonValue}</Button>
+                        <div>
+                            
+                        <a className='low-link' href={lowLinkRef}>{lowLinkValue}</a>
+                        </div>
+
+                    </form>
+            </div>
+            
+=======
                 <form>
                     {children}
                     <Button
@@ -16,6 +29,7 @@ const Form = ({children, buttonFunction, buttonValue}) => {
                     />
                 </form>
         </div>
+>>>>>>> Desenvolvimento
     );
 }
  
