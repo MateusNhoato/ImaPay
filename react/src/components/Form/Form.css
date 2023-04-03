@@ -5,6 +5,17 @@
     width: 35%;
 }
 
+.low-link {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
 form div{
     position: relative;
+    text-align: center;
+}
+
+form div .button{
+    margin-bottom: 20px;
 }

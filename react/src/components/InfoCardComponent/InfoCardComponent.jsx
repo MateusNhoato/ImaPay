@@ -2,7 +2,6 @@ import React from 'react';
 import './InfoCardComponent.css';
 
 const InfoCardComponent = (props) => {
-    console.log(props.value);
     return (
         <div>
             <div className="infoCard">
