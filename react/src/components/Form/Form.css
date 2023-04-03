@@ -9,6 +9,7 @@
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
     color: var(--primary-color);
+    margin-top: 100px;
 }
 
 form div{

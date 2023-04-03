@@ -9,13 +9,13 @@ import Button from './components/Button/Button'
 import TermsAndConditions from './components/TermsAndConditions/TermsAndConditions'
 import BalancePage from './pages/balance_page'
 
-
 function App() {
 const alertButton = () => {
   alert("123123");
 }
 
-const items = [<Button>Cadastrar</Button>, <Button>Registrar</Button>];
+const items = [<Button key="1" label="Cadastre-se" backgroundColor={"var(--secondary-color)"} hover={"var(--primary-color-light)"} click={() => {alert('1')}} width={""} />,
+              <Button key="1" label="Login" backgroundColor={"var(--primary-color-light)"} hover={"var(secondary-color)"} click={() => {alert('1')}} width={"100px"} />];
 
   return (
     <>
