@@ -1,13 +1,12 @@
-.button{
-        display: block;
-        margin: auto;
-        border: 0;
-        color: var(--tertiary-color);
-        letter-spacing: 5px;
-        padding: 11px 11vw;
-        background-color: var(--primary-color);
-        border-radius: 19px;
-        cursor: pointer;
+.button {
+    display: block;
+    border: 0;
+    color: var(--tertiary-color);
+    letter-spacing: 2px;
+    padding: 11px;
+    background-color: var(--primary-color);
+    border-radius: 19px;
+    cursor: pointer;
 }
 
 .button:hover{

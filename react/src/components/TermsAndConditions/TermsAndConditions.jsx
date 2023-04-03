@@ -44,7 +44,7 @@ function TermsAndConditions() {
       <button onClick={handleButtonClick}>Abrir termos e condições</button>
       <div className="transparency-bg hidden" onClick={handleBackgroundClick} ref={bgRef}>
         <div className="terms-box" ref={termsBoxRef}>
-          <p className="title">Termos e condições</p>
+          <p className="terms-title">Termos e condições</p>
           <div className="terms" onScroll={handleTermsScroll} ref={termsRef}>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -90,7 +90,7 @@ function TermsAndConditions() {
           </div>
           <div className="checkbox-container" onClick={handleCheckboxContainerClick} ref={checkboxRef}>
             <div className='label'>
-              <input type="checkbox" checked={isChecked} />
+              <input type="checkbox" checked={isChecked} readOnly/>
               Li e aceito os termos e condições
             </div>
           </div>
