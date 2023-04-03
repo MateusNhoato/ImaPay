@@ -2,13 +2,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    --background: #fafafa;      
-    --primary-color: #00376E;    /*Cor de 20% do site (Destaques)*/
-    --secondary-color: #E6BA5C;     /*Cor de 10% do site (Detalhes)*/
-    --tertiary-color: #f0f7ff;
-    --aux-color: #862020;             
-    --letter-color: #181617;       
-    --form: #1b1b1b59;
+    --background: #FFFFFF; /* Fundo do site  */  
+    --primary-color: #111827;    /* Parte da logo, títulos, alguns botões e cartão digital */
+    --primary-color-dark: #090E18;  
+    --primary-color-light: #1B263D;  
+    --secondary-color: #288484;     /* Destaque (presente em vários elementos do site) */
+    --neutral-color-dark: #050505; /* Utilizada nos textos  */
+    --neutral-color-light: #FFFFFF;
+    --system-color-error: #FF001F;    
+    --system-color-confirmed: #3DB949;             
+    --system-color-notice: #FF7A00;                      
+    --form: #0e0e0e; /* Utilizada em todos os formulários  */
     /* border: 1px solid #000; */
 }
 
@@ -48,7 +52,7 @@ body {
     font-size: 1.8em;
 }
 
-.slogan {
+/* .slogan {
     text-align: center;
     font-family:'Lato', sans-serif;
     font-size: 1.2em;
@@ -57,7 +61,7 @@ body {
     flex-direction: column;
     margin-top: -5%;
     padding: 1em;    
-}
+}  */
 
 .form {
     width: 80%;
@@ -83,7 +87,7 @@ input {
     font-family:'Lato', sans-serif;
     font-size: 0.95em;
     font-weight: bold;
-    color: var(--letter-color);
+    color: var(--neutral-color-dark);
     background-color: rgba(100, 148, 237, 0);
 }
 
@@ -93,7 +97,7 @@ input:focus {
 }
 
 input::placeholder {
-color: var(--letter-color);
+color: var(--form);
 }
 
 .low-div {
@@ -108,7 +112,7 @@ color: var(--letter-color);
     text-align: center;
     font-family: 'Lato', sans-serif;
     font-size: 1.2em;
-    color: var(--letter-color);
+    color: var(--neutral-color-dark);
     margin-bottom: 10%;
 }
 
@@ -129,7 +133,7 @@ color: var(--letter-color);
     left: 0;
     padding: 10px;
     font-size: 12px;
-    color: var(--letter-color);
+    color: var(--form);
     font-family:'Montserrat', sans-serif;
     font-weight: bolder;
     text-decoration: none;
@@ -155,7 +159,7 @@ color: var(--letter-color);
 
 }
 
-.slogan-upper {
+/* .slogan-upper {
     width: 30%;
     text-align: justify; 
     margin: 38.5% 10% 10% 10%;
@@ -176,6 +180,7 @@ color: var(--letter-color);
     font-size: 1vw;
     color: #ffffff;
 }
+*/
 
 .login {
     margin-top: 10%;
@@ -212,13 +217,13 @@ color: var(--letter-color);
     display: flex;
     font-family: 'Lato', sans-serif;
     font-size: 1.1em;
-    color: var(--letter-color);
+    color: var(--neutral-color-dark);
     margin-bottom: 10%;
     margin-top: 3%;
 }
 
 .login-low-div a:link {
-    color: var(--letter-color);
+    color: var(--neutral-color-dark);
 }
 
 .login-low-div a:hover {
@@ -243,7 +248,7 @@ color: var(--letter-color);
     margin: auto;
     border: none;
     border-radius: 50px; 
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     font-family:'Open Sans', sans-serif;
     font-size: 0.8em;
     font-weight: bold;
@@ -251,13 +256,13 @@ color: var(--letter-color);
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--tertiary-color); 
+    color: var(--neutral-color-light); 
     cursor: pointer;
 }
 
 .login-button:hover {
-    background-color: var(--secondary-color);
-    color:var(--letter-color);
+    background-color: var(--primary-color);
+    color:var(--neutral-color-light);
 }
 
 
