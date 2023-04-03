@@ -1,9 +1,11 @@
 .button {
     display: block;
     border: 0;
-    color: var(--tertiary-color);
+    color: var(--neutral-color-light);
+    font-weight: bold;
     letter-spacing: 2px;
-    padding: 11px;
+    padding: 8px 20px;
+    margin-bottom: auto;
     background-color: var(--primary-color);
     border-radius: 19px;
     cursor: pointer;
@@ -11,5 +13,4 @@
 
 .button:hover{
     background-color: var(--secondary-color);
-    color: var(--letter-color);
 }

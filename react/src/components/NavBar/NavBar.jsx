@@ -2,16 +2,13 @@ import React from 'react';
 import Logo from '../../assets/img/logotipo.svg'
 import './NavBar.css'
 
+import ListItem from './ListItem';
 
 const NavBar = (props) => {
     const items = props.items;
 
-    const ListItem = (item) =>{
-        return <li>{item.value}</li>
-    }
-
-    const ItemsList = items.map((item, index) =>
-        <ListItem key={index} value={item} />);
+    const ItemsList = items.map((item) =>
+        <ListItem key={item.key} value={item} />);
     
     return (
         <nav className='nav'>
