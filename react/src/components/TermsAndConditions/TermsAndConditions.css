@@ -41,7 +41,7 @@
   margin-bottom: 8px;
 }
 
-p.title {
+p.terms-title {
   text-align: center;
   font-weight: bold;
   font-size: 23px;
@@ -80,5 +80,5 @@ input[type="checkbox"] {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-background: #32b8b8; 
+  background: #32b8b8; 
 }

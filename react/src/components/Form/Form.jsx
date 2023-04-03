@@ -6,6 +6,7 @@ import './Form.css'
 const Form = ({children, buttonFunction, buttonValue, lowLinkValue, lowLinkRef}) => {
     return (
             <div className='form-container'>
+<<<<<<< HEAD
                     <form>
                         {children}
                         <Button onClick={buttonFunction}>{buttonValue}</Button>
@@ -17,6 +18,18 @@ const Form = ({children, buttonFunction, buttonValue, lowLinkValue, lowLinkRef})
                     </form>
             </div>
             
+=======
+                <form>
+                    {children}
+                    <Button
+                        label={buttonValue}
+                        click={buttonFunction}
+                        width={'-webkit-fill-available'}
+                        backgroundColor={''}
+                    />
+                </form>
+        </div>
+>>>>>>> Desenvolvimento
     );
 }
  
