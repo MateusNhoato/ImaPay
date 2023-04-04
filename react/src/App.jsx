@@ -19,25 +19,9 @@ const items = [<Button key="1" label="Cadastre-se" backgroundColor={"var(--secon
 
   return (
     <>
-      {/* Exemplo de implementação. Remover depois de aplicado*/}
-      <NavBar items={items}/>
 
-      <Form 
-        buttonFunction={alertButton} 
-        buttonValue={'Clicar'}
-        lowLinkRef='/'
-        lowLinkValue='Possui uma conta? Entrar'>
-        <Input>Nome Completo</Input>
-        <Input>Cpf</Input>
-        <Input>Email</Input>
-        <Input>Telefone</Input>
-      </Form>
-      {/* Exemplo de implementação. Remover depois de aplicado*/}
-      <div className="infoCardComponent">
-        <InfoCardComponent title="Conta corrente" value="5.000,00" />
-        <InfoCardComponent title="Investimentos" value="22.652,00"/>
-        <InfoCardComponent title="Poupança"value="642,00"/>
-      </div>
+      <BalancePage />
+    
 
     </>
   )
