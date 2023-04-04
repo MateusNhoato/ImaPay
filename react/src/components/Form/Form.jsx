@@ -3,14 +3,16 @@ import Button from '../Button/Button'
 
 import './Form.css'
 
-const Form = ({children, buttonColor, buttonFunction, buttonValue, lowLinkValue, lowLinkRef}) => {
+const Form = ({title, children, buttonFunction, buttonValue, lowLinkValue, lowLinkRef}) => {
     return (
             <div className='form-container'>
+                 <h2 className='form-container-h2'>{title}</h2>
                     <form>
                         {children}
-                        <Button key="1" label={buttonValue} backgroundColor={buttonColor} click={(buttonFunction) => {alert('1')}} width={"100%"} ></Button>
-                        <div>   
-                            <a className='low-link' href={lowLinkRef}>{lowLinkValue}</a>
+                        <Button onClick={buttonFunction}>{buttonValue}</Button>
+                        <div>
+                             
+                        <a className='low-link' href={lowLinkRef}>{lowLinkValue}</a>
                         </div>
                     </form>
             </div>

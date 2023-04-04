@@ -20,3 +20,18 @@ form div{
 form div .button{
     margin-bottom: 20px;
 }
+
+.form-container-h2{ 
+    position: absolute;
+    width: 365px;
+    height: 56px;
+    left: 570px;
+    top: 65px;
+    font-family:'arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 112%;
+    color:var(--primary-color);
+    letter-spacing: 0.05em;
+}
