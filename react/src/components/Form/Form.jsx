@@ -9,6 +9,7 @@ const Form = ({title, children, buttonFunction, buttonValue, lowLinkValue, lowLi
 
     return (
             <div className='form-container'>
+                <div className='form-gradient'></div>
                  <h2 className='form-container-h2'>{title}</h2>
                     <form>
                         {children}
