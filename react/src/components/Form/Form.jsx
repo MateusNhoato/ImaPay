@@ -5,7 +5,9 @@ import './Form.css'
 
 const Form = ({children, buttonFunction, buttonValue, lowLinkValue, lowLinkRef}) => {
     return (
+        <div>
             <div className='form-container'>
+            <div className='form-gradient'></div>                
                     <form>
                         {children}
                         <Button onClick={buttonFunction}>{buttonValue}</Button>
@@ -14,7 +16,8 @@ const Form = ({children, buttonFunction, buttonValue, lowLinkValue, lowLinkRef})
                         <a className='low-link' href={lowLinkRef}>{lowLinkValue}</a>
                         </div>
                     </form>
-            </div>
+            </div>            
+        </div>           
     );
 }
  
