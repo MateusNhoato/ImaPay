@@ -23,6 +23,7 @@ const items = [<Button>Cadastrar</Button>, <Button>Registrar</Button>];
       <NavBar items={items}/>
 
       <Form 
+        title = 'Crie uma conta'
         buttonFunction={alertButton} 
         buttonValue={'Clicar'}
         lowLinkRef='/'
