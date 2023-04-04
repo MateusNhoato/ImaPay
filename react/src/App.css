@@ -52,4 +52,44 @@
           font-size: 13px;
       }
   }
+
+  .btn-div {
+    display: flex;
+    width: fit-content;
+    margin: 20px 20px 54px auto;
+}
+
+.btn-div button {
+    margin-right: 13px;
+}
+
+.component-cards {
+    margin: 40px 20px 0 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+hr {
+    margin: 25px 20px 38px 20px;
+    background-color: #dedede;
+    width: 95%;
+    height: 2px;
+    border: 0;
+}
+
+h2.title-investments {
+    width: 60%;
+    margin: 0 auto 14px auto;
+    font-size: 18px;
+}
+
+.img-logo-box {
+    width: fit-content;
+    margin: -5px 0 0 9px;
+    position: absolute;
+}
+
+.img-logo-box img {
+    width: 205px;
+}
   

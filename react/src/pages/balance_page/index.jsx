@@ -36,13 +36,15 @@ const BalancePage = () => {
 
     return (
         <>
-            {/*<Logo />*/}
+            <div className='img-logo-box'>
+                <img src="/src/assets/img/logotipo.svg" alt="Logo" width="20%" />
+            </div>
 
             <div className='btn-div'>
                 <Button
                     label={'Transferência bancária'}
-                    width={'50px'}
-                    backgroundColor={'blue'}
+                    width={''}
+                    backgroundColor={''}
                     click={() => location.href = 'https://google.com'}
                 />
                 <Button
@@ -56,11 +58,18 @@ const BalancePage = () => {
             <TopTitle
                 title='Bom dia, Ana!'
                 subtitle='Saldo atual:'
-                styleTitle={{backgroundColor: 'red'}}
-                styleSubtitle={{}}
+                styleTitle={{
+                    fontSize: '27px',
+                    fontWeight: 'bold',
+                }}
+                styleSubtitle={{
+                    left: '-100px',
+                    top: '33px',
+                    fontSize: '17px',
+                }}
             />           
             
-            <div>
+            <div className='component-cards'>
                 <InfoCardComponent
                     title='Conta corrente'
                     value='5.472,00'
