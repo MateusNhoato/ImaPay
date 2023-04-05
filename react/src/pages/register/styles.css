@@ -4,29 +4,15 @@
 }
 
 .form-container {
-    display: flex;
-    justify-content: center;
     background-color: white;
-    margin: 74px auto 15px auto;
     border-radius: 12px;
     padding: 68px 0 20px 0;
     box-shadow: 6px 5px 6px gray;
-    position: relative;
-    width: 35%;
 }
 
 .form-container-h2 {
-    position: absolute;
-    width: 365px;
-    height: 56px;
     text-align: center;
     left: 0;
     top: 7px;
-    font-family: 'arial';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 112%;
-    color: var(--primary-color);
-    letter-spacing: 0.05em;
+    width: 100%;
 }
