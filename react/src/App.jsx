@@ -9,6 +9,7 @@ import Button from './components/Button/Button'
 import TermsAndConditions from './components/TermsAndConditions/TermsAndConditions'
 import BalancePage from './pages/balance_page'
 import Register from './pages/register'
+import TransferPage from './pages/transfer_page/TransferPage'
 
 function App() {
 const alertButton = () => {
@@ -23,7 +24,9 @@ const items = [<Button key="1" label="Cadastre-se" backgroundColor={"var(--secon
 
       {/* <BalancePage /> */}
 
-      <Register />
+      {/* <Register /> */}
+
+      <TransferPage />
 
     </>
   )

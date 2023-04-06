@@ -83,6 +83,7 @@ h2.title-investments {
     font-size: 18px;
 }
 
+
 .img-logo-box {
     width: fit-content;
     margin: -5px 0 0 9px;
@@ -92,4 +93,12 @@ h2.title-investments {
 .img-logo-box img {
     width: 205px;
 }
-  
+
+.salto-atual {
+    font-family: 'Roboto', sans-serif ;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: var(--secondary-color);
+    margin: 50px 50px -40px;
+    
+}

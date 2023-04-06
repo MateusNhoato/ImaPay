@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     margin: 74px auto 15px auto;
-    width: 35%;
+    width: 55%;
 }
 
 .form-gradient {
@@ -38,10 +38,12 @@ form div .button{
 .form-container-h2{ 
     position: absolute;
     width: 365px;
-    height: 56px;
+    height: 30px;
     left: 570px;
     top: 65px;
-    font-family:'arial';
+    display: flex;
+    justify-content: center;
+    font-family:'arial', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 30px;

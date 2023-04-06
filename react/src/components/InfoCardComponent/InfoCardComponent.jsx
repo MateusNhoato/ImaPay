@@ -3,7 +3,7 @@ import './InfoCardComponent.css';
 
 const InfoCardComponent = (props) => {
     return (
-        <div>
+        <div className="infoCardComponent">
             <div className="infoCard">
                 <p className="infoCardTitle">{props.title}</p>
                 <div className='InfoCardText'>

@@ -1,5 +1,6 @@
 .form-data {
-    width: 29vw;
+    width: 50vw;
+    max-width: 50vw;
     border: 0;
     padding: 5px;
     margin-bottom: 42px;
