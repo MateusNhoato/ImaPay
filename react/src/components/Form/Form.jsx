@@ -13,14 +13,16 @@ const Form = ({title, children, buttonFunction, buttonValue, lowLinkValue, lowLi
                  <h2 className='form-container-h2'>{title}</h2>
                     <form>
                         {children}
-                        <Button 
-                            onClick={buttonFunction}
-                            label={buttonValue}
-                            width={buttonWidth}
-                            backgroundColor={BTN_COLOR}
-                            hoverColor={BTN_HOVER_COLOR}
-                            leaveColor={BTN_COLOR}
-                        />
+                        <div style={{display: "flex", "justify-content": "center"}}>
+                            <Button
+                                onClick={buttonFunction}
+                                label={buttonValue}
+                                width={buttonWidth}
+                                backgroundColor={BTN_COLOR}
+                                hoverColor={BTN_HOVER_COLOR}
+                                leaveColor={BTN_COLOR}
+                            />
+                        </div>
                         <div>
                              
                         <a className='low-link' href={lowLinkRef}>{lowLinkValue}</a>
