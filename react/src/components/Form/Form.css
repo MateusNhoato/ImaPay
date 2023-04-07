@@ -19,6 +19,19 @@
     z-index: -1;    
 }
 
+.form-no-gradient {	
+    background-color: #fff;	
+}	
+
+.form-container-transfer {	
+    display: flex;	
+    justify-content: center;	
+    margin: 74px auto 15px auto;	
+    width: 55%;	
+    background-color: white;	
+    padding: 68px 0 20px 0;	
+}
+
 .low-link {
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
@@ -38,12 +51,10 @@ form div .button{
 .form-container-h2{ 
     position: absolute;
     width: 365px;
-    height: 30px;
+    height: 56px;
     left: 570px;
     top: 65px;
-    display: flex;
-    justify-content: center;
-    font-family:'arial', sans-serif;
+    font-family:'arial';
     font-style: normal;
     font-weight: 400;
     font-size: 30px;

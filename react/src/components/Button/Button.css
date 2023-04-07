@@ -9,6 +9,7 @@
     background-color: var(--primary-color);
     border-radius: 19px;
     cursor: pointer;
+    
 }
 
 .button:hover{
