@@ -24,7 +24,7 @@ const TransferPage = () => {
         <div>
             <NavBar items={items} />
             
-            <div className="transfer-container">
+            <div>
                 <div className="transfer-div">
                     <div className="transfer-title">Transferência bancária</div>
                 </div>
