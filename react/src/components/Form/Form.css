@@ -19,17 +19,17 @@
     z-index: -1;    
 }
 
-.form-no-gradient {
-    background-color: #fff;
-}
+.form-no-gradient {	
+    background-color: #fff;	
+}	
 
-.form-container-transfer {
-    display: flex;
-    justify-content: center;
-    margin: 74px auto 15px auto;
-    width: 55%;
-    background-color: white;
-    padding: 68px 0 20px 0;
+.form-container-transfer {	
+    display: flex;	
+    justify-content: center;	
+    margin: 74px auto 15px auto;	
+    width: 55%;	
+    background-color: white;	
+    padding: 68px 0 20px 0;	
 }
 
 .low-link {

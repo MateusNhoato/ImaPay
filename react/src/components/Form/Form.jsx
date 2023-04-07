@@ -5,7 +5,7 @@ import './Form.css'
 
 const Form = ({title, children, buttonFunction, buttonValue, lowLinkValue, lowLinkRef, buttonWidth, hoverColor='#28a4a4', gradient=false}) => {
     const BTN_COLOR = 'var(--secondary-color)';
-    const GRADIENT_CLASS = gradient ? "form-gradient" : "form-no-gradient";
+    const GRADIENT_CLASS = gradient ? "form-gradient" : "form-no-gradient";	
     const FORM_CLASS = gradient ? "form-container" : "form-container-transfer";
 
     return (
