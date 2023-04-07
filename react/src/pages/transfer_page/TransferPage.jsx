@@ -24,17 +24,17 @@ const TransferPage = () => {
         <div>
             <NavBar items={items} />
             
-            <div >
+            <div className="transfer-container">
                 <div className="transfer-div">
                     <div className="transfer-title">Transferência bancária</div>
                 </div>
                 <Form
+                    // title={<div className="transfer-title">Transferência bancária</div>}
                     buttonValue={'Confirmar transferência'}
                     buttonWidth={'80%'}
                     click={() => {}}
                     hoverColor={'#111827'}
                     leaveColor={'#288484'}
-                    gradient={false}
                 >
                     <Input>Tipo de conta</Input>
                     <Input>Data de transferência</Input>

@@ -3,14 +3,13 @@ import Button from '../Button/Button'
 
 import './Form.css'
 
-const Form = ({title, children, buttonFunction, buttonValue, lowLinkValue, lowLinkRef, buttonWidth, hoverColor='#28a4a4', gradient=false}) => {
+const Form = ({title, children, buttonFunction, buttonValue, lowLinkValue, lowLinkRef, buttonWidth}) => {
+    const BTN_HOVER_COLOR = '#28a4a4';
     const BTN_COLOR = 'var(--secondary-color)';
-    const GRADIENT_CLASS = gradient ? "form-gradient" : "form-no-gradient";
-    const FORM_CLASS = gradient ? "form-container" : "form-container-transfer";
 
     return (
-            <div className={FORM_CLASS}>
-                <div className={GRADIENT_CLASS}></div>
+            <div className='form-container'>
+                <div className='form-gradient'></div>
                  <h2 className='form-container-h2'>{title}</h2>
                     <form>
                         {children}
@@ -20,7 +19,7 @@ const Form = ({title, children, buttonFunction, buttonValue, lowLinkValue, lowLi
                                 label={buttonValue}
                                 width={buttonWidth}
                                 backgroundColor={BTN_COLOR}
-                                hoverColor={hoverColor}
+                                hoverColor={BTN_HOVER_COLOR}
                                 leaveColor={BTN_COLOR}
                             />
                         </div>
