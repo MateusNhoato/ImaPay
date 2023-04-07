@@ -1,7 +1,6 @@
 .nav {
     display:flex;
     justify-content: space-between;
-    margin-top: 1em;
     margin-bottom: 5em;
     align-items: center;
     gap: 1em;
