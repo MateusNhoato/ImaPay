@@ -2,13 +2,15 @@
     display: block;
     border: 0;
     color: var(--neutral-color-light);
+    font-size: 1rem;
     font-weight: bold;
     letter-spacing: 2px;
-    padding: 8px 20px;
+    padding: 10px 20px;
     margin-bottom: auto;
     background-color: var(--primary-color);
     border-radius: 19px;
     cursor: pointer;
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.4);
 }
 
 .button:hover{
