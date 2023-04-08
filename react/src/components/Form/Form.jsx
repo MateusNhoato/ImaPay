@@ -24,8 +24,7 @@ const Form = ({title, children, buttonFunction, buttonValue, lowLinkValue, lowLi
                                 leaveColor={BTN_COLOR}
                             />
                         </div>
-                        <div>
-                             
+                        <div>                             
                         <a className='low-link' href={lowLinkRef}>{lowLinkValue}</a>
                         </div>
                     </form>
