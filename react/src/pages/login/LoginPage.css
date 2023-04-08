@@ -1,7 +1,6 @@
 .low-link {
     font-family: 'Roboto';
     font-weight: 500;
-    /* font-size: 30px; */
     line-height: 35px;
     letter-spacing: 0.035em;
     text-decoration: none;
@@ -9,7 +8,7 @@
 }
 
 .form-container {
-    padding: 130px 0 141px 0;
+    padding: 130px 0 104px 0;
 }
 
 .form-container-h2 {
@@ -17,7 +16,7 @@
 }
 
 form div .button {
-    margin-bottom: 8px;
+    margin-bottom: 32px;
     margin-top: 15px;
 }
 
