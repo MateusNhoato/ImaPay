@@ -2,23 +2,17 @@ import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import Button from '../../components/Button/Button';
-import Form from '../../components/Form/Form';
-import Input from '../../components/Input/Input';
 import InfoCardComponent from '../../components/InfoCardComponent/InfoCardComponent';
 import NavBar from '../../components/NavBar/NavBar';
 import imapayContext from '../../context/imapayContext';
 
 import '../../App.css';
-import './TransferPage.css'
+import './compleatTransfer.css'
 
-const TransferPage = () => {
-    const { setAccountType, setTransferDate, setAgency, setAccount, setTransferValue } = useContext(imapayContext);
+const CompleatTransfer = () => {
+    const { accountType, transferDate, agency, account, transferValue } = useContext(imapayContext);
     const navigate = useNavigate();
-
-    const handleSubmit = (event) => {
-        navigate("/compleatTransfer")
-    }
-
+    
     const items = [<Button
         label={'Histórico de transações'}
         width={''}
@@ -28,29 +22,42 @@ const TransferPage = () => {
         leaveColor={'var(--primary-color)'}
     />];
 
-    const formTransfer = (
+    const navigateToTransferPage = () => {
+        navigate("/transfer")
+    }
+
+    const compleatTransfer = (
         <div>
             <NavBar items={items} />
             
             <div>
                 <div className="transfer-div">
-                    <div className="transfer-title">Transferência bancária</div>
+                    <div className="transfer-title">Transferência concluída</div>
                 </div>
-                <Form
-                    buttonValue={'Confirmar transferência'}
-                    buttonWidth={'80%'}
-                    buttonFunction={handleSubmit}
-                    hoverColor={'#111827'}
-                    leaveColor={'#288484'}
-                    gradient={false}
-                >
-                    <Input inputFunction={setAccountType}>Tipo de conta</Input>
-                    <Input inputFunction={setTransferDate}>Data de transferência</Input>
-                    <Input inputFunction={setAgency}>Agência (sem dígito)</Input>
-                    <Input inputFunction={setAccount}>Conta (com dígito)</Input>
-                    <Input inputFunction={setTransferValue}>Valor da transferência</Input>
-                </Form>
+                <h1>Tipo de conta</h1>
+                <p>{accountType}</p>
+
+                <h1>Data de transferência</h1>
+                <p>{transferDate}</p>
+
+                <h1>Agência</h1>
+                <p>{agency}</p>
+
+                <h1>Conta</h1>
+                <p>{account}</p>
+
+                <h1>Valor da transferência</h1>
+                <p>{transferValue}</p>
             </div>
+
+            <Button
+                label={'Nova transferência'}
+                width={''}
+                backgroundColor={'#111827'}
+                click={navigateToTransferPage}
+                hoverColor={'var(--secondary-color)'}
+                leaveColor={'var(--primary-color)'}
+            />
 
             <p className='saldo-atual'> Saldo atual: </p>
             <div className="infoCardComponent">
@@ -71,8 +78,8 @@ const TransferPage = () => {
     )
 
     return (
-        formTransfer
+        compleatTransfer
     )
 };
 
-export default TransferPage;
+export default CompleatTransfer;

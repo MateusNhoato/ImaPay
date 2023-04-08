@@ -15,7 +15,7 @@ const Button = ({label, width, backgroundColor, click, hoverColor, leaveColor}) 
         <>
             <button 
                 className="button"
-                style={{width, backgroundColor}} 
+                style={{width, backgroundColor}}
                 onClick={click}
                 onMouseEnter={hover}
                 onMouseLeave={leave}
