@@ -1,0 +1,26 @@
+.low-link {
+    font-family: 'Roboto';
+    font-weight: 500;
+    /* font-size: 30px; */
+    line-height: 35px;
+    letter-spacing: 0.035em;
+    text-decoration: none;
+    color: var(--primary-color);     
+}
+
+.form-container {
+    padding: 130px 0 141px 0;
+}
+
+.form-container-h2 {
+    padding: 35px;        
+}
+
+form div .button {
+    margin-bottom: 8px;
+    margin-top: 15px;
+}
+
+.form {
+    padding: 56px;
+}
