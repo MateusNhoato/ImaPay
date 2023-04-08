@@ -25,8 +25,7 @@ const Form = ({title, children, buttonFunction, buttonValue, lowLinkValue, lowLi
                                 isEnable={isEnable}
                             />
                         </div>
-                        <div>
-                             
+                        <div>                             
                         <a className='low-link' href={lowLinkRef}>{lowLinkValue}</a>
                         </div>
                     </form>
