@@ -10,6 +10,7 @@ import ImapayProvider from './context/imapayProvider'
 import CompletedTransfer from './pages/CompletedTransfer/CompletedTransfer'
 import LoginPage from './pages/login/LoginPage'
 import PasswordPage from './pages/password/PasswordPage'
+import Transaction_history from './pages/transaction_history/index'
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
   
     <ImapayProvider>
       <Routes>
+        <Route path="/transactionHistory" element={<Transaction_history />} />
         <Route path="/completedTransfer" element={<CompletedTransfer />} />
         <Route path="/transfer" element={<TransferPage />} />
         <Route path="/balance" element={<BalancePage />} />
@@ -30,4 +32,4 @@ function App() {
   )
 }
 
-export default App;
+export default App
