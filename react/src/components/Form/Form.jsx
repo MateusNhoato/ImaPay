@@ -14,7 +14,7 @@ const Form = ({title, children, buttonFunction, buttonValue, lowLinkValue, lowLi
                  <h2 className='form-container-h2'>{title}</h2>
                     <form>
                         {children}
-                        <div style={{display: "flex", "justify-content": "center"}}>
+                        <div style={{display: "flex", "justifyContent": "center"}}>
                             <Button
                                 label={buttonValue}
                                 width={buttonWidth}

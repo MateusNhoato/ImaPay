@@ -63,6 +63,11 @@
     margin-right: 13px;
 }
 
+.btn-form {
+    display: flex;
+    justify-content: center;
+}
+
 .component-cards {
     margin: 40px 20px 0 20px;
     display: flex;
@@ -94,7 +99,7 @@ h2.title-investments {
     width: 205px;
 }
 
-.salto-atual {
+.saldo-atual {
     font-family: 'Roboto', sans-serif ;
     font-size: 1.3em;
     font-weight: bold;

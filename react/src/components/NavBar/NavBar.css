@@ -8,6 +8,10 @@
     padding: 0 3em;
 }
 
+.nav img {
+    width: 185px;
+}
+
 .nav ul{
     padding: 0;
     margin:0;
