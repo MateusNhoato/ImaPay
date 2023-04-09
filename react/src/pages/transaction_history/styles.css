@@ -1,0 +1,31 @@
+svg.btn-advance-table {
+    position: absolute;
+    right: 0;
+}
+
+svg.btn-back-table {
+    position: absolute;
+}
+
+.table-container svg:hover {
+    fill: white;
+}
+
+.table-container svg {
+    border-radius: 50%;
+    fill: yellow;
+}
+
+.table-slide {
+    overflow: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+}
+
+.table-container {
+    background-color: #F4FCFD;
+    width: 90%;
+    margin: 33px auto;
+    max-width: 760px;
+    position: relative;
+}
