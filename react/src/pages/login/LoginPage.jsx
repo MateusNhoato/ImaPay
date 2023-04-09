@@ -31,6 +31,7 @@ const LoginPage = () => {
                     gradient={true}
                     // lowLinkRef = {colocar o link}
                     lowLinkValue ={'Esqueceu a senha?'}
+                    
                 >
                     <Input>E-mail</Input>
                     <Input>Senha</Input>                               
