@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 95%;
+    height: 100%;
+}
+
+.home-header {
+    margin-left: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: right;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}   
+
+
+.home-button {
+    display: flex;
+    width: 20%;
+    justify-content: space-between;
+    margin-right: 2%;
+}
+
+.home-button button{
+    font-size: 17px;
+}
+
+.home-container {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    margin-left: 6%;
+    margin-top: -3%;
+  }
+
+.imagem-principal {
+    width: 80%;
+    justify-content: left;
+    margin-top: 2%;
+    margin-left: 7%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    /* or 39px */
+}
+  
+.imagem-principal h3 {
+    font-family: Arial, sans-serif;
+    font-size: 58px;
+    font-weight: 300;
+    line-height: 70px;
+    letter-spacing: 0.08rem;
+    align-items: center;
+    text-align: justify;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    
+} 
+  .imagem-principal p {
+    margin-top: 4%;
+    margin-bottom: 5%;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight:bold;
+    font-size: 17px;
+    line-height: 150%;
+}
+.imagem-principal button{
+    margin-bottom: 10%;
+}
+.img-card{
+    display: flex;
+    width: 10%;
+}
+.img-card img{
+    width: 47em;
+    margin-top: -8%;
+}
+
+.code-breakers {
+    margin: 15px 15px;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+}
+
+.code-breakers a {
+    text-decoration: none;
+}
+
+.code-breakers a:visited {
+    color: var(--primary-color);
+}
