@@ -28,7 +28,8 @@
     cursor: pointer;
 }
 
+
 .logo:hover{
-    box-shadow: 5px 3px 3px var(--primary-color-dark);
+    background-color: #defff8;
     border-radius: 19px;
 }
