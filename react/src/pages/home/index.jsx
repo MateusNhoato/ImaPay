@@ -3,8 +3,11 @@ import Logo from "../../assets/img/logotipo.svg"
 import Button from "../../components/Button/Button"
 import styles from "./styles.css";
 import imagem from "../../assets/card-image-home.svg"
+import { useNavigate } from "react-router-dom";
+
 
 function HomePage() {
+    const navigate = useNavigate()
     return (
       <html>
         <head>
@@ -16,8 +19,8 @@ function HomePage() {
                 <img src={Logo} alt="Logotipo" />
                 </div>
                 <div className="home-button">
-                    <Button label="Cadastre-se" onClick />
-                    <Button label="Login" onClick />
+                    <Button label="Cadastre-se" click={()=>{navigate('/register')}} />
+                    <Button label="Login"  click={()=>{navigate('/login')}} />
                 </div>
             </div>    
             <div className="home-container">

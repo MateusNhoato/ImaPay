@@ -12,6 +12,7 @@ import Register from './pages/register'
 import TransferPage from './pages/transfer_page/TransferPage'
 import HomePage from './pages/home'
 import LoginPage from './pages/login/LoginPage'
+import Routes from './Routes/Routes'
 
 function App() {
 const alertButton = () => {
@@ -30,9 +31,11 @@ const items = [<Button key="1" label="Cadastre-se" backgroundColor={"var(--secon
 
       {/* <TransferPage /> */}
 
-      <LoginPage />
+      {/* <LoginPage /> */}
 
       {/* <HomePage /> */}
+
+      <Routes/>
 
     </>
   )

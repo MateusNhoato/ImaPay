@@ -8,13 +8,15 @@ import NavBar from '../../components/NavBar/NavBar';
 import '../../App.css';
 import './LoginPage.css'
 
-const LoginPage = () => {
+import { useNavigate } from "react-router-dom";
 
+const LoginPage = () => {
+    const navigate = useNavigate()
     const items = [<Button
         label={'Cadastre-se'}
         width={''}
         backgroundColor={'#111827'}
-        click={() => {alert('Cadastre-se')}}
+        click={()=>navigate('/register')}
         hoverColor={'var(--primary-color)'}
         leaveColor={'var(--secondary-color)'}
     />];
@@ -29,6 +31,7 @@ const LoginPage = () => {
                     buttonValue={'Login'}
                     buttonWidth={'90%'}
                     gradient={true}
+                    buttonFunction={()=>navigate('/balance_page')}
                     // lowLinkRef = {colocar o link}
                     lowLinkValue ={'Esqueceu a senha?'}
                 >

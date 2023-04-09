@@ -5,8 +5,10 @@ import Button from '../../components/Button/Button.jsx';
 import TopTitle from '../../components/TopTitle/TopTitle.jsx';
 import InfoCardComponent from '../../components/InfoCardComponent/InfoCardComponent.jsx';
 import InvestimentTable from '../../components/InvestimentTable/InvestimentTable.jsx';
+import { useNavigate } from "react-router-dom";
 
 const BalancePage = () => {
+    const navigate = useNavigate();
     const investimentData = [
         {
             type: 'CDI',
@@ -45,7 +47,7 @@ const BalancePage = () => {
                     label={'Transferência bancária'}
                     width={''}
                     backgroundColor={''}
-                    click={() => location.href = 'https://google.com'}
+                    click={() => navigate('/transferPage')}
                 />
                 <Button
                     label={'Histórico de transações'}
