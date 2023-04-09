@@ -16,7 +16,7 @@ const TransferPage = () => {
     const navigate = useNavigate();
 
     const handleSubmit = (event) => {
-        navigate("/compleatTransfer")
+        navigate("/completedTransfer")
     }
 
     const items = [<Button
@@ -52,7 +52,7 @@ const TransferPage = () => {
                 </Form>
             </div>
 
-            <p className='saldo-atual'> Saldo atual: </p>
+            <p className="saldo-atual"> Saldo atual: </p>
             <div className="infoCardComponent">
                 <InfoCardComponent
                     title="Conta corrente"

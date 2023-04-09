@@ -32,14 +32,6 @@
     padding: 68px 0 20px 0;	
 }	
 
-.form-container-transfer {	
-    display: flex;	
-    justify-content: center;	
-    margin: 74px auto 15px auto;	
-    width: 55%;	
-    background-color: white;	
-    padding: 68px 0 20px 0;	
-}
 
 .low-link {
     font-family: 'Roboto', sans-serif;
@@ -63,7 +55,7 @@ form div .button{
     height: 56px;
     left: 570px;
     top: 65px;
-    font-family:'arial';
+    font-family:'arial', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 30px;

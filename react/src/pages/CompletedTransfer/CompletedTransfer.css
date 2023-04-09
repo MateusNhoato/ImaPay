@@ -1,3 +1,10 @@
+@media (max-width: 912px) {
+    button {
+        min-width: 25%;
+        
+    }
+}
+
 .transfer-container+.form-box {
     box-shadow: 0;
 }
@@ -6,6 +13,28 @@
     display: flex;
     justify-content: center;
     margin-bottom: -70px;
+}
+
+.transfer-completed {	
+    display: flex;	
+    justify-content: center;	
+    flex-direction: column;
+    margin: 74px auto 15px auto;	
+    width: 55%;	
+    background-color: white;	
+    padding: 68px 0 20px 0;	
+}
+
+.transfer-completed p { 
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+
+.transfer-completed h2 {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
 }
 
 .transfer-title {

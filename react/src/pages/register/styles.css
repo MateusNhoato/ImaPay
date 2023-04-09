@@ -1,13 +1,8 @@
-.button-box {
-    width: fit-content;
-    margin: 15px 21px 0 auto;
-}
-
-.form-container {
+.form-box {
     background-color: white;
     border-radius: 12px;
-    padding: 68px 0 20px 0;
     box-shadow: 6px 5px 6px gray;
+    margin: 10px 100px;
 }
 
 .form-container-h2 {
