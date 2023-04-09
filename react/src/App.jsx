@@ -16,6 +16,7 @@ import HomePage from './pages/home'
 import ImapayProvider from './context/imapayProvider'
 import CompleatTransfer from './pages/compleatTransfer/compleatTransfer'
 import LoginPage from './pages/login/LoginPage'
+import PasswordPage from './pages/password/PasswordPage'
 
 
 function App() {
@@ -35,6 +36,7 @@ const items = [<Button key="1" label="Cadastre-se" backgroundColor={"var(--secon
         <Route path="/balance" element={<BalancePage />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/password" element={<PasswordPage />} />
         <Route path="/" element={<HomePage />} />
       </Routes>
     </ImapayProvider>
