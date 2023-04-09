@@ -1,27 +1,35 @@
 import React from "react";
+
 import Form from "../../components/Form/Form";
 import Input from "../../components/Input/Input";
 import Button from "../../components/Button/Button";
+import NavBar from "../../components/NavBar/NavBar";
+
+import '../../components/Form/Form.css'
 import './styles.css';
 
 const Register = () => {
+
+    const items = [<Button
+        label={'Login'}
+        width={''}
+        backgroundColor={'var(--primary-color)'}
+        click={() => {alert('Login')}}
+        hoverColor={'var(--secondary-color)'}
+        leaveColor={'var(--primary-color)'}
+    />];
+
     return (
         <>
-            <div className='img-logo-box'>
-                <img src="/src/assets/img/logotipo.svg" alt="Logo" width="20%" />
+            <div>
+                <NavBar items={items} />
             </div>
-
-            <div className='button-box'>
-                <Button
-                    label={'Login'}
-                />
-            </div>
-
             <div className='form-box'>
                 <Form
                     title={'Crie uma conta'}
                     buttonValue={'Criar conta'}
                     buttonWidth={'100%'}
+                    gradient={'true'}
                 >
                     <Input>Nome completo</Input>
                     <Input>CPF</Input>

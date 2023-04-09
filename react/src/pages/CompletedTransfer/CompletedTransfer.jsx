@@ -7,7 +7,8 @@ import NavBar from '../../components/NavBar/NavBar';
 import imapayContext from '../../context/imapayContext';
 
 import '../../App.css';
-import './compleatTransfer.css'
+import './CompletedTransfer.css'
+import '../../components/Button/Button.css'
 
 const CompleatTransfer = () => {
     const { accountType, transferDate, agency, account, transferValue } = useContext(imapayContext);
@@ -34,32 +35,33 @@ const CompleatTransfer = () => {
                 <div className="transfer-div">
                     <div className="transfer-title">Transferência concluída</div>
                 </div>
-                <h1>Tipo de conta</h1>
-                <p>{accountType}</p>
-
-                <h1>Data de transferência</h1>
-                <p>{transferDate}</p>
-
-                <h1>Agência</h1>
-                <p>{agency}</p>
-
-                <h1>Conta</h1>
-                <p>{account}</p>
-
-                <h1>Valor da transferência</h1>
-                <p>{transferValue}</p>
+                
+                <div className="transfer-completed">
+                    <h2>Tipo de conta</h2>
+                    <p>{accountType}</p>
+                    <h2>Data de transferência</h2>
+                    <p>{transferDate}</p>
+                    <h2>Agência</h2>
+                    <p>{agency}</p>
+                    <h2>Conta</h2>
+                    <p>{account}</p>
+                    <h2>Valor da transferência</h2>
+                    <p>{transferValue}</p>
+                </div>
             </div>
 
-            <Button
-                label={'Nova transferência'}
-                width={''}
-                backgroundColor={'#111827'}
-                click={navigateToTransferPage}
-                hoverColor={'var(--secondary-color)'}
-                leaveColor={'var(--primary-color)'}
-            />
+            <div className="btn-form">
+                <Button
+                    label={'Nova transferência'}
+                    width={'25%'}
+                    backgroundColor={'var(--secondary-color)'}
+                    click={navigateToTransferPage}
+                    hoverColor={'var(--primary-color)'}
+                    leaveColor={'var(--secondary-color)'}
+                />
+            </div>
 
-            <p className='saldo-atual'> Saldo atual: </p>
+            <p className="saldo-atual"> Saldo atual: </p>
             <div className="infoCardComponent">
                 <InfoCardComponent
                     title="Conta corrente"
