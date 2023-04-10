@@ -6,14 +6,15 @@ import Button from "../../components/Button/Button";
 import NavBar from "../../components/NavBar/NavBar";
 
 import '../../components/Form/Form.css'
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
-
+    const navigate = useNavigate() 
     const items = [<Button
         label={'Login'}
         width={''}
         backgroundColor={'var(--primary-color)'}
-        click={() => {alert('Login')}}
+        click={() => navigate('/login')}
         hoverColor={'var(--secondary-color)'}
         leaveColor={'var(--primary-color)'}
     />];

@@ -4,7 +4,7 @@ import Button from "../../components/Button/Button";
 import NavBar from "../../components/NavBar/NavBar";
 import InfoCardComponent from "../../components/InfoCardComponent/InfoCardComponent";
 import TopTitle from "../../components/TopTitle/TopTitle";
-
+import { useNavigate } from "react-router-dom";
 
 
 import "./styles.css";
@@ -226,6 +226,7 @@ const tableData = [
   }];
 
 const TransactionHistory = () => {
+  const navigate = useNavigate();
   const tableSlide = useRef();
   let scrollPosition = 0;
 
@@ -243,7 +244,7 @@ const TransactionHistory = () => {
     label={'Saldo'}
     width={''}
     backgroundColor={'#111827'}
-    click={() => {alert('balance page')}}
+    click={() => navigate('/balance')}
     hoverColor={'var(--secondary-color)'}
     leaveColor={'var(--primary-color)'}/>,
 
@@ -251,7 +252,7 @@ const TransactionHistory = () => {
     label={'Transferência bancária'}
     width={''}
     backgroundColor={'#111827'}
-    click={() => {alert('Transferência bancária')}}
+    click={() => navigate('/transferPage')}
     hoverColor={'var(--secondary-color)'}
     leaveColor={'var(--primary-color)'}/>
 ];

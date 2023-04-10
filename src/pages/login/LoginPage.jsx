@@ -6,14 +6,15 @@ import Input from '../../components/Input/Input';
 import NavBar from '../../components/NavBar/NavBar';
 
 import '../../App.css';
+import { useNavigate } from 'react-router-dom';
 
 const LoginPage = () => {
-
+    const navigate = useNavigate()
     const items = [<Button
         label={'Cadastre-se'}
         width={''}
         backgroundColor={'#111827'}
-        click={() => {alert('Cadastre-se')}}
+        click={() => navigate('/register')}
         hoverColor={'var(--primary-color)'}
         leaveColor={'var(--secondary-color)'}
     />];
