@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import {React, useState, useRef} from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import Button from '../../components/Button/Button';
@@ -6,18 +6,28 @@ import Form from '../../components/Form/Form';
 import Input from '../../components/Input/Input';
 import InfoCardComponent from '../../components/InfoCardComponent/InfoCardComponent';
 import NavBar from '../../components/NavBar/NavBar';
-import imapayContext from '../../context/imapayContext';
+
 
 import '../../App.css';
 import './TransferPage.css'
 
 const TransferPage = () => {
-    const { setAccountType, setTransferDate, setAgency, setAccount, setTransferValue } = useContext(imapayContext);
+
+    const [accountType, setAccountType] = useState('');
+    const [transferDate, setTransferDate] = useState('');
+    const [bankAgency, setbankAgency] = useState('');
+    const [accountNumber, setAccountNuber] = useState('');
+    const [valueTransfer , setValueTransfer] = useState('');
+
+    const alertInvalidFields = useRef();
+
     const navigate = useNavigate();
 
-    const handleSubmit = (event) => {
-        navigate("/completedTransfer")
-    }
+
+    // foi alterado o local para execucao do navigate esta no handle submit do form
+    // const handleSubmit = (event) => {
+    //     navigate("/completedTransfer")
+    // }
 
     const items = [<Button
         label={'Saldo'}
@@ -51,12 +61,74 @@ const TransferPage = () => {
                     hoverColor={'#111827'}
                     leaveColor={'#288484'}
                     gradient={false}
+                    handleSubmit={event => {
+                        event.preventDefault();
+                        if(!accountType){ 
+                            alertInvalidFields.current.innerText = 'Tipo da conta não informado';
+                            return;
+                        }
+
+                        if(!transferDate){ 
+                            alertInvalidFields.current.innerText = 'Informe uma data para transferência';
+                            return;
+                        }
+                        if(!bankAgency){ 
+                            alertInvalidFields.current.innerText = 'Informe o número da agência';
+                            return;
+                        }
+                        if(!accountNumber){ 
+                            alertInvalidFields.current.innerText = 'Informe o número da conta ';
+                            return;
+                        }
+                        if(!valueTransfer ){ 
+                            alertInvalidFields.current.innerText = 'Informe o valor da transferência';
+                            return;
+                        }
+                        navigate("/completedTransfer")
+
+                    }}
+
                 >
-                    <Input inputFunction={setAccountType}>Tipo de conta</Input>
-                    <Input inputFunction={setTransferDate}>Data de transferência</Input>
-                    <Input inputFunction={setAgency}>Agência (sem dígito)</Input>
-                    <Input inputFunction={setAccount}>Conta (com dígito)</Input>
-                    <Input inputFunction={setTransferValue}>Valor da transferência</Input>
+                    <p className='alert-invalid-fields' ref={alertInvalidFields}></p>
+                    <Input
+                        type={'text'}
+                        value={accountType}
+                        onChange={e => {
+                            setAccountType(e.target.value);
+                        }}
+                    >Tipo de conta</Input>
+
+                    <Input
+                        isDate={true}
+                        value={transferDate}
+                        onChange={e => {
+                            setTransferDate(e.target.value);
+                        }}
+                    >Data de transferência</Input>
+
+                    <Input
+                        type={'number'}
+                        value={bankAgency}
+                        onChange={e => {
+                            setbankAgency(e.target.value);
+                        }}                      
+                    >Agência (sem dígito)</Input>
+
+                    <Input
+                        type={'number'}
+                        value={accountNumber}
+                        onChange={e => {
+                            setAccountNuber(e.target.value);
+                        }}                 
+                    >Conta (com dígito)</Input>
+
+                    <Input
+                        type={'number'}
+                        value={valueTransfer}
+                        onChange={e => {
+                            setValueTransfer(e.target.value);
+                        }}       
+                    >Valor da transferência</Input>
                 </Form>
             </div>
 
