@@ -30,7 +30,7 @@
 
 .transaction-history-container .table-container svg {
 	border-radius: 50%;
-	fill: yellow;
+	fill: var(--primary-color-dark);
 }
 
 .transaction-history-container .table-slide {

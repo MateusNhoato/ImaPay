@@ -1,9 +1,15 @@
+.up-div-container {
+    font-family: 'Roboto';
+}
+
 .up-div-container .title {
     font-size: 34px;
     color: #000000;
+    font-weight: 500;
 }
 
 .up-div-container .subtitle {
     font-size: 22px;
+    font-weight: 400;
     color: #288484;
 }

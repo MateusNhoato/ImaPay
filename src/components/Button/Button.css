@@ -2,7 +2,8 @@
     display: block;
     border: 0;
     color: var(--neutral-color-light);
-    font-weight: bold;
+    font-family: 'Roboto';
+    font-weight: 400;
     font-size: 1rem;
     letter-spacing: 2px;
     padding: 10px 20px;

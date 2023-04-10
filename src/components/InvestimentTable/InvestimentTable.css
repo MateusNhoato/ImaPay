@@ -2,6 +2,7 @@
 	width: 60%;
 	margin: auto;
 	border-collapse: collapse;
+	font-family: 'Roboto', sans-serif;
 }
 
 .investiment-table-box tr:nth-child(1) {

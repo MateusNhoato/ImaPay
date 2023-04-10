@@ -41,7 +41,6 @@ function HomePage() {
                             label={'Clique aqui para saber mais'}
                             width={''}
                             backgroundColor={'var(--secondary-color)'}
-                            click={() => {alert('Mais informações')}}
                             hoverColor={'var(--primary-color)'}
                             leaveColor={'var(--secondary-color)'}
                         />
