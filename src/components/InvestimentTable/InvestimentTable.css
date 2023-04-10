@@ -1,53 +1,47 @@
-* {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
 .investiment-table-box table {
-  width: 60%;
-  margin: auto;
-  border-collapse: collapse;
+	width: 60%;
+	margin: auto;
+	border-collapse: collapse;
 }
 
 .investiment-table-box tr:nth-child(1) {
-  position: relative;
-  background-color: #288484;
-  color: white;
+	position: relative;
+	background-color: #288484;
+	color: white;
 }
 
 .investiment-table-box th:nth-child(1) {
-  display: block;
+	display: block;
 }
 
 .investiment-table-box tr:nth-child(1)::before {
-  content: '';
-  height: -webkit-fill-available;
-  width: 34px;
-  position: absolute;
-  left: -15px;
-  z-index: -1;
-  border-radius: 50%;
-  background-color: #288484;
+	content: '';
+	height: -webkit-fill-available;
+	width: 34px;
+	position: absolute;
+	left: -15px;
+	z-index: -1;
+	border-radius: 50%;
+	background-color: #288484;
 }
 
 .investiment-table-box tr:nth-child(1)::after {
-  content: '';
-  height: -webkit-fill-available;
-  width: 34px;
-  position: absolute;
-  right: -15px;
-  z-index: -1;
-  border-radius: 50%;
-  background-color: #288484;
+	content: '';
+	height: -webkit-fill-available;
+	width: 34px;
+	position: absolute;
+	right: -15px;
+	z-index: -1;
+	border-radius: 50%;
+	background-color: #288484;
 }
 
 .investiment-table-box td,
 th {
-  text-align: left;
-  padding: 8px;
+	text-align: left;
+	padding: 8px;
 }
 
 .investiment-table-box tr:nth-child(even) {
-  background-color: #dddddd;
+	background-color: #dddddd;
 }

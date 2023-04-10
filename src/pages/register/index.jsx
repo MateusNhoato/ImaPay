@@ -5,9 +5,10 @@ import Input from "../../components/Input/Input";
 import Button from "../../components/Button/Button";
 import NavBar from "../../components/NavBar/NavBar";
 import { useNavigate } from "react-router-dom";
+import './styles.css';
 
 
-import '../../components/Form/Form.css'
+// import '../../components/Form/Form.css'
 
 
 const Register = () => {
@@ -23,23 +24,25 @@ const Register = () => {
 
     return (
         <>
-            <div>
-                <NavBar items={items} />
-            </div>
-            <div className='form-box'>
-                <Form
-                    title={'Crie uma conta'}
-                    buttonValue={'Criar conta'}
-                    buttonWidth={'60%'}
-                    gradient={'true'}
-                >
-                    <Input>Nome completo</Input>
-                    <Input>CPF</Input>
-                    <Input>Celular</Input>
-                    <Input>E-mail</Input>
-                    <Input>Endereço</Input>
-                    <Input>Senha</Input>
-                </Form>
+            <div className="register-container">
+                <div>
+                    <NavBar items={items} />
+                </div>
+                <div className='form-box'>
+                    <Form
+                        title={'Crie uma conta'}
+                        buttonValue={'Criar conta'}
+                        buttonWidth={'60%'}
+                        gradient={'true'}
+                    >
+                        <Input>Nome completo</Input>
+                        <Input>CPF</Input>
+                        <Input>Celular</Input>
+                        <Input>E-mail</Input>
+                        <Input>Endereço</Input>
+                        <Input>Senha</Input>
+                    </Form>
+                </div>
             </div>
         </>
     )

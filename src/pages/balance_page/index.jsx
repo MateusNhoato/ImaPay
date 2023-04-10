@@ -1,6 +1,5 @@
 import React from 'react';
 
-// import Logo from '../../components/Logo/Logo.jsx';
 import Button from '../../components/Button/Button.jsx';
 import TopTitle from '../../components/TopTitle/TopTitle.jsx';
 import InfoCardComponent from '../../components/InfoCardComponent/InfoCardComponent.jsx';
@@ -9,6 +8,7 @@ import NavBar from '../../components/NavBar/NavBar.jsx';
 import { useContext } from 'react';
 import imapayContext from '../../context/imapayContext';
 import { useNavigate } from 'react-router-dom';
+import './styles.css';
 
 const BalancePage = () => {
     const navigate = useNavigate()
@@ -57,42 +57,35 @@ const BalancePage = () => {
     
     return (
         <>
-            <NavBar items={items} />
+            <div className='balance-container'>
+                <NavBar items={items} />
 
-            <TopTitle
-                title='Olá, seja bem-vindo!'
-                subtitle='Saldo atual:'
-                styleTitle={{
-                    fontSize: '27px',
-                    fontWeight: 'bold',
-                }}
-                styleSubtitle={{
-                    left: '-100px',
-                    top: '33px',
-                    fontSize: '17px',
-                }}
-            />           
-            
-            <div className='component-cards'>
-                <InfoCardComponent
-                    title='Conta corrente'
-                    value='5.472,00'
-                />
-                <InfoCardComponent
-                    title='Investimentos'
-                    value='22.652,00'
-                />
-                <InfoCardComponent
-                    title='Poupança'
-                    value='642,00'
+                <TopTitle
+                    title='Olá, seja bem-vindo!'
+                    subtitle='Saldo atual:'
+                />           
+
+                <div className='component-cards'>
+                    <InfoCardComponent
+                        title='Conta corrente'
+                        value='5.472,00'
+                    />
+                    <InfoCardComponent
+                        title='Investimentos'
+                        value='22.652,00'
+                    />
+                    <InfoCardComponent
+                        title='Poupança'
+                        value='642,00'
+                    />
+                </div>
+
+                <hr />        
+
+                <InvestimentTable
+                    investimentData={investimentData}
                 />
             </div>
-
-            <hr />        
-
-            <InvestimentTable
-                investimentData={investimentData}
-            />
         </>
     )
 }

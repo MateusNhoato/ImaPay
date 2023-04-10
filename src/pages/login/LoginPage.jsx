@@ -7,7 +7,8 @@ import Form from '../../components/Form/Form';
 import Input from '../../components/Input/Input';
 import NavBar from '../../components/NavBar/NavBar';
 
-import '../../App.css';
+// import '../../App.css';
+import './styles.css';
 
 const LoginPage = () => {
     const { setUserLogin, isUserLoggedIn } = useContext(imapayContext);
@@ -23,7 +24,7 @@ const LoginPage = () => {
     />];
 
     return (
-        <div>
+        <div className='login-container'>
             <NavBar items={items} />
 
             <div className='form-box'>

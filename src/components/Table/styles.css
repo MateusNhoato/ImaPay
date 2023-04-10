@@ -1,44 +1,44 @@
 .table-box table tr th.monthYearTransaction {
-    text-align: center;
-    height: 47px;
-    color: white;
-    background-color: #288484;
+	text-align: center;
+	height: 47px;
+	color: white;
+	background-color: #288484;
 }
 
 .table-box th {
-    color: gray;
+	color: gray;
 }
 
 .table-box th,
 td,
 tr {
-    text-align: left;
-    padding: 5px;
+	text-align: left;
+	padding: 5px;
 }
 
 .table-box table {
-    width: 100%;
-    border-collapse: collapse;
+	width: 100%;
+	border-collapse: collapse;
 }
 
 .table-box {
-    display: inline-flex;
-    width: 100%;
+	display: inline-flex;
+	width: 100%;
 }
 
 .table-box td:nth-child(2) {
-    color: teal;
+	color: teal;
 }
 
 .table-box td:last-child {
-    text-align: end;
+	text-align: end;
 }
 
 .table-box th:last-child {
-    text-align: end;
+	text-align: end;
 }
 
 .table-box table tbody tr:hover {
-    background-color: white;
-    cursor: pointer;
+	background-color: white;
+	cursor: pointer;
 }
