@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-import {React, useState, useRef} from 'react';
-import InfoCardComponent from '../../components/InfoCardComponent/InfoCardComponent';
-=======
-import {React, useContext} from 'react';
+import {React, useState, useRef, useContext} from 'react';
 import { useNavigate } from 'react-router-dom';
-
 import imapayContext from '../../context/imapayContext';
->>>>>>> Desenvolvimento
+
+import InfoCardComponent from '../../components/InfoCardComponent/InfoCardComponent';
 import Button from '../../components/Button/Button';
 import Form from '../../components/Form/Form';
 import Input from '../../components/Input/Input';
@@ -16,18 +12,13 @@ import NavBar from '../../components/NavBar/NavBar';
 import './styles.css';
 
 const LoginPage = () => {
-<<<<<<< HEAD
-
     const [loginEmail, setLoginEmail] = useState('');
     const [loginPassword , setLoginPassword] = useState('');
-
     const alertInvalidFields = useRef();
 
-=======
     const { setUserLogin, isUserLoggedIn } = useContext(imapayContext);
     const navigate = useNavigate()
   
->>>>>>> Desenvolvimento
     const items = [<Button
         label={'Cadastre-se'}
         width={''}
