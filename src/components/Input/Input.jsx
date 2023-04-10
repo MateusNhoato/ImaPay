@@ -27,7 +27,7 @@ const Input = ({children, inputFunction}) => {
             onBlur={handleOnBlur}
             onChange={handleChange}
             className='form-data' 
-            type="text" required />
+            type="text" />
 			
             <label className={transition}>{children}</label>
         </div>
