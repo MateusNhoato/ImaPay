@@ -8,8 +8,10 @@ import InvestimentTable from '../../components/InvestimentTable/InvestimentTable
 import NavBar from '../../components/NavBar/NavBar.jsx';
 import { useContext } from 'react';
 import imapayContext from '../../context/imapayContext';
+import { useNavigate } from 'react-router-dom';
 
 const BalancePage = () => {
+    const navigate = useNavigate()
     const investimentData = [
         {
             type: 'CDI',
@@ -42,7 +44,7 @@ const BalancePage = () => {
         label={'Histórico de transações'}
         width={''}
         backgroundColor={'#111827'}
-        click={() => {alert('Histórico de transações')}}
+        click={() => navigate('/transactionHistory')}
         hoverColor={'var(--secondary-color)'}
         leaveColor={'var(--primary-color)'}/>,
         
@@ -50,7 +52,7 @@ const BalancePage = () => {
         label={'Transferência bancária'}
         width={''}
         backgroundColor={''}
-        click={() => alert('Transferência')}/>
+        click={() => navigate('/transferPage')}/>
     ];
     
     return (

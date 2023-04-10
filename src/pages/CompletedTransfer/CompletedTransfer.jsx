@@ -18,13 +18,13 @@ const CompleatTransfer = () => {
         label={'Histórico de transações'}
         width={''}
         backgroundColor={'#111827'}
-        click={() => {alert('Histórico de transações')}}
+        click={() => navigate('/transactionHistory')}
         hoverColor={'var(--secondary-color)'}
         leaveColor={'var(--primary-color)'}
     />];
 
     const navigateToTransferPage = () => {
-        navigate("/transfer")
+        navigate("/transferPage")
     }
 
     const compleatTransfer = (
