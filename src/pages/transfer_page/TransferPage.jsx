@@ -20,7 +20,7 @@ const TransferPage = () => {
         label={'Saldo'}
         width={''}
         backgroundColor={'#111827'}
-        click={() => navigate('/balance')}
+        click={() => navigate('/user/balance')}
         hoverColor={'var(--secondary-color)'}
         leaveColor={'var(--primary-color)'}/>,
     
@@ -28,7 +28,7 @@ const TransferPage = () => {
         label={'Histórico de transações'}
         width={''}
         backgroundColor={'#111827'}
-        click={() => navigate('/transactionHistory')}
+        click={() => navigate('/user/transactionHistory')}
         hoverColor={'var(--secondary-color)'}
         leaveColor={'var(--primary-color)'}/>
     ];
@@ -44,7 +44,7 @@ const TransferPage = () => {
                 <Form
                     buttonValue={'Confirmar transferência'}
                     buttonWidth={'80%'}
-                    buttonFunction={() => navigate('/completedTransfer')}
+                    buttonFunction={() => navigate('/user/completedTransfer')}
                     hoverColor={'#111827'}
                     leaveColor={'#288484'}
                     gradient={false}

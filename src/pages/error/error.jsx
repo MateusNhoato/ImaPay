@@ -26,7 +26,7 @@ const Error = () => {
         <NavBar items={items}/>
         <div className='error-container'>
             <h2>Aconteceu algum erro!</h2>
-            <a>Voltar para página inicial.</a>
+            <a onClick={()=> navigate('/')}>Voltar para página inicial.</a>
         </div>
         </>  );
 }

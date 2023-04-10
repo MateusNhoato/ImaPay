@@ -39,6 +39,7 @@
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
     color: var(--primary-color);
+    cursor: pointer;
 }
 
 form div{

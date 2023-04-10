@@ -244,7 +244,7 @@ const TransactionHistory = () => {
     label={'Saldo'}
     width={''}
     backgroundColor={'#111827'}
-    click={() => navigate('/balance')}
+    click={() => navigate('/user/balance')}
     hoverColor={'var(--secondary-color)'}
     leaveColor={'var(--primary-color)'}/>,
 
@@ -252,7 +252,7 @@ const TransactionHistory = () => {
     label={'Transferência bancária'}
     width={''}
     backgroundColor={'#111827'}
-    click={() => navigate('/transferPage')}
+    click={() => navigate('/user/transfer')}
     hoverColor={'var(--secondary-color)'}
     leaveColor={'var(--primary-color)'}/>
 ];

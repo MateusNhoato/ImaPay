@@ -15,16 +15,24 @@ const CompleatTransfer = () => {
     const navigate = useNavigate();
     
     const items = [<Button
+        label={'Saldo'}
+        width={''}
+        backgroundColor={'#111827'}
+        click={() => navigate('/user/balance')}
+        hoverColor={'var(--secondary-color)'}
+        leaveColor={'var(--primary-color)'}/>,
+
+        <Button
         label={'Histórico de transações'}
         width={''}
         backgroundColor={'#111827'}
-        click={() => navigate('/transactionHistory')}
+        click={() => navigate('/user/transactionHistory')}
         hoverColor={'var(--secondary-color)'}
         leaveColor={'var(--primary-color)'}
     />];
 
     const navigateToTransferPage = () => {
-        navigate("/transferPage")
+        navigate('/user/transfer')
     }
 
     const compleatTransfer = (

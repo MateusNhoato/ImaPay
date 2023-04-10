@@ -44,7 +44,7 @@ const BalancePage = () => {
         label={'Histórico de transações'}
         width={''}
         backgroundColor={'#111827'}
-        click={() => navigate('/transactionHistory')}
+        click={() => navigate('/user/transactionHistory')}
         hoverColor={'var(--secondary-color)'}
         leaveColor={'var(--primary-color)'}/>,
         
@@ -52,7 +52,7 @@ const BalancePage = () => {
         label={'Transferência bancária'}
         width={''}
         backgroundColor={''}
-        click={() => navigate('/transferPage')}/>
+        click={() => navigate('/user/transfer')}/>
     ];
     
     return (

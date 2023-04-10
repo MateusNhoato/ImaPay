@@ -15,15 +15,15 @@ const Routing = ()=>{
     return(
         <Router>
             <Routes>
-                <Route path="/balance" element={<Balance/>}></Route>
-                <Route path="/completedTransfer" element={<CompleatTransfer/>}></Route>
-                <Route path="/*" element={<Error/>}></Route>
-                <Route path="/" element={<HomePage/>}></Route>
                 <Route path="/login" element={<LoginPage/>}></Route>
-                <Route path="/password" element={<PasswordPage/>}></Route>
                 <Route path="/register" element={<Register/>}></Route>
-                <Route path="/transactionHistory" element={<TransactionHistory/>}></Route>
-                <Route path="/transferPage" element={<TransferPage/>}></Route>
+                <Route path="/password" element={<PasswordPage/>}></Route>
+                <Route path="/user/balance" element={<Balance/>}></Route>
+                <Route path="/user/transfer" element={<TransferPage/>}></Route>                
+                <Route path="/user/completedTransfer" element={<CompleatTransfer/>}></Route>             
+                <Route path="/user/transactionHistory" element={<TransactionHistory/>}></Route>
+                <Route path="/" element={<HomePage/>}></Route>
+                <Route path="/*" element={<Error/>}></Route>
             </Routes>
         </Router>
     )
