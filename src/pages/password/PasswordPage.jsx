@@ -7,13 +7,14 @@ import NavBar from '../../components/NavBar/NavBar';
 
 import '../../App.css';
 import './PasswordPage.css'
+import { useNavigate } from 'react-router-dom';
 const PasswordPage = () => {
-
+    const navigate = useNavigate()
     const items = [<Button
         label={'Cadastre-se'}
         width={''}
         backgroundColor={'var(--secondary-color)'}
-        click={() => {alert('Cadastre-se')}}
+        click={() => navigate('/register')}
         hoverColor={'var(--primary-color)'}
         leaveColor={'var(--secondary-color)'}
     />,
@@ -21,13 +22,13 @@ const PasswordPage = () => {
         label={'Login'}
         width={''}
         backgroundColor={'var(--primary-color)'}
-        click={() => {alert('Login')}}
+        click={() => navigate('/login')}
         hoverColor={'var(--secondary-color)'}
         leaveColor={'var(--primary-color)'}
     />];
 
     return (
-        <div>
+        <div className='password-container'>
             <NavBar items={items} />
 
             <div className='form-box'>
@@ -38,7 +39,7 @@ const PasswordPage = () => {
                     buttonWidth={'90%'}
                     gradient={true}
                 >
-                    <h3 className='form-h3'>Forneça o E-mail cadastrado e enviaremos o código para alterar a senha</h3>
+                    <h3 className='form-h3'>Forneça o e-mail cadastrado e enviaremos o código para alterar a senha</h3>
                     <div className='form-input'><Input>E-mail</Input></div>                                                                       
                 </Form>              
                 

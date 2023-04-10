@@ -15,15 +15,12 @@ const TransferPage = () => {
     const { setAccountType, setTransferDate, setAgency, setAccount, setTransferValue } = useContext(imapayContext);
     const navigate = useNavigate();
 
-    const handleSubmit = (event) => {
-        navigate("/completedTransfer")
-    }
 
     const items = [<Button
         label={'Saldo'}
         width={''}
         backgroundColor={'#111827'}
-        click={() => {alert('balance page')}}
+        click={() => navigate('/user/balance')}
         hoverColor={'var(--secondary-color)'}
         leaveColor={'var(--primary-color)'}/>,
     
@@ -31,7 +28,7 @@ const TransferPage = () => {
         label={'Histórico de transações'}
         width={''}
         backgroundColor={'#111827'}
-        click={() => {alert('Histórico de transações')}}
+        click={() => navigate('/user/transactionHistory')}
         hoverColor={'var(--secondary-color)'}
         leaveColor={'var(--primary-color)'}/>
     ];
@@ -47,7 +44,7 @@ const TransferPage = () => {
                 <Form
                     buttonValue={'Confirmar transferência'}
                     buttonWidth={'80%'}
-                    buttonFunction={handleSubmit}
+                    buttonFunction={() => navigate('/user/completedTransfer')}
                     hoverColor={'#111827'}
                     leaveColor={'#288484'}
                     gradient={false}
