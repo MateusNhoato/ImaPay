@@ -1,5 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router';
+
 import Button from '../Button/Button'
+
+
 
 import './Form.css'
 
@@ -7,6 +11,7 @@ const Form = ({hundleSubmit,title, children, buttonFunction, buttonValue, lowLin
     const BTN_COLOR = 'var(--secondary-color)';
     const GRADIENT_CLASS = gradient ? "form-gradient" : "form-no-gradient";	
     const FORM_CLASS = gradient ? "form-container" : "form-container-transfer";
+    const navigate = useNavigate();
 
     return (
         <>
@@ -28,7 +33,7 @@ const Form = ({hundleSubmit,title, children, buttonFunction, buttonValue, lowLin
                             </div>
 
                         <div>                             
-                        <a className='low-link' href={lowLinkRef}>{lowLinkValue}</a>
+                        <a className='low-link' onClick={() => navigate(`${lowLinkRef}`)}>{lowLinkValue}</a>
                         </div>
                         
                         </form>

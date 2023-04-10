@@ -8,6 +8,7 @@ function ImapayProvider({children}){
     const [agency, setAgency] = useState(0);
     const [account, setAccount] = useState(0);
     const [transferValue, setTransferValue] = useState(0);
+    const [isUserLoggedIn, setUserLogin] = useState(false);
 
     return(
         <imapayContext.Provider
@@ -21,7 +22,9 @@ function ImapayProvider({children}){
                 account,
                 setAccount,
                 transferValue,
-                setTransferValue
+                setTransferValue,
+                isUserLoggedIn,
+                setUserLogin
             }}
         >
             {children}

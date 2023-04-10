@@ -2,14 +2,15 @@ import React from 'react';
 import NavBar from '../../components/NavBar/NavBar';
 import Button from '../../components/Button/Button';
 import './error.css'
-
+import { useNavigate } from 'react-router-dom';
 
 const Error = () => {
+    const navigate = useNavigate()
     const items = [<Button
         label={'Cadastre-se'}
         width={''}
         backgroundColor={'var(--secondary-color)'}
-        click={() => {alert('Cadastre-se')}}
+        click={() => navigate('/register')}
         hoverColor={'var(--primary-color)'}
         leaveColor={'var(--secondary-color)'}
     />,
@@ -17,7 +18,7 @@ const Error = () => {
         label={'Login'}
         width={''}
         backgroundColor={'var(--primary-color)'}
-        click={() => {alert('Login')}}
+        click={() => navigate('/login')}
         hoverColor={'var(--secondary-color)'}
         leaveColor={'var(--primary-color)'}
     />];
@@ -25,7 +26,7 @@ const Error = () => {
         <NavBar items={items}/>
         <div className='error-container'>
             <h2>Aconteceu algum erro!</h2>
-            <a>Voltar para página inicial.</a>
+            <a onClick={()=> navigate('/')}>Voltar para página inicial.</a>
         </div>
         </>  );
 }
