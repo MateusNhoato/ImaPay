@@ -259,54 +259,47 @@ const TransactionHistory = () => {
 
   return (
     <>
-      <NavBar items={items} />
-      <div className="info-container">
-      <TopTitle
-                title='Olá, seja bem-vindo!'
-                subtitle='Histórico de Transações:'
-                styleTitle={{
-                    fontSize: '27px',
-                    fontWeight: 'bold',
-                }}
-                styleSubtitle={{
-                    left: '-30px',
-                    top: '33px',
-                    fontSize: '17px',
-                }}
-            />
+      <div className="transaction-history-container">
+        <NavBar items={items} />
+        <div className="info-container">
+        <TopTitle
+                  title='Olá, seja bem-vindo!'
+                  subtitle='Histórico de Transações:'
+              />
 
-       <InfoCardComponent
-                    title='Conta corrente'
-                    value='5.472,00'
-                />
-      </div>
-      
+        <InfoCardComponent
+                      title='Conta corrente'
+                      value='5.472,00'
+                  />
+        </div>
+        
 
-      <div class="table-container">
-        <svg
-          class="btn-back-table"
-          onClick={previousTable}
-          xmlns="http://www.w3.org/2000/svg"
-          height="48"
-          viewBox="0 96 960 960"
-          width="48"
-        >
-          <path d="M561 816 320 575l241-241 43 43-198 198 198 198-43 43Z" />
-        </svg>
-        <svg
-          class="btn-advance-table"
-          onClick={nextTable}
-          xmlns="http://www.w3.org/2000/svg"
-          height="48"
-          viewBox="0 96 960 960"
-          width="48"
-        >
-          <path d="m375 816-43-43 198-198-198-198 43-43 241 241-241 241Z" />
-        </svg>
-        <div class="table-slide" ref={tableSlide}>
-          {tableData.map(item => {
-            return <Table props={item} />;
-          })}
+        <div class="table-container">
+          <svg
+            class="btn-back-table"
+            onClick={previousTable}
+            xmlns="http://www.w3.org/2000/svg"
+            height="48"
+            viewBox="0 96 960 960"
+            width="48"
+          >
+            <path d="M561 816 320 575l241-241 43 43-198 198 198 198-43 43Z" />
+          </svg>
+          <svg
+            class="btn-advance-table"
+            onClick={nextTable}
+            xmlns="http://www.w3.org/2000/svg"
+            height="48"
+            viewBox="0 96 960 960"
+            width="48"
+          >
+            <path d="m375 816-43-43 198-198-198-198 43-43 241 241-241 241Z" />
+          </svg>
+          <div class="table-slide" ref={tableSlide}>
+            {tableData.map(item => {
+              return <Table props={item} />;
+            })}
+          </div>
         </div>
       </div>
     </>

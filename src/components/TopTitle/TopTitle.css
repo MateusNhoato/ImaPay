@@ -1,40 +1,9 @@
-.up-div {
-    display: flex;
-    flex-direction: row;
-    padding: 0 20px;
-    text-align: center;
-    align-items: center;
-    margin-left: 2em;
-}
-
-.title {
-    position: absolute;
-    /* width: 262px;
-    height: 64px;
-    left: 136px;
-    top: 181px; */
-
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 2.5rem;
-    line-height: 47px;
-
+.up-div-container .title {
+    font-size: 34px;
     color: #000000;
 }
 
-.subtitle {
-    position: relative;
-    width: 291px;
-    height: 34px;
-    left: 0px;
-    top: 79px;
-
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 2rem;
-    line-height: 35px;
-
+.up-div-container .subtitle {
+    font-size: 22px;
     color: #288484;
 }

@@ -28,7 +28,7 @@ const PasswordPage = () => {
     />];
 
     return (
-        <div>
+        <div className='password-container'>
             <NavBar items={items} />
 
             <div className='form-box'>
@@ -39,7 +39,7 @@ const PasswordPage = () => {
                     buttonWidth={'90%'}
                     gradient={true}
                 >
-                    <h3 className='form-h3'>Forneça o E-mail cadastrado e enviaremos o código para alterar a senha</h3>
+                    <h3 className='form-h3'>Forneça o e-mail cadastrado e enviaremos o código para alterar a senha</h3>
                     <div className='form-input'><Input>E-mail</Input></div>                                                                       
                 </Form>              
                 

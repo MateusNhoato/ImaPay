@@ -1,84 +1,79 @@
-* {
-  padding: 0;
-  margin: 0;
-}
-
 .terms-box {
-  width: 600px;
-  font-family: 'Roboto Mono', monospace;
-  background-color: white;
-  border-radius: 6px;
-  overflow: hidden;
-  box-shadow: 0 0 10px #ffffff;
-  transform: scale(0);
-  transition: transform .5s ease;
+	width: 600px;
+	font-family: 'Roboto Mono', monospace;
+	background-color: white;
+	border-radius: 6px;
+	overflow: hidden;
+	box-shadow: 0 0 10px #ffffff;
+	transform: scale(0);
+	transition: transform .5s ease;
 }
 
 .zoom-in {
-  transform: scale(1);
+	transform: scale(1);
 }
 
 .terms {
-  padding: 20px;
-  height: 350px;
-  overflow-y: scroll;
+	padding: 20px;
+	height: 350px;
+	overflow-y: scroll;
 }
 
 .transparency-bg {
-  display: flex;
-  height: 100vh;
-  align-items: center;
-  background-color: rgba(0,0,0,.3);
-  justify-content: center;
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1;
+	display: flex;
+	height: 100vh;
+	align-items: center;
+	background-color: rgba(0, 0, 0, .3);
+	justify-content: center;
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1;
 }
 
 .terms p {
-  margin-bottom: 8px;
+	margin-bottom: 8px;
 }
 
 p.terms-title {
-  text-align: center;
-  font-weight: bold;
-  font-size: 23px;
-  margin: 17px 0 17px 0;
+	text-align: center;
+	font-weight: bold;
+	font-size: 23px;
+	margin: 17px 0 17px 0;
 }
 
 .label {
-  padding: 20px;
-  display: block;
-  user-select: none;
+	padding: 20px;
+	display: block;
+	user-select: none;
 }
 
 .checkbox-container {
-  cursor: not-allowed;
+	cursor: not-allowed;
 }
 
 .checkbox-container:hover {
-  background-color: #f8ffeb;
+	background-color: #f8ffeb;
 }
 
 input[type="checkbox"] {
-  pointer-events: none;
-  margin-right: 6px;
+	pointer-events: none;
+	margin-right: 6px;
 }
 
 .hidden {
-  visibility: hidden;
+	visibility: hidden;
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+	width: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #288484; 
+	background: #288484;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #32b8b8; 
+	background: #32b8b8;
 }
