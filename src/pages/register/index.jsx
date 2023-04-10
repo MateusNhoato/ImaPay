@@ -33,6 +33,7 @@ const Register = () => {
                         title={'Crie uma conta'}
                         buttonValue={'Criar conta'}
                         buttonWidth={'60%'}
+                        buttonFunction={() => navigate('/login')}
                         gradient={'true'}
                     >
                         <Input>Nome completo</Input>
