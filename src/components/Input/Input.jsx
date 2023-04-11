@@ -2,8 +2,9 @@ import {React, useState, useRef} from 'react';
 
 import './Input.css'
 
-const Input = ({children, inputFunction}) => {
+const Input = ({children}) => {
     const [transition, setTransition] = useState('');
+    const [value, setValue] = useState('');
     const textInput = useRef();
 
     const handleOnFocus = () => {
@@ -16,12 +17,13 @@ const Input = ({children, inputFunction}) => {
     }
     
     const handleChange = (event) => {
-        inputFunction(event.target.value)
+        setValue(event.target.value)
     }
 
     return (
         <div>
             <input 
+            value={value}
             ref= {textInput} 
             onFocus={handleOnFocus} 
             onBlur={handleOnBlur}
