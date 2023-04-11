@@ -1,3 +1,83 @@
 .register-container .form-container h2 {
     margin-bottom: 29px;
 }
+
+.terms-container .terms-box {
+	width: 600px;
+	font-family: 'Roboto Mono', monospace;
+	background-color: white;
+	border-radius: 6px;
+	overflow: hidden;
+	box-shadow: 0 0 10px #ffffff;
+	transform: scale(0);
+	transition: transform .5s ease;
+}
+
+.terms-container .zoom-in {
+	transform: scale(1);
+}
+
+.terms-container .terms {
+	padding: 20px;
+	height: 350px;
+	overflow-y: scroll;
+}
+
+.terms-container .transparency-bg {
+	display: flex;
+	height: 100vh;
+	align-items: center;
+	background-color: rgba(0, 0, 0, .3);
+	justify-content: center;
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.terms-container .terms p {
+	margin-bottom: 8px;
+}
+
+.terms-container p.terms-title {
+	text-align: center;
+	font-weight: bold;
+	font-size: 23px;
+	margin: 17px 0 17px 0;
+}
+
+.terms-container .label {
+	padding: 20px;
+	display: block;
+	user-select: none;
+}
+
+.terms-container .checkbox-container {
+	cursor: not-allowed;
+}
+
+.terms-container .checkbox-container:hover {
+	background-color: #f8ffeb;
+}
+
+.terms-container input[type="checkbox"] {
+	pointer-events: none;
+	margin-right: 6px;
+}
+
+.terms-container .hidden {
+	visibility: hidden;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #288484;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #32b8b8;
+}
