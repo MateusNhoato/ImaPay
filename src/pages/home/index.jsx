@@ -9,6 +9,8 @@ import imagem from "../../assets/card-image-home.svg"
 import { useNavigate } from "react-router-dom";
 
 function HomePage() {
+    document.title = 'Ímã Pay - Home';
+
     const navigate = useNavigate()
     const items = [<Button
         label={'Cadastre-se'}

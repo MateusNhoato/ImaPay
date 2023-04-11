@@ -226,6 +226,8 @@ const tableData = [
   }];
 
 const TransactionHistory = () => {
+  document.title = 'Ímã Pay - Histórico de transações';
+
   const navigate = useNavigate();
   const tableSlide = useRef();
   let scrollPosition = 0;
