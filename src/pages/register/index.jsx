@@ -8,6 +8,8 @@ import { useNavigate } from "react-router-dom";
 import './styles.css';
 
 const Register = () => {
+    document.title = 'Ímã Pay - Cadastre-se';
+
     const navigate = useNavigate() 
     const items = [<Button
         label={'Login'}

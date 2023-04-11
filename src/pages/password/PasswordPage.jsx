@@ -9,6 +9,8 @@ import '../../App.css';
 import './PasswordPage.css'
 import { useNavigate } from 'react-router-dom';
 const PasswordPage = () => {
+    document.title = 'Ímã Pay - Recuperação de senha';
+
     const navigate = useNavigate()
     const items = [<Button
         label={'Cadastre-se'}

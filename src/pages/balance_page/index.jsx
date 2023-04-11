@@ -11,6 +11,8 @@ import { useNavigate } from 'react-router-dom';
 import './styles.css';
 
 const BalancePage = () => {
+    document.title = 'Ímã Pay - Meu saldo';
+
     const navigate = useNavigate()
     const investimentData = [
         {

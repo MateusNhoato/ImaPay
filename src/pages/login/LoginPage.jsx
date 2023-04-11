@@ -11,6 +11,8 @@ import NavBar from '../../components/NavBar/NavBar';
 import './styles.css';
 
 const LoginPage = () => {
+    document.title = 'Ímã Pay - Login';
+
     const { setUserLogin, isUserLoggedIn } = useContext(imapayContext);
     const navigate = useNavigate()
   

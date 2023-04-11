@@ -11,6 +11,8 @@ import './CompletedTransfer.css'
 import '../../components/Button/Button.css'
 
 const CompleatTransfer = () => {
+    document.title = 'Ímã Pay - Transferência concluída';
+
     const { accountType, transferDate, agency, account, transferValue } = useContext(imapayContext);
     const navigate = useNavigate();
     

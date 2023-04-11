@@ -12,6 +12,8 @@ import '../../App.css';
 import './TransferPage.css'
 
 const TransferPage = () => {
+    document.title = 'Ímã Pay - Nova transferência';
+
     const { setAccountType, setTransferDate, setAgency, setAccount, setTransferValue } = useContext(imapayContext);
     const navigate = useNavigate();
 
