@@ -1,0 +1,64 @@
+.form-container {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	flex-flow: row wrap;
+	width: 55%;
+	padding-bottom: 10px;
+}
+
+.form-gradient {
+	position: absolute;
+	width: 120%;
+	height: 90%;
+	left: auto;
+	top: 6vh;
+	background: linear-gradient(26.62deg, rgba(40, 132, 132, 0.2) 20.64%, rgba(249, 124, 89, 0) 49.82%), linear-gradient(56.79deg, rgba(40, 132, 132, 0.2) 33.79%, rgba(185, 91, 230, 0) 72.67%), linear-gradient(301.08deg, rgba(40, 132, 132, 0.2) 20.42%, rgba(252, 178, 91, 0) 60.38%), linear-gradient(141.57deg, rgba(40, 132, 132, 0.2) 19.08%, rgba(78, 173, 235, 0) 98.72%), rgba(40, 132, 132, 0.2);
+	background-blend-mode: normal, darken, normal, normal, normal;
+	filter: blur(119px);
+	border-radius: 24px;
+	z-index: -1;
+}
+
+.form-no-gradient {
+	background-color: #fff;
+}
+
+.form-container-transfer {
+	display: flex;
+	justify-content: center;
+	margin: 74px auto 15px auto;
+	width: 55%;
+	background-color: white;
+	padding: 68px 0 20px 0;
+}
+
+
+.low-link {
+	font-size: larger;
+	font-family: 'Roboto', sans-serif;
+	text-decoration: none;
+	color: var(--primary-color);
+	cursor: pointer;
+}
+
+form div {
+	position: relative;
+	text-align: center;
+}
+
+form div .button {
+	margin-bottom: 20px;
+}
+
+.form-container h2 {
+	font-family: 'arial', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 35px;
+	line-height: 112%;
+	margin-top: 1em;
+	color: var(--primary-color);
+	letter-spacing: 0.05em;
+	margin-bottom: 15px;
+}

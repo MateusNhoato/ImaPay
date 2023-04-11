@@ -1,0 +1,48 @@
+.investiment-table-box table {
+	width: 60%;
+	margin: auto;
+	border-collapse: collapse;
+	font-family: 'Roboto', sans-serif;
+}
+
+.investiment-table-box tr:nth-child(1) {
+	position: relative;
+	background-color: #288484;
+	color: white;
+}
+
+.investiment-table-box th:nth-child(1) {
+	display: block;
+}
+
+.investiment-table-box tr:nth-child(1)::before {
+	content: '';
+	height: -webkit-fill-available;
+	width: 34px;
+	position: absolute;
+	left: -15px;
+	z-index: -1;
+	border-radius: 50%;
+	background-color: #288484;
+}
+
+.investiment-table-box tr:nth-child(1)::after {
+	content: '';
+	height: -webkit-fill-available;
+	width: 34px;
+	position: absolute;
+	right: -15px;
+	z-index: -1;
+	border-radius: 50%;
+	background-color: #288484;
+}
+
+.investiment-table-box td,
+th {
+	text-align: left;
+	padding: 8px;
+}
+
+.investiment-table-box tr:nth-child(even) {
+	background-color: #dddddd;
+}

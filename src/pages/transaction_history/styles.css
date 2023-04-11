@@ -1,0 +1,71 @@
+.transaction-history-container .info-container {
+	display: flex;
+	flex-wrap: row;
+	margin: 0 5em;
+	justify-content: space-between;
+	width: auto;
+	height: 6em;
+}
+
+.transaction-history-container .info-container .infoCardComponent {
+	margin: 0;
+	padding: 0;
+	width: fit-content;
+	justify-self: flex-end;
+}
+
+
+.transaction-history-container svg.btn-advance-table {
+	position: absolute;
+	right: 0;
+}
+
+.transaction-history-container svg.btn-back-table {
+	position: absolute;
+}
+
+.transaction-history-container .table-container svg:hover {
+	fill: white;
+}
+
+.transaction-history-container .table-container svg {
+	border-radius: 50%;
+	fill: var(--primary-color-dark);
+}
+
+.transaction-history-container .table-slide {
+	overflow: hidden;
+	white-space: nowrap;
+	scroll-behavior: smooth;
+}
+
+.transaction-history-container .table-container {
+	background-color: #F4FCFD;
+	width: 90%;
+	margin: 33px auto;
+	max-width: 760px;
+	position: relative;
+}
+
+.transaction-history-container .table-container::before {
+	content: '';
+	height: 47px;
+	width: 40px;
+	background-color: #288484;
+	left: -20px;
+	position: absolute;
+	border-radius: 50%;
+	z-index: -1;
+}
+
+.transaction-history-container .table-container::after {
+	content: '';
+	height: 47px;
+	width: 40px;
+	background-color: #288484;
+	right: -20px;
+	position: absolute;
+	top: 0;
+	border-radius: 50%;
+	z-index: -1;
+}

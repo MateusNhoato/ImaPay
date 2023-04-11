@@ -10,7 +10,7 @@ Projeto Ímã Pay, do grupo Code Breakers da turma Sharp Coders.
 
 ### Front-end
 
-<img src="https://avatars.githubusercontent.com/u/113543375?v=4" width="124">| Tem 26 anos. Formada em biomedicina, está passando por uma transição de carreira. Se considera uma pessoa autoditada e adora buscar novos conhecimentos e desafios. Estuda para ser Full Stack, mas têm preferência pelo front-end. 
+<img src="https://avatars.githubusercontent.com/u/113543375?v=4" width="124">| Tem 26 anos. Formada em biomedicina, está passando por uma transição de carreira. Se considera uma pessoa autodidata e adora buscar novos conhecimentos e desafios. Estuda desenvolvimento Full Stack, mas têm preferência pelo front-end. 
 --|--
 **Stefani de Menezes Araujo Lima**  | 📍 Santos - SP
 <a href="https://github.com/stefanimalima"><img src="https://logosmarcas.net/wp-content/uploads/2020/12/GitHub-Logo.png" width="80px"></a>| <a href="https://www.linkedin.com/in/1stefanilima/"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="40px"> </a>
@@ -64,11 +64,6 @@ Projeto Ímã Pay, do grupo Code Breakers da turma Sharp Coders.
 --|--
 **Weslley Joaquim Gomes**  | 📍 Brasília - DF
 <a href="https://github.com/weslleyjoaquim"><img src="https://logosmarcas.net/wp-content/uploads/2020/12/GitHub-Logo.png" width="80px"></a>| <a href="https://www.linkedin.com/in/weslley-joaquim-gomes/"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="40px"> </a>
-
-<img src="https://avatars.githubusercontent.com/u/88977354?v=4" width="124">| Graduado em Análise e Desenvolvimento de Sistemas, e pós-graduado em Administração de Banco de Dados. Fez transição de carreira da educação para tecnologia e hoje trabalho crianda objetos em banco de dados Sql Oracle para integração entre sistemas, e com gerenciamento de projetos.
---|--
-**Vanderlândio Zeferino Da Rocha**  | 📍 Caruaru - PE
-<a href="https://github.com/Vandorc-Dev"><img src="https://logosmarcas.net/wp-content/uploads/2020/12/GitHub-Logo.png" width="80px"></a>| <a href="https://www.linkedin.com/in/vanderlandio-rocha/"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="40px"> </a>
 
 <table>
   <tr>

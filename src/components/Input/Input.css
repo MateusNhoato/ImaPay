@@ -1,0 +1,30 @@
+.form-data {
+	width: 35vw;
+	max-width: 50vw;
+	border: 0;
+	padding: 5px;
+	margin-bottom: 42px;
+	border-bottom: solid var(--form) 0.5px;
+}
+
+.form-data:focus {
+	outline: none;
+}
+
+label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: top .3s, left .3s;
+	margin-left: 15px;
+	pointer-events: none;
+	font-family: 'Lato', sans-serif;
+	font-size: 17px;
+}
+
+.label-transition {
+	top: -8px;
+	left: -15px;
+	color: gray;
+	font-size: 11px;
+}

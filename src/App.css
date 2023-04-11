@@ -1,0 +1,86 @@
+:root {
+	--background: #FFFFFF;
+	/* Fundo do site  */
+	--primary-color: #111827;
+	/* Parte da logo, títulos, alguns botões e cartão digital */
+	--primary-color-dark: #090E18;
+	--primary-color-light: #1B263D;
+	--secondary-color: #288484;
+	/* Destaque (presente em vários elementos do site) */
+	--neutral-color-dark: #050505;
+	/* Utilizada nos textos  */
+	--neutral-color-light: #FFFFFF;
+	--system-color-error: #FF001F;
+	--system-color-confirmed: #3DB949;
+	--system-color-notice: #FF7A00;
+	--form: #0e0e0e;
+	/* Utilizada em todos os formulários  */
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.btn-div button {
+	margin-right: 13px;
+}
+
+.btn-form {
+	display: flex;
+	justify-content: center;
+}
+
+.component-cards {
+	margin: 40px 20px 0 20px;
+	display: flex;
+	justify-content: space-between;
+}
+
+hr {
+	margin: 25px 20px 38px 20px;
+	background-color: #dedede;
+	width: 95%;
+	height: 2px;
+	border: 0;
+}
+
+h2.title-investments {
+	width: 60%;
+	margin: 0 auto 14px auto;
+	font-size: 18px;
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+}
+
+
+.img-logo-box {
+	width: fit-content;
+	margin: -5px 0 0 9px;
+	position: absolute;
+}
+
+.img-logo-box img {
+	width: 205px;
+}
+
+.saldo-atual {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.3em;
+	font-weight: bold;
+	color: var(--secondary-color);
+	margin: 50px 50px -40px;
+
+}
+
+.form-box {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	background-color: white;
+	border-radius: 12px;
+	box-shadow: 6px 5px 6px gray;
+	margin: 74px auto 15px auto;
+	width: fit-content;
+}

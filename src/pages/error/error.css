@@ -1,0 +1,7 @@
+.error-container{
+    margin-left: 5em;
+}
+
+.error-container a {
+    cursor: pointer;
+}

@@ -1,0 +1,53 @@
+@media (max-width: 912px) {
+	button {
+		min-width: 25%;
+
+	}
+}
+
+.transfer-container+.form-box {
+	box-shadow: 0;
+}
+
+.transfer-div {
+	display: flex;
+	justify-content: center;
+	margin-bottom: -70px;
+}
+
+.transfer-completed {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	margin: 74px auto 15px auto;
+	width: 55%;
+	background-color: white;
+	padding: 68px 0 20px 0;
+}
+
+.transfer-completed p {
+	display: flex;
+	justify-content: center;
+	margin: 5px;
+}
+
+.transfer-completed h2 {
+	display: flex;
+	justify-content: center;
+	margin: 5px;
+}
+
+.transfer-title {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 35px;
+	color: #fff;
+	border-radius: 50px;
+	width: 80%;
+	height: 1.8em;
+	display: flex;
+	justify-content: center;
+	background-color: var(--primary-color);
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.35);
+}

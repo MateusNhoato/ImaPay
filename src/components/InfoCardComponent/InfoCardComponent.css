@@ -1,0 +1,64 @@
+.infoCardComponent {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	width: 100%;
+	margin: 30px auto;
+}
+
+/* Rectangle conta corrent */
+.infoCard {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 25vw;
+	height: 70px;
+	min-width: 250px;
+	max-width: 350px;
+	background: #FFFFFF;
+	box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
+	border-radius: 20px;
+	font-family: 'Roboto', sans-serif;
+}
+
+/* Conta corrente */
+.infoCardTitle {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 27px;
+	color: #000000;
+}
+
+.InfoCardText {
+	font-family: 'Roboto', sans-serif;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 38px;
+	color: var(--letter-color);
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+}
+
+.infoCardDollarSign {
+	color: var(--aux-color2);
+}
+
+@media (max-width: 912px) {
+	div.infoCardComponent {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 70vw;
+		margin: 30px auto;
+		gap: 5px;
+	}
+
+	.infoCard {
+		width: 250px;
+	}
+}
