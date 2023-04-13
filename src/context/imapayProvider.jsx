@@ -7,7 +7,7 @@ function ImapayProvider({children}){
     const [transferDate, setTransferDate] = useState("");
     const [agency, setAgency] = useState(0);
     const [account, setAccount] = useState(0);
-    const [transferValue, setTransferValue] = useState(0);
+    const [transferAmount, setTransferAmount] = useState(0);
     const [isUserLoggedIn, setUserLogin] = useState(false);
 
     return(
@@ -21,8 +21,8 @@ function ImapayProvider({children}){
                 setAgency,
                 account,
                 setAccount,
-                transferValue,
-                setTransferValue,
+                transferAmount,
+                setTransferAmount,
                 isUserLoggedIn,
                 setUserLogin
             }}
