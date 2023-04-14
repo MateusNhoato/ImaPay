@@ -16,28 +16,27 @@ const Form = ({title, children, buttonFunction, buttonValue, lowLinkValue, lowLi
     return (
         <>
             <div className={GRADIENT_CLASS}></div>
-                <div className={FORM_CLASS}>
-                     <h2>{title}</h2>
-                        <form>
-                            {children}
-                            <div style={{display: "flex", "justifyContent": "center"}}>
-                                <Button
-                                label={buttonValue}
-                                width={buttonWidth}
-                                backgroundColor={BTN_COLOR}
-                                click={buttonFunction}
-                                hoverColor={hoverColor}
-                                leaveColor={BTN_COLOR}
-                                isEnable={isEnable}
-                            />
-                            </div>
+            <div className={FORM_CLASS}>
+                <h2>{title}</h2>
+                <form>
+                    {children}
+                    <div style={{display: "flex", "justifyContent": "center"}}>
+                        <Button
+                            label={buttonValue}
+                            width={buttonWidth}
+                            backgroundColor={BTN_COLOR}
+                            click={buttonFunction}
+                            hoverColor={hoverColor}
+                            leaveColor={BTN_COLOR}
+                            isEnable={isEnable}
+                        />
+                    </div>
 
-                        <div>                             
+                    <div>                             
                         <a className='low-link' onClick={() => navigate(`${lowLinkRef}`)}>{lowLinkValue}</a>
-                        </div>
-                        
-                        </form>
-                </div>
+                    </div>
+                </form>
+            </div>
         </>
     );
 }

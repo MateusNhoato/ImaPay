@@ -1,14 +1,18 @@
-.transfer-container+.form-box {
+.transfer-page-container {
+    font-family: 'Roboto';
+}
+
+.transfer-page-container .transfer-container+.form-box {
 	box-shadow: 0;
 }
 
-.transfer-div {
+.transfer-page-container .transfer-div {
 	display: flex;
 	justify-content: center;
 	margin-bottom: -70px;
 }
 
-.transfer-title {
+.transfer-page-container .transfer-title {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 600;
 	font-size: 20px;
@@ -21,4 +25,26 @@
 	justify-content: center;
 	background-color: var(--primary-color);
 	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.35);
+}
+
+.transfer-page-container p.alert-invalid-fields {
+    background-color: #fbffb3;
+    text-align: center;
+    margin-bottom: 21px;
+}
+
+.transfer-page-container .choose-account .account-selector-box {
+    margin: 0 7px 0 15px;
+}
+
+.transfer-page-container .choose-account {
+    text-align: start;
+    margin: 0 0 39px 0;
+    display: flex;
+    border-bottom: 1px solid;
+    padding-bottom: 10px;
+}
+
+.transfer-page-container .choose-account .account-selector-box span {
+    font-weight: 300;
 }

@@ -16,3 +16,15 @@
     margin-bottom: 32px;
     text-align: center;
 }
+
+.login-container .errorAlert {
+    margin-bottom: 12px;
+    text-align: center;
+    color: red;
+    font-family: 'roboto';
+}
+
+.login-container .fildError {
+    color: red;
+    border-color: red;
+}
