@@ -2,6 +2,8 @@
 
 Projeto Ímã Pay, do grupo Code Breakers da turma Sharp Coders.
 
+Site: https://imapay.netlify.app
+
 ## Integrantes do Projeto
 - [Front-end](#front-end)
 - [Back-end](#back-end)
@@ -10,7 +12,7 @@ Projeto Ímã Pay, do grupo Code Breakers da turma Sharp Coders.
 
 ### Front-end
 
-<img src="https://avatars.githubusercontent.com/u/113543375?v=4" width="124">| Tem 26 anos. Formada em biomedicina, está passando por uma transição de carreira. Se considera uma pessoa autodidata e adora buscar novos conhecimentos e desafios. Estuda desenvolvimento Full Stack, mas têm preferência pelo front-end. 
+<img src="https://avatars.githubusercontent.com/u/113543375?v=4" width="124">| Tem 26 anos. Formada em biomedicina, está passando por uma transição de carreira. Se considera uma pessoa determinada e apaixonada por tecnologia. Estuda para atuar como desenvolvedora Full Stack.  
 --|--
 **Stefani de Menezes Araujo Lima**  | 📍 Santos - SP
 <a href="https://github.com/stefanimalima"><img src="https://logosmarcas.net/wp-content/uploads/2020/12/GitHub-Logo.png" width="80px"></a>| <a href="https://www.linkedin.com/in/1stefanilima/"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="40px"> </a>
