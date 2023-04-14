@@ -61,9 +61,10 @@ body {
 	margin-bottom: 5%;
 	font-family: 'Roboto', sans-serif;
 	font-style: normal;
-	font-weight: bold;
+/*	font-weight: bold; */
 	font-size: 17px;
 	line-height: 150%;
+	text-align: justify;
 }
 
 .imagem-principal button {
@@ -84,6 +85,7 @@ body {
 	margin: 15px 15px;
 	font-size: 0.9rem;
 	color: var(--primary-color);
+	font-family: Arial, sans-serif;
 }
 
 .code-breakers a {
