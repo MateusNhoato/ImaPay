@@ -70,6 +70,21 @@
 	visibility: hidden;
 }
 
+.register-container .errorAlert {
+    margin-bottom: 12px;
+    text-align: center;
+    color: red;
+    margin-left: auto;
+    font-family: 'roboto';
+    max-width: 380px;
+    margin-right: auto;
+}
+
+.register-container .fildError {
+    color: red;
+    border-color: red;
+}
+
 ::-webkit-scrollbar {
 	width: 10px;
 }

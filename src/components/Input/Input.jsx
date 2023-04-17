@@ -22,8 +22,20 @@ const Input = ({children, type, isDate, maxlength, onChange, value, name, patter
         }
     }
 
+    const showHidePass = event => {
+        if(event.target.getAttribute('data-visibility') == 'hidden') {
+            event.target.dataset.visibility = '';
+            event.target.src = '\\src\\assets\\img\\password-image-lock.svg';
+            setDefineType('text');
+        } else {
+            event.target.dataset.visibility = 'hidden';
+            event.target.src = '\\src\\assets\\img\\password-image.svg';
+            setDefineType('password');
+        }
+    }
+
     return (
-        <div>
+        <div className='input-container'>
             <input 
                 value={value}
                 ref= {textInput} 
@@ -36,6 +48,11 @@ const Input = ({children, type, isDate, maxlength, onChange, value, name, patter
                 name={name}
                 required
             />
+
+            {
+                ['password', 'password-confirm'].includes(name) && <img data-visibility='hidden' onClick={showHidePass} className='password-img' src='' />
+            }
+
 			
             <label className={transition}>{children}</label>
         </div>

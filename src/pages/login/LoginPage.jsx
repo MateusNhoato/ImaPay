@@ -41,7 +41,7 @@ const LoginPage = () => {
                             const passwordInput = e.target.parentElement.parentElement.querySelector('input[type="password"]');
                             const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
                             const isValidEmail = emailRegex.test(emailInput.value);
-                            const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[$*&@#])[0-9a-zA-Z$*&@#]{8,}$/;
+                            const passwordRegex = /^(?=.*[A-Z])(?=.*[!#@$%&])(?=.*[0-9])(?=.*[a-z]).{8,}$/;
                             const isValidPassword = passwordRegex.test(passwordInput.value);
 
 
@@ -63,7 +63,6 @@ const LoginPage = () => {
                             }
 
                             if(!isValidPassword) {
-                                console.log('senha ruim')
                                 errorAlert.current.innerText = `
                                     A senha deve ter pelo menos:
                                     8 caracteres, 1 letra maiúscula, 1 letra minúscula, 1 número e 1 caractere especial !@#$%^&()
