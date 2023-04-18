@@ -265,7 +265,7 @@ const TransactionHistory = () => {
         <NavBar items={items} />
         <div className="info-container">
         <TopTitle
-                  title='Olá, seja bem-vindo!'
+                  title='Seja bem-vindo(a)!'
                   subtitle='Histórico de Transações:'
               />
 
