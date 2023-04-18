@@ -12,7 +12,7 @@
 }
 
 .investiment-table-box th:nth-child(1) {
-	display: block;
+	display: block;	
 }
 
 .investiment-table-box tr:nth-child(1)::before {
@@ -40,7 +40,11 @@
 .investiment-table-box td,
 th {
 	text-align: left;
-	padding: 8px;
+	padding: 8px;	
+}
+
+.investiment-table-box th {	
+	font-weight: 500;	
 }
 
 .investiment-table-box tr:nth-child(even) {

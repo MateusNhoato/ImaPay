@@ -63,7 +63,7 @@ const BalancePage = () => {
                 <NavBar items={items} />
 
                 <TopTitle
-                    title='Olá, seja bem-vindo!'
+                    title='Seja bem-vindo(a)!'
                     subtitle='Saldo atual:'
                 />           
 

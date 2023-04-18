@@ -3,13 +3,14 @@
 	height: 47px;
 	color: white;
 	background-color: #288484;
-	font-weight: bold;
-	font-size: 1.3rem;
+	font-weight: 500;
+	font-size: 1.2rem;
 }
 
 .table-box th {
-	color: gray;
-	font-weight: 400;
+	/* color: gray; */
+	color: (--primary-color-light);
+	font-weight: 500;
 	font-size: 1.1rem;
 }
 
@@ -23,6 +24,7 @@ tr {
 .table-box table {
 	width: 100%;
 	border-collapse: collapse;
+	font-family: 'Roboto', sans-serif;
 }
 
 .table-box {
