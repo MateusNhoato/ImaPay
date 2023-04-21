@@ -1,6 +1,6 @@
 import {React, useRef} from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import Login from '../../models/login';
 import Button from '../../components/Button/Button';
 import Form from '../../components/Form/Form';
 import Input from '../../components/Input/Input';
@@ -43,7 +43,9 @@ const LoginPage = () => {
                             const isValidEmail = emailRegex.test(emailInput.value);
                             const passwordRegex = /^(?=.*[A-Z])(?=.*[!#@$%&])(?=.*[0-9])(?=.*[a-z]).{8,}$/;
                             const isValidPassword = passwordRegex.test(passwordInput.value);
-
+                            const login = new Login();// ste
+                            login.email = emailInput;
+                            login.password = passwordInput; // ste
 
                             if(!emailInput.value) {
                                 errorAlert.current.innerText = 'Preencha o campo do email';
@@ -71,11 +73,39 @@ const LoginPage = () => {
                             }
 
                             errorAlert.current.innerText = '';
-
-                            setTimeout(() => {
-                                navigate('/user/balance');
-                            }, 1000);
-
+                            
+                            if(isValidEmail) //  ste
+                            {
+                                const requestOptions = {
+                                    method: 'POST',
+                                    headers: { 'Content-Type': 'application/json' },
+                                    body: JSON.stringify({ body: login})
+                                };
+                                fetch('https://imapayapi.azurewebsites.net/api/ImaPay/Login', requestOptions)
+                                    .then(async response => {
+                                        const isJson = response.headers.get('content-type')?.includes('application/json');
+                                        const data = isJson && await response.json();
+                                        
+                                        if(response.ok)
+                                        {
+                                            setTimeout(() => {
+                                                navigate('/user/balance');
+                                            }, 1000);
+                                        }
+                                        else if (!response.ok) {
+                                            errorAlert.current.innerText = 'Informe um email válido!';
+                                            emailInput.classList.add('fildError');
+                                            emailInput.parentElement.querySelector('label').classList.add('fildError');
+                                            return;
+                                        }
+                             
+                                        this.setState({ postId: data.id })
+                                    })
+                                    .catch(error => {
+                                        this.setState({ errorMessage: error.toString() });
+                                        console.error('There was an error!', error);
+                                    });                                
+                            }     // ste                                                                     
                         }
                     }
                     gradient={true}
