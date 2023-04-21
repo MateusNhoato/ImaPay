@@ -1,11 +1,10 @@
-import React from 'react';
+import { React, useContext, useState, useEffect } from 'react';
 
 import Button from '../../components/Button/Button.jsx';
 import TopTitle from '../../components/TopTitle/TopTitle.jsx';
 import InfoCardComponent from '../../components/InfoCardComponent/InfoCardComponent.jsx';
 import InvestimentTable from '../../components/InvestimentTable/InvestimentTable.jsx';
 import NavBar from '../../components/NavBar/NavBar.jsx';
-import { useContext } from 'react';
 import imapayContext from '../../context/imapayContext';
 import { useNavigate } from 'react-router-dom';
 import './styles.css';
@@ -14,6 +13,31 @@ const BalancePage = () => {
     document.title = 'Ímã Pay - Meu saldo';
 
     const navigate = useNavigate()
+
+    const [data, setData] = useState(null);
+    const [error, setError] = useState (null);
+
+    useEffect(() => {
+        fetch('https://localhost:7067/swagger/index.html', {
+            method: 'GET',
+        })
+            .then((response) => {
+                if (response.ok) {
+                    return response.json();
+                }
+                throw response;
+            })
+            .then(data => {
+                setData(data);
+            })
+            .catch((error) => {
+                console.error("Error fetching data: ", error);
+                setError(error);
+            })
+    }, [])
+    if (error == null) return "Error!";
+
+    console.log(data);
     const investimentData = [
         {
             type: 'CDI',
@@ -70,15 +94,15 @@ const BalancePage = () => {
                 <div className='component-cards'>
                     <InfoCardComponent
                         title='Conta corrente'
-                        value='5.472,00'
+                        value={data.balance}
                     />
                     <InfoCardComponent
                         title='Investimentos'
-                        value='22.652,00'
+                        value={data.investments}
                     />
                     <InfoCardComponent
                         title='Poupança'
-                        value='642,00'
+                        value={data.savings}
                     />
                 </div>
 
