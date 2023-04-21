@@ -48,11 +48,43 @@ const Register = () => {
         const termsBox = termsRef.current;
         const isAtTheEnd = Math.ceil(termsBox.scrollTop + termsBox.offsetHeight) >= termsBox.scrollHeight;
 
+        const _name = document.querySelector('input[name="name"]').value;
+        const _cpf = document.querySelector('input[name="cpf"]').value;
+        const _phone = document.querySelector('input[name="phone"]').value;
+        const _email = document.querySelector('input[name="email"]').value;
+        const _address = document.querySelector('input[name="address"]').value;
+        const _password = document.querySelector('input[name="password"]').value;
+
         if (isAtTheEnd) {
             setIsChecked(!isChecked);
-            setTimeout(() => {
-                navigate('/login')
-            }, 1000);
+
+            const requestOptions = {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(
+                    {
+                        "userName": _name,
+                        "cpf": _cpf,
+                        "telephone": _phone,
+                        "email": _email,
+                        "password": _password,
+                        "address": _address
+                    }
+                )
+            };
+            fetch('https://6442916633997d3ef913dc2a.mockapi.io/api/v1/register', requestOptions)
+                .then(response => response.json())
+                .then(data => {
+                    const registered = data.registered || true;
+                    
+                    if(registered) {
+                        setTimeout(() => {
+                            navigate('/login');          
+                        }, 1000);
+                    }
+                }).catch(e => {
+                    console.log(e);
+                });
         }
     }
 
