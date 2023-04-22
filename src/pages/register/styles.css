@@ -29,7 +29,7 @@
 	align-items: center;
 	background-color: rgba(0, 0, 0, .3);
 	justify-content: center;
-	position: absolute;
+	position: fixed;
 	width: 100%;
 	top: 0;
 	left: 0;
@@ -83,6 +83,36 @@
 .register-container .fildError {
     color: red;
     border-color: red;
+}
+
+.register-container .registration-success-message {
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	width: 100%;
+	z-index: 2;
+	top: -100px;
+	animation: showPopup .5s ease-in-out forwards;
+}
+
+@keyframes showPopup {
+	to {
+	   top: 50px;
+	}
+ }
+
+ .register-container .registration-success-message > p {
+	 background-color: #ccffd0;
+	 width: fit-content;
+	 padding: 12px;
+	 border-radius: 10px;
+	 font-weight: bold;
+	 font-family: sans-serif;
+	 box-shadow: 0 0 19px #ffffff;
+ }
+
+ .register-container .popup-hidden {
+	display: none;
 }
 
 ::-webkit-scrollbar {

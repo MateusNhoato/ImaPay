@@ -78,9 +78,11 @@ const Register = () => {
                     const registered = data.registered || true;
                     
                     if(registered) {
+                        const sucessMsn = document.querySelector('.registration-success-message');
+                        sucessMsn.classList.remove('popup-hidden');
                         setTimeout(() => {
                             navigate('/login');          
-                        }, 1000);
+                        }, 1500);
                     }
                 }).catch(e => {
                     console.log(e);
@@ -156,6 +158,9 @@ const Register = () => {
             </div>
 
             <div className="register-container">
+                <div className="popup-hidden registration-success-message">
+                    <p>Cadastrado com sucesso!</p>
+                </div>
                 <div>
                     <NavBar items={items} />
                 </div>
