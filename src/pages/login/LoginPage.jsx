@@ -43,9 +43,9 @@ const LoginPage = () => {
                             const isValidEmail = emailRegex.test(emailInput.value);
                             const passwordRegex = /^(?=.*[A-Z])(?=.*[!#@$%&])(?=.*[0-9])(?=.*[a-z]).{8,}$/;
                             const isValidPassword = passwordRegex.test(passwordInput.value);
-                            const login = new Login();// ste
+                            const login = new Login();
                             login.email = emailInput;
-                            login.password = passwordInput; // ste
+                            login.password = passwordInput;
 
                             if(!emailInput.value) {
                                 errorAlert.current.innerText = 'Preencha o campo do email';
@@ -74,7 +74,7 @@ const LoginPage = () => {
 
                             errorAlert.current.innerText = '';
                             
-                            if(isValidEmail) //  ste
+                            if(isValidEmail)
                             {
                                 const requestOptions = {
                                     method: 'POST',
@@ -82,10 +82,7 @@ const LoginPage = () => {
                                     body: JSON.stringify({ body: login})
                                 };
                                 fetch('https://imapayapi.azurewebsites.net/api/ImaPay/Login', requestOptions)
-                                    .then(async response => {
-                                        const isJson = response.headers.get('content-type')?.includes('application/json');
-                                        const data = isJson && await response.json();
-                                        
+                                    .then(async response => {                                   
                                         if(response.ok)
                                         {
                                             setTimeout(() => {
@@ -93,19 +90,17 @@ const LoginPage = () => {
                                             }, 1000);
                                         }
                                         else if (!response.ok) {
-                                            errorAlert.current.innerText = 'Informe um email válido!';
+                                            errorAlert.current.innerText = 'Error!';
                                             emailInput.classList.add('fildError');
                                             emailInput.parentElement.querySelector('label').classList.add('fildError');
                                             return;
-                                        }
-                             
-                                        this.setState({ postId: data.id })
+                                        }                         
                                     })
                                     .catch(error => {
                                         this.setState({ errorMessage: error.toString() });
                                         console.error('There was an error!', error);
                                     });                                
-                            }     // ste                                                                     
+                            }                                                                       
                         }
                     }
                     gradient={true}
