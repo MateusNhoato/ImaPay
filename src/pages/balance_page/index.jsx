@@ -14,56 +14,69 @@ const BalancePage = () => {
 
     const navigate = useNavigate()
 
-    const [data, setData] = useState(null);
-    const [error, setError] = useState (null);
+    const [balanceData, setBalanceData] = useState({});
+    const [error, setError] = useState ({});
 
     useEffect(() => {
-        fetch('https://localhost:7067/swagger/index.html', {
+        const request = {
             method: 'GET',
+            headers: { 'Content-Type': 'application/json' },
+        };
+        fetch('https://6442f8f433997d3ef91d4a1b.mockapi.io/api/v1/balance/1', request)
+        .then((response) => {
+            if (response.ok) {
+                return response.json();
+            }
+            throw response;
         })
-            .then((response) => {
-                if (response.ok) {
-                    return response.json();
-                }
-                throw response;
-            })
-            .then(data => {
-                setData(data);
-            })
-            .catch((error) => {
-                console.error("Error fetching data: ", error);
-                setError(error);
-            })
+        .then(balanceData => {
+            setBalanceData(balanceData);
+        })
+        .catch((error) => {
+            console.error("Error fetching data: ", error);
+            setError(error);
+        })
     }, [])
-    if (error == null) return "Error!";
 
-    console.log(data);
-    const investimentData = [
-        {
-            type: 'CDI',
-            date: '10/02/2022',
-            details: 'Rendendo acima da margem',
-            performance: '1,9% ao mês',
-        },
-        {
-            type: 'CDI',
-            date: '10/03/2022',
-            details: 'Rendendo acima da margem',
-            performance: '1,9% ao mês',
-        },
-        {
-            type: 'CDI',
-            date: '10/05/2022',
-            details: 'Rendendo acima da margem',
-            performance: '1,9% ao mês',
-        },
-        {
-            type: 'CDI',
-            date: '10/08/2022',
-            details: 'Rendendo acima da margem',
-            performance: '1,9% ao mês',
-        },
-    ]
+    const [investmentsData, setInvestmentsData] = useState({});
+
+    useEffect(() => {
+        const request = {
+            method: 'GET',
+            headers: { 'Content-Type': 'application/json' },
+        };
+        fetch('https://6442f8f433997d3ef91d4a1b.mockapi.io/api/v1/investments', request)
+        .then((response) => {
+            if (response.ok) {
+                return response.json();
+            }
+            throw response;
+        })
+        .then(investmentsData => {
+            setInvestmentsData(investmentsData);
+        })
+        .catch((error) => {
+            console.error("Error fetching data: ", error);
+            setError(error);
+        })
+    }, [])
+
+    const parseDate = (date) => {
+        date = date.slice(0,10);
+        let parsedDate = date.replace(/-/g,'/');
+        parsedDate = parsedDate.slice(8,10) + parsedDate.slice(4,8) + parsedDate.slice(0,4);
+        return parsedDate;
+    }
+    let totalInvestment = 0.0;
+    let investmentsArray = [];
+    for (let i = 0; i < investmentsData.length; i++) {
+        const type = 'CDI';
+        const date = parseDate(investmentsData[i]['createdAt']);
+        const details = 'Rendendo acima da margem';
+        totalInvestment += parseFloat(investmentsData[i]['value']);
+        const performance = (investmentsData[i]['value'] / 100).toFixed(2).toString() + '%';
+        investmentsArray.push({type, date, details, performance});
+    }
 
     const items = [
         <Button
@@ -94,22 +107,22 @@ const BalancePage = () => {
                 <div className='component-cards'>
                     <InfoCardComponent
                         title='Conta corrente'
-                        value={data.balance}
+                        value={balanceData.balance}
                     />
                     <InfoCardComponent
                         title='Investimentos'
-                        value={data.investments}
+                        value={totalInvestment.toFixed(2)}
                     />
                     <InfoCardComponent
                         title='Poupança'
-                        value={data.savings}
+                        value={balanceData.savings}
                     />
                 </div>
 
                 <hr />        
 
                 <InvestimentTable
-                    investimentData={investimentData}
+                    investimentData={investmentsArray}
                 />
             </div>
         </>
