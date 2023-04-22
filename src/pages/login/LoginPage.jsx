@@ -5,6 +5,8 @@ import Button from '../../components/Button/Button';
 import Form from '../../components/Form/Form';
 import Input from '../../components/Input/Input';
 import NavBar from '../../components/NavBar/NavBar';
+import localStorage from 'localStorage';
+
 
 import './styles.css';
 
@@ -85,6 +87,7 @@ const LoginPage = () => {
                                     .then(async response => {                                   
                                         if(response.ok)
                                         {
+                                            localStorage.setItem('authToken', response.json());
                                             setTimeout(() => {
                                                 navigate('/user/balance');
                                             }, 1000);
