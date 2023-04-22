@@ -14,28 +14,29 @@ const BalancePage = () => {
 
     const navigate = useNavigate()
 
-    const [data, setData] = useState(null);
-    const [error, setError] = useState (null);
+    const [data, setData] = useState({});
+    const [error, setError] = useState ({});
 
     useEffect(() => {
-        fetch('https://localhost:7067/swagger/index.html', {
+        const request = {
             method: 'GET',
+            headers: { 'Content-Type': 'application/json' },
+        };
+        fetch('https://6442f8f433997d3ef91d4a1b.mockapi.io/api/v1/balance/1', request)
+        .then((response) => {
+            if (response.ok) {
+                return response.json();
+            }
+            throw response;
         })
-            .then((response) => {
-                if (response.ok) {
-                    return response.json();
-                }
-                throw response;
-            })
-            .then(data => {
-                setData(data);
-            })
-            .catch((error) => {
-                console.error("Error fetching data: ", error);
-                setError(error);
-            })
+        .then(data => {
+            setData(data);
+        })
+        .catch((error) => {
+            console.error("Error fetching data: ", error);
+            setError(error);
+        })
     }, [])
-    if (error == null) return "Error!";
 
     console.log(data);
     const investimentData = [
