@@ -72,7 +72,7 @@ const Register = () => {
                     }
                 )
             };
-            fetch('https://6442916633997d3ef913dc2a.mockapi.io/api/v1/register', requestOptions)
+            fetch('https://imapayapi-production.up.railway.app/api/ImaPay/Register', requestOptions)
                 .then(response => response.json())
                 .then(data => {
                     const registered = data.registered || true;
