@@ -73,19 +73,21 @@ const Register = () => {
                 )
             };
             fetch('https://imapayapi-production.up.railway.app/api/ImaPay/Register', requestOptions)
-                .then(response => response.json())
-                .then(data => {
-                    const registered = data.registered || true;
-                    
-                    if(registered) {
-                        const sucessMsn = document.querySelector('.registration-success-message');
-                        sucessMsn.classList.remove('popup-hidden');
-                        setTimeout(() => {
-                            navigate('/login');          
-                        }, 1500);
-                    }
-                }).catch(e => {
-                    console.log(e);
+                .then(response => {
+                    if(response.ok) return;
+                    throw new Error();                    
+                })
+                .then(() => {
+                    window.scrollTo(0 ,0);
+                    const sucessMsn = document.querySelector('.registration-success-message');
+                    sucessMsn.classList.remove('popup-hidden');
+
+                    setTimeout(() => {
+                        navigate('/login'); 
+                    }, 1500);
+                }).catch(() => {
+                    bgRef.current.classList.add('hidden');
+                    errorAlert.current.innerText = 'Usuário já cadastrado! Faça login';
                 });
         }
     }
@@ -324,7 +326,6 @@ const Register = () => {
 
                                     if(/\d/.test(e.nativeEvent.data) || e.nativeEvent.data == null) {
                                         if(e.nativeEvent.data != null) {
-                                            console.log(e.target.value.length);
 
                                             if(e.target.value.length == 4 && e.target.value.indexOf('.') == -1) {
                                                 setCpfNumber(`${e.target.value.substring(0, 3)}.${e.nativeEvent.data}`);
