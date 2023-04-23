@@ -14,7 +14,7 @@ const BalancePage = () => {
 
     const navigate = useNavigate()
 
-    const [balanceData, setBalanceData] = useState({});
+    const [data, setData] = useState({});
     const [error, setError] = useState ({});
 
     useEffect(() => {
@@ -22,15 +22,15 @@ const BalancePage = () => {
             method: 'GET',
             headers: { 'Content-Type': 'application/json' },
         };
-        fetch('https://6442f8f433997d3ef91d4a1b.mockapi.io/api/v1/balance/1', request)
+        fetch('https://imapayapi-production.up.railway.app/swagger/Info', request)
         .then((response) => {
             if (response.ok) {
                 return response.json();
             }
             throw response;
         })
-        .then(balanceData => {
-            setBalanceData(balanceData);
+        .then(data => {
+            setData(data);
         })
         .catch((error) => {
             console.error("Error fetching data: ", error);
@@ -38,28 +38,6 @@ const BalancePage = () => {
         })
     }, [])
 
-    const [investmentsData, setInvestmentsData] = useState({});
-
-    useEffect(() => {
-        const request = {
-            method: 'GET',
-            headers: { 'Content-Type': 'application/json' },
-        };
-        fetch('https://6442f8f433997d3ef91d4a1b.mockapi.io/api/v1/investments', request)
-        .then((response) => {
-            if (response.ok) {
-                return response.json();
-            }
-            throw response;
-        })
-        .then(investmentsData => {
-            setInvestmentsData(investmentsData);
-        })
-        .catch((error) => {
-            console.error("Error fetching data: ", error);
-            setError(error);
-        })
-    }, [])
 
     const parseDate = (date) => {
         date = date.slice(0,10);
@@ -67,9 +45,13 @@ const BalancePage = () => {
         parsedDate = parsedDate.slice(8,10) + parsedDate.slice(4,8) + parsedDate.slice(0,4);
         return parsedDate;
     }
+
     let totalInvestment = 0.0;
     let investmentsArray = [];
-    for (let i = 0; i < investmentsData.length; i++) {
+    let investmentsLength = 4;
+    let investmentsData = data.investments;
+
+    for (let i = 0; i < investmentsLength.length; i++) {
         const type = 'CDI';
         const date = parseDate(investmentsData[i]['createdAt']);
         const details = 'Rendendo acima da margem';
@@ -107,15 +89,15 @@ const BalancePage = () => {
                 <div className='component-cards'>
                     <InfoCardComponent
                         title='Conta corrente'
-                        value={balanceData.balance}
+                        value={data.balance}
                     />
                     <InfoCardComponent
                         title='Investimentos'
-                        value={totalInvestment.toFixed(2)}
+                        value={data.investments}
                     />
                     <InfoCardComponent
                         title='Poupança'
-                        value={balanceData.savings}
+                        value={data.savings}
                     />
                 </div>
 
