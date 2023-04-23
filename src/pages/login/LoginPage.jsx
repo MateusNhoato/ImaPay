@@ -79,10 +79,15 @@ const LoginPage = () => {
                                 const requestOptions = {
                                     method: 'POST',
                                     headers: { 'Content-Type': 'application/json' },
-                                    body: { email: emailInput.value, password: passwordInput.value}
+                                    body: JSON.stringify(
+                                        {
+                                            "email": emailInput.value,
+                                            "password": passwordInput.value
+                                        }
+                                    )
                                 };
                                 console.log(requestOptions)
-                                fetch('https://imapayapi-production.up.railway.app/swagger/Login', requestOptions)
+                                fetch('https://imapayapi-production.up.railway.app/api/ImaPay/Login', requestOptions)
                                     .then(async response => {                                   
                                         if(response.ok)
                                         {
