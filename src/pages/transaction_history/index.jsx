@@ -20,7 +20,7 @@ const TransactionHistory = () => {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' },
     };
-    fetch('https://6443fe87466f7c2b4b5f2dbd.mockapi.io/transactions', request)
+    fetch('https://imapayapi-production.up.railway.app/api/ImaPay/TransferHistory', request)
     .then((response) => {
         if (response.ok) {
             return response.json();
