@@ -79,9 +79,10 @@ const LoginPage = () => {
                                 const requestOptions = {
                                     method: 'POST',
                                     headers: { 'Content-Type': 'application/json' },
-                                    body: JSON.stringify({ body: login})
+                                    body: { email: emailInput.value, password: passwordInput.value}
                                 };
-                                fetch('https://imapayapi.azurewebsites.net/api/ImaPay/Login', requestOptions)
+                                console.log(requestOptions)
+                                fetch('https://imapayapi-production.up.railway.app/swagger/Login', requestOptions)
                                     .then(async response => {                                   
                                         if(response.ok)
                                         {
@@ -97,6 +98,7 @@ const LoginPage = () => {
                                         }                         
                                     })
                                     .catch(error => {
+                                        console.log(error);
                                         this.setState({ errorMessage: error.toString() });
                                         console.error('There was an error!', error);
                                     });                                
