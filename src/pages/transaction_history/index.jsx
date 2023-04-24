@@ -14,6 +14,7 @@ const TransactionHistory = () => {
   const navigate = useNavigate();
   const [tableData, setTableData] = useState([]);
   const [error, setError] = useState ({});
+  const [balanceData, setBalanceData] = useState({});
 
   
   useEffect(() => {
@@ -61,6 +62,24 @@ const TransactionHistory = () => {
         setError(error);
     })
   }, [])
+  const token = localStorage.getItem('token');
+  const request = {
+      method: 'GET',
+       headers: { 'Content-Type': 'application/json', 'token': token },
+  };
+  fetch('https://imapayapi-production.up.railway.app/api/ImaPay/Info', request)
+  .then((response) => {
+      if (response.ok) {
+          return response.json();
+      }
+      throw response;
+  })
+  .then(balanceData => {
+      setBalanceData(balanceData)
+  })
+  .catch((error) => {
+    console.error("Error fetching data: ", error);
+})
 
   const tableSlide = useRef();
   let scrollPosition = 0;
@@ -104,7 +123,7 @@ const TransactionHistory = () => {
 
         <InfoCardComponent
             title='Conta corrente'
-            value='5.472,00'
+            value={balanceData.balance}
         />
         </div>
         
