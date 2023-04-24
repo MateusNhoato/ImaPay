@@ -21,26 +21,28 @@ const Table = ({ props }) => {
           </tr>
           <tbody>
             {props.body.map(col => {
-              const signal = col.value4.trim().charAt(0);
-              const cond1 = props.hasCentralTitle && signal == "+";
-              const cond2 = props.hasCentralTitle && signal == "-";
-              const color = cond1 ? "green" : cond2 ? "red" : "";
-
-              return (
-                <>
-                  <tr>
-                    <td>{col.value1}</td>
-                    <td>{col.value2}</td>
-                    <td>
-                      <span>{col.value3}</span>
-                    </td>
-                    <td>
-                      <span style={{ color }}>{col.value4}</span>
-                    </td>
-                  </tr>
-                </>
-              );
-            })}
+              
+                console.log(col.valueTransaction);
+                const signal = Number(col.valueTransaction);
+                const color = signal>0 ? "green" : "red";
+                const valueTransaction = `R$ ${col.valueTransaction}`.replace('.',',');
+      
+                const dataHora = new Date(col.date);
+                const opcoes = { timeZone: 'America/Sao_Paulo' };
+                const dataHoraFormatada = dataHora.toLocaleString('pt-BR', opcoes).replace(',','').slice(0,10);
+  
+                return (
+                  <>
+                    <tr>
+                      <td>{dataHoraFormatada}</td>
+                      <td>{col.account}</td>
+                      <td>{col.status}</td>
+                      <span style={{ color }}>{valueTransaction}</span>
+                    </tr>
+                  </>
+                );
+              })
+            }
           </tbody>
         </table>
       </div>

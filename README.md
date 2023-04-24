@@ -1,8 +1,26 @@
-# ImaPay
+<h1 align="center"> Projeto ImaPay – Code Breakers </h1>
 
-Projeto Ímã Pay, do grupo Code Breakers da turma Sharp Coders.
+Projeto de desenvolvimento de aplicação de uma fintech com serviços de criação de conta, depósito e saque de nome fictício ImaPay, desenvolvido pelo grupo Code Breakers no programa de formação de desenvolvedores Sharp Coders da [Ímã Tech](https://github.com/imalearningplace-education).
 
-Site: https://imapay.netlify.app
+Para conhecer a aplicação, clique aqui: [ImaPay - site](https://imapay.netlify.app/)
+
+## Objetivo
+
+O projeto teve como objetivo aplicar e desenvolver o conteúdo estudado durante o programa de formação, trabalhar e vivenciar tecnologias específicas, além de desenvolver soft skills, especialmente aquelas relacionadas ao trabalho em grupo, focando no mercado de trabalho. Foi possível colocar em prática alguns eventos da metodologia ágil Scrum e Kanban, que foram essenciais para organização das tarefas do projeto, como também pode-se trabalhar com o Git e o GitHub em grupo, vivenciando conflitos de versões e suas resoluções.
+
+## Tecnologias utilizadas
+
+- C#
+- Javascript
+- HTML
+- CSS
+- ReactJS
+- Vite
+- MySQL
+- Git (GitFlow)
+- Visual Studio Code e Visual Studio Community (IDEs)
+- Figma (prototipação das telas)
+
 
 ## Integrantes do Projeto
 - [Front-end](#front-end)
@@ -12,7 +30,7 @@ Site: https://imapay.netlify.app
 
 ### Front-end
 
-<img src="https://avatars.githubusercontent.com/u/113543375?v=4" width="124">| Tem 26 anos. Formada em biomedicina, está passando por uma transição de carreira. Se considera uma pessoa determinada e apaixonada por tecnologia. Estuda para atuar como desenvolvedora Full Stack.  
+<img src="https://avatars.githubusercontent.com/u/113543375?v=4" width="124">| Tem 26 anos. Formada em biomedicina, está passando por uma transição de carreira. Se considera uma pessoa autodidata e adora buscar novos conhecimentos e desafios. Estuda desenvolvimento Full Stack, mas têm preferência pelo front-end. 
 --|--
 **Stefani de Menezes Araujo Lima**  | 📍 Santos - SP
 <a href="https://github.com/stefanimalima"><img src="https://logosmarcas.net/wp-content/uploads/2020/12/GitHub-Logo.png" width="80px"></a>| <a href="https://www.linkedin.com/in/1stefanilima/"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="40px"> </a>
@@ -67,21 +85,6 @@ Site: https://imapay.netlify.app
 **Weslley Joaquim Gomes**  | 📍 Brasília - DF
 <a href="https://github.com/weslleyjoaquim"><img src="https://logosmarcas.net/wp-content/uploads/2020/12/GitHub-Logo.png" width="80px"></a>| <a href="https://www.linkedin.com/in/weslley-joaquim-gomes/"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="40px"> </a>
 
-<table>
-  <tr>
-    <td><img src="https://avatars.githubusercontent.com/u/65512201?v=4" width="124"></td>
-    <td>Em migração de carreira para TI, cursando Analise e desenvolvimento de sistemas. 
-Com experiencia em frontend e buscando conhecimentos em backend para se tornar fullstack. Gosta de sneakers, basquete e musica.</td>
-  </tr>
-  <tr>
-    <td><bold>Lucas Andrade de Sá Nascimento</bold></td>
-    <td>📍 São Paulo - SP</td>
-  </tr>
-  <tr>
-    <td><a href="https://github.com/Lucas-andrade-nascimento"><img src="https://logosmarcas.net/wp-content/uploads/2020/12/GitHub-Logo.png" width="80px"></a> </td>
-    <td><a href="https://www.linkedin.com/in/lucas-as-nascimento/"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="40px"> </a></td>
-  </tr>
-</table>
 
 ### Monitor
 

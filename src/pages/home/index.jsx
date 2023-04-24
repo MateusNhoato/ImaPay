@@ -3,12 +3,14 @@ import React from "react";
 import Button from "../../components/Button/Button"
 import NavBar from "../../components/NavBar/NavBar";
 
-import styles from "./styles.css";
+import "./styles.css";
 
 import imagem from "../../assets/card-image-home.svg"
 import { useNavigate } from "react-router-dom";
 
 function HomePage() {
+    document.title = 'Ímã Pay - Home';
+
     const navigate = useNavigate()
     const items = [<Button
         label={'Cadastre-se'}
@@ -49,7 +51,7 @@ function HomePage() {
                 <div className="img-card"><img src={imagem} alt="" /></div>
             </div>
         <div className="code-breakers">
-            <a href="https://github.com/MateusNhoato/ImaPay" alt="GitHub">@CodeBreakers</a>
+            <a href="https://github.com/MateusNhoato/ImaPay" target="_blank" alt="GitHub">@CodeBreakers</a>
         </div>
     </div>
 );

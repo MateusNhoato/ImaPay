@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import Table from "../../components/Table";
 import Button from "../../components/Button/Button";
 import NavBar from "../../components/NavBar/NavBar";
@@ -6,227 +6,62 @@ import InfoCardComponent from "../../components/InfoCardComponent/InfoCardCompon
 import TopTitle from "../../components/TopTitle/TopTitle";
 import { useNavigate } from "react-router-dom";
 
-
 import "./styles.css";
 
-const tableData = [
-  {
-    hasCentralTitle: true,
-    month: "Janeiro / 2023",
-    head: {
-      col1: "Data",
-      col2: "Descrição",
-      col3: "Status",
-      col4: "Valor",
-    },
-    body: [
-      {
-        value1: "02/01/2023",
-        value2: "Transferência enviada",
-        value3: "Falha",
-        value4: "- R$ 2.000,00",
-      },
-      {
-        value1: "05/01/2023",
-        value2: "Pagamento de conta",
-        value3: "Concluída",
-        value4: "- R$ 350,00",
-      },
-      {
-        value1: "10/01/2023",
-        value2: "Compra de material de escritório",
-        value3: "Concluída",
-        value4: "- R$ 150,00",
-      },
-      {
-        value1: "15/01/2023",
-        value2: "Depósito em conta",
-        value3: "Concluída",
-        value4: "+ R$ 5.000,00",
-      },
-      {
-        value1: "20/01/2023",
-        value2: "Compra de passagens aéreas",
-        value3: "Pendente",
-        value4: "- R$ 1.500,00",
-      },
-      {
-        value1: "10/01/2023",
-        value2: "Pagamento de boleto",
-        value3: "Concluída",
-        value4: "- R$ 150,00",
-      },
-      {
-        value1: "13/01/2023",
-        value2: "Recarga de celular",
-        value3: "Falha",
-        value4: "- R$ 20,00",
-      },
-      {
-        value1: "15/01/2023",
-        value2: "Compra",
-        value3: "Pendente",
-        value4: "- R$ 300,00",
-      },
-      {
-        value1: "20/01/2023",
-        value2: "Transferência enviada",
-        value3: "Concluída",
-        value4: "- R$ 50,00",
-      },
-      {
-        value1: "22/01/2023",
-        value2: "Compra",
-        value3: "Concluída",
-        value4: "- R$ 45,00",
-      },
-    ],
-  },
-
-  {
-    hasCentralTitle: true,
-    month: "Fevereiro / 2023",
-    head: {
-      col1: "Data",
-      col2: "Descrição",
-      col3: "Status",
-      col4: "Valor",
-    },
-    body: [
-      {
-        value1: "15/02/2023",
-        value2: "Recarga de celular",
-        value3: "Processando",
-        value4: "- R$ 15,00",
-      },
-      {
-        value1: "17/02/2023",
-        value2: "Compra",
-        value3: "Revertida",
-        value4: "- R$ 278,00",
-      },
-      {
-        value1: "23/02/2023",
-        value2: "Transferência recebida",
-        value3: "Concluída",
-        value4: "+ R$ 790,00",
-      },
-      {
-        value1: "25/02/2023",
-        value2: "Compra",
-        value3: "Revertida",
-        value4: "- R$ 20,00",
-      },
-      {
-        value1: "27/02/2023",
-        value2: "Transferência enviada",
-        value3: "Concluída",
-        value4: "- R$ 80,00",
-      },
-      {
-        value1: "25/02/2023",
-        value2: "Pagamento de conta",
-        value3: "Pendente",
-        value4: "- R$ 100,00",
-      },
-      {
-        value1: "28/02/2023",
-        value2: "Transferência recebida",
-        value3: "Concluída",
-        value4: "+ R$ 500,00",
-      },
-      {
-        value1: "30/02/2023",
-        value2: "Compra",
-        value3: "Revertida",
-        value4: "- R$ 75,00",
-      },
-      {
-        value1: "02/02/2023",
-        value2: "Depósito em conta",
-        value3: "Concluída",
-        value4: "+ R$ 1.000,00",
-      },
-      {
-        value1: "05/02/2023",
-        value2: "Transferência enviada",
-        value3: "Falha",
-        value4: "- R$ 200,00",
-      }
-    ],
-  },
-
-
-
-  {
-    hasCentralTitle: true,
-    month: "Março / 2023",
-    head: {
-      col1: "Data",
-      col2: "Descrição",
-      col3: "Status",
-      col4: "Valor",
-    },
-    body: [
-      {
-        value1: "04/03/2023",
-        value2: "Recarga de celular",
-        value3: "Concluída",
-        value4: "- R$ 25,00",
-      },
-      {
-        value1: "18/03/2023",
-        value2: "Transferência recebida",
-        value3: "Concluída",
-        value4: "+ R$ 9.560,00",
-      },
-      {
-        value1: "04/03/2023",
-        value2: "Recarga de celular",
-        value3: "Concluída",
-        value4: "- R$ 25,00",
-      },
-      {
-        value1: "18/03/2023",
-        value2: "Transferência recebida",
-        value3: "Concluída",
-        value4: "+ R$ 9.560,00",
-      },
-      {
-        value1: "10/03/2023",
-        value2: "Pagamento de boleto",
-        value3: "Concluída",
-        value4: "- R$ 150,00",
-      },
-      {
-        value1: "13/03/2023",
-        value2: "Recarga de celular",
-        value3: "Falha",
-        value4: "- R$ 20,00",
-      },
-      {
-        value1: "15/03/2023",
-        value2: "Compra",
-        value3: "Pendente",
-        value4: "- R$ 300,00",
-      },
-      {
-        value1: "20/03/2023",
-        value2: "Transferência enviada",
-        value3: "Concluída",
-        value4: "- R$ 50,00",
-      },
-      {
-        value1: "22/03/2023",
-        value2: "Compra",
-        value3: "Concluída",
-        value4: "- R$ 45,00",
-      },
-    ],
-  }];
-
 const TransactionHistory = () => {
+  document.title = 'Ímã Pay - Histórico de transações';
+
   const navigate = useNavigate();
+  const [tableData, setTableData] = useState([]);
+  const [error, setError] = useState ({});
+
+  
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    const request = {
+        method: 'GET',
+        headers: { 'Content-Type': 'application/json', 'token': token },
+    };
+    fetch('https://imapayapi-production.up.railway.app/api/ImaPay/TransferHistory', request)
+    .then((response) => {
+        if (response.ok) {
+          return response.json();
+        }
+        throw response;
+    })
+    .then(data => {
+      let dataArray = []
+      for (let i = 0; i < data.transactions.length; )
+      {
+        let innerDataArray = [];
+        for (let j = 0; j < 5; j++, i++)
+        {
+          if (i > data.transactions.length) break;
+          innerDataArray.push(data.transactions[i]);
+        }
+        if (i > data.transactions.length) break;
+        dataArray.push(innerDataArray);
+      }
+      const table = [
+        {
+          hasCentralTitle: true,
+          month: "Transações",
+          head: {
+            col1: "Data",
+            col2: "Conta",
+            col3: "Status",
+            col4: "Valor"
+          },
+          body: data.transactions
+        }];
+        setTableData(table);
+    })
+    .catch((error) => {
+        console.error("Error fetching data: ", error);
+        setError(error);
+    })
+  }, [])
+
   const tableSlide = useRef();
   let scrollPosition = 0;
 
@@ -263,14 +98,14 @@ const TransactionHistory = () => {
         <NavBar items={items} />
         <div className="info-container">
         <TopTitle
-                  title='Olá, seja bem-vindo!'
-                  subtitle='Histórico de Transações:'
-              />
+          title='Seja bem-vindo(a)!'
+          subtitle='Histórico de Transações:'
+        />
 
         <InfoCardComponent
-                      title='Conta corrente'
-                      value='5.472,00'
-                  />
+            title='Conta corrente'
+            value='5.472,00'
+        />
         </div>
         
 

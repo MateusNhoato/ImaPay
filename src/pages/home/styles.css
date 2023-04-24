@@ -1,6 +1,9 @@
 body {
 	width: 95%;
 	height: 100%;
+	text-align: justify;
+	font-family: 'Roboto', sans-serif;
+
 }
 
 .home-header {
@@ -84,6 +87,7 @@ body {
 	margin: 15px 15px;
 	font-size: 0.9rem;
 	color: var(--primary-color);
+	font-family: Arial, sans-serif;
 }
 
 .code-breakers a {
