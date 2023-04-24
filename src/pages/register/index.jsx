@@ -5,8 +5,6 @@ import Input from "../../components/Input/Input";
 import Button from "../../components/Button/Button";
 import NavBar from "../../components/NavBar/NavBar";
 import { useNavigate } from "react-router-dom";
-import PasswordImg from '../../assets/password-image.svg';
-import PasswordImgLock from "../../assets/password-image-lock.svg";
 import './styles.css';
 
 const Register = () => {
@@ -437,9 +435,9 @@ const Register = () => {
                                     const img = document.querySelector('.password-img');
                 
                                     if(img.getAttribute('data-visibility') == 'hidden') {
-                                        img.src = PasswordImg;
+                                        img.src = '';
                                     } else {
-                                        img.src = PasswordImgLock;
+                                        img.src = '';
                                     }
                                 }
                             }
@@ -456,9 +454,9 @@ const Register = () => {
                                     const img = document.querySelectorAll('.password-img')[1];
                 
                                     if(img.getAttribute('data-visibility') == 'hidden') {
-                                        img.src = PasswordImg;
+                                        img.src = '';
                                     } else {
-                                        img.src = PasswordImgLock;
+                                        img.src = '';
                                     }
                                 }
                             }

@@ -99,7 +99,7 @@ const BalancePage = () => {
     ];
 
     const wellcome = `Olá, ${balanceData.userName}`;
-    const accountNumber = `${balanceData.account.slice(0,4)}-${balanceData.account.slice(-1)}`;
+    const accountNumber = `${balanceData.account?.slice(0,4)}-${balanceData.account?.slice(-1)}`;
     
     return (
         <>
