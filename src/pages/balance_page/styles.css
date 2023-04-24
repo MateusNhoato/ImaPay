@@ -1,3 +1,32 @@
 .balance-container .up-div-container {
     margin-left: 48px;
 }
+
+.balance-container .agency-card span,
+.balance-container .account-card span {
+    display: block;
+    font-weight: bold;
+    font-size: 21px;
+}
+
+.balance-container .agency-card,
+.balance-container .account-card {
+    padding: 9px;
+    width: 280px;
+    border-radius: 20px;
+    box-shadow: 0 0 4px gray;
+    text-align: center;
+}
+
+.balance-container .account-card {
+    margin-left: 130px;
+}
+
+.balance-container .cards-containers {
+    display: flex;
+    justify-content: center;
+}
+
+.balance-container span.card-name {
+    font-size: 15px;
+}

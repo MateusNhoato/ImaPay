@@ -17,11 +17,12 @@ const BalancePage = () => {
     const [error, setError] = useState ({});
 
     useEffect(() => {
+         const token = localStorage.getItem('token');
         const request = {
             method: 'GET',
-            headers: { 'Content-Type': 'application/json' },
+             headers: { 'Content-Type': 'application/json', 'token': token },
         };
-        fetch('https://6442f8f433997d3ef91d4a1b.mockapi.io/api/v1/balance/1', request)
+        fetch('https://imapayapi-production.up.railway.app/api/ImaPay/Info', request)
         .then((response) => {
             if (response.ok) {
                 return response.json();
@@ -96,6 +97,9 @@ const BalancePage = () => {
         backgroundColor={''}
         click={() => navigate('/user/transfer')}/>
     ];
+
+    const wellcome = `Olá, ${balanceData.userName}`;
+    const accountNumber = `${balanceData.account.slice(0,4)}-${balanceData.account.slice(-1)}`;
     
     return (
         <>
@@ -103,7 +107,7 @@ const BalancePage = () => {
                 <NavBar items={items} />
 
                 <TopTitle
-                    title='Seja bem-vindo(a)!'
+                    title={wellcome}
                     subtitle='Saldo atual:'
                 />           
 
@@ -121,6 +125,19 @@ const BalancePage = () => {
                         value={balanceData.savings}
                     />
                 </div>
+
+                <div className='cards-containers'>
+                    <div className='agency-card'>
+                        <span className='card-name'>Agência</span>
+                        <span>{balanceData.agency}</span>
+                    </div>
+
+                    <div className='account-card'>
+                        <span className='card-name'>Conta</span>
+                        <span>{accountNumber}</span>
+                    </div>
+                </div>
+
 
                 <hr />        
 
