@@ -107,10 +107,9 @@ const TransferPage = () => {
                             
                             const token = localStorage.getItem('token');
 
-                            const transferValueCharLength = transferAmount.length;
-                            const transferValue = transferAmount.substring(3,transferValueCharLength);
-
+                                                   
                             let accountToSend = account.replace('-','');
+                            console.log(Number.parseFloat(transferAmount.replace('R$ ','').replace(/\./,'').replace(',','.')));
 
 
                             const requestOptions = {
@@ -122,7 +121,7 @@ const TransferPage = () => {
                                         "agency": agency,
                                         "account": accountToSend,
                                         "accountType": "Conta corrente",
-                                        "valueTransaction": Number.parseFloat(transferValue.replace(',','.'))
+                                        "valueTransaction": Number.parseFloat(transferAmount.replace('R$ ','').replace(/\./,'').replace(',','.'))
                                     }
                                 )
                             };
