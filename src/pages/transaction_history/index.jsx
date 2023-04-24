@@ -123,7 +123,7 @@ const TransactionHistory = () => {
 
         <InfoCardComponent
             title='Conta corrente'
-            value={balanceData.balance}
+            value={balanceData.balance?.toFixed(2).replace("." , ",")}
         />
         </div>
         
