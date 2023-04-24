@@ -45,7 +45,7 @@ const CompleatTransfer = () => {
     const opcoes = { timeZone: 'America/Sao_Paulo' };
     const dataHoraFormatada = dataHora.toLocaleString('pt-BR', opcoes).replace(',','').slice(0,10);
 
-    const valueTransaction = `R$ ${transferObject.valueTransaction}`.replace('.',',');
+    const valueTransaction = `R$ ${transferObject.valueTransaction?.toFixed(2)}`.replace('.',',');
 
     const [data, setData] = useState({});
     const [error, setError] = useState ({});
@@ -112,15 +112,15 @@ const CompleatTransfer = () => {
             <div className="infoCardComponent">
                 <InfoCardComponent
                     title="Conta corrente"
-                    value={data.balance}
+                    value={data.balance?.toFixed(2).replace("." , ",")}
                 />
                 <InfoCardComponent
                     title="Investimentos"
-                    value={data.investments}
+                    value={data.investments?.toFixed(2).replace("." , ",")}
                 />
                 <InfoCardComponent
                     title="Poupança"
-                    value={data.savings}
+                    value={data.savings?.toFixed(2).replace("." , ",")}
                 />
             </div>
         </div>

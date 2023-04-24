@@ -1,5 +1,6 @@
 import "./styles.css";
 
+
 const Table = ({ props }) => {
   return (
     <>
@@ -21,11 +22,10 @@ const Table = ({ props }) => {
           </tr>
           <tbody>
             {props.body.map(col => {
-              
-                console.log(col.valueTransaction);
+                const accountNumber = `${col.account?.slice(0,4)}-${col.account?.slice(-1)}`;
                 const signal = Number(col.valueTransaction);
                 const color = signal>0 ? "green" : "red";
-                const valueTransaction = `R$ ${col.valueTransaction}`.replace('.',',');
+                const valueTransaction = `R$ ${col.valueTransaction?.toFixed(2)}`.replace('.',',');
       
                 const dataHora = new Date(col.date);
                 const opcoes = { timeZone: 'America/Sao_Paulo' };
@@ -35,7 +35,7 @@ const Table = ({ props }) => {
                   <>
                     <tr>
                       <td>{dataHoraFormatada}</td>
-                      <td>{col.account}</td>
+                      <td>{accountNumber}</td>
                       <td>{col.status}</td>
                       <span style={{ color }}>{valueTransaction}</span>
                     </tr>

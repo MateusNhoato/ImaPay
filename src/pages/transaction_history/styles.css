@@ -18,19 +18,21 @@
 .transaction-history-container svg.btn-advance-table {
 	position: absolute;
 	right: 0;
+	
 }
 
 .transaction-history-container svg.btn-back-table {
 	position: absolute;
+	
 }
 
 .transaction-history-container .table-container svg:hover {
-	fill: white;
+	fill: #288484;
 }
 
 .transaction-history-container .table-container svg {
 	border-radius: 50%;
-	fill: var(--primary-color-dark);
+	fill: #288484;
 }
 
 .transaction-history-container .table-slide {

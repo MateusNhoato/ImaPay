@@ -41,7 +41,7 @@ tr {
 }
 
 .table-box th:last-child {
-	text-align: end;
+	text-align: left;
 }
 
 .table-box table tbody tr:hover {

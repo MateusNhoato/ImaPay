@@ -114,15 +114,15 @@ const BalancePage = () => {
                 <div className='component-cards'>
                     <InfoCardComponent
                         title='Conta corrente'
-                        value={balanceData.balance}
+                        value={balanceData.balance?.toFixed(2).replace("." , ",")}
                     />
                     <InfoCardComponent
                         title='Investimentos'
-                        value={totalInvestment.toFixed(2)}
+                        value={totalInvestment?.toFixed(2).replace("." , ",")}
                     />
                     <InfoCardComponent
                         title='Poupança'
-                        value={balanceData.savings}
+                        value={balanceData.savings?.toFixed(2).replace("." , ",")}
                     />
                 </div>
 
