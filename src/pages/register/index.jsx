@@ -5,8 +5,8 @@ import Input from "../../components/Input/Input";
 import Button from "../../components/Button/Button";
 import NavBar from "../../components/NavBar/NavBar";
 import { useNavigate } from "react-router-dom";
-import PasswordImg from "\\src\\assets\\img\\password-image.svg";
-import PasswordImgLock from "\\src\\assets\\img\\password-image-lock.svg"
+import PasswordImg from '../../assets/password-image.svg';
+import PasswordImgLock from "../../assets/password-image-lock.svg";
 import './styles.css';
 
 const Register = () => {
