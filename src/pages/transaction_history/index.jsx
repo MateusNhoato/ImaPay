@@ -30,7 +30,18 @@ const TransactionHistory = () => {
         throw response;
     })
     .then(data => {
-      console.log(data);
+      let dataArray = []
+      for (let i = 0; i < data.transactions.length; )
+      {
+        let innerDataArray = [];
+        for (let j = 0; j < 5; j++, i++)
+        {
+          if (i > data.transactions.length) break;
+          innerDataArray.push(data.transactions[i]);
+        }
+        if (i > data.transactions.length) break;
+        dataArray.push(innerDataArray);
+      }
       const table = [
         {
           hasCentralTitle: true,
