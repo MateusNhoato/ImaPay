@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import Button from '../../components/Button/Button';
@@ -12,8 +12,7 @@ import '../../components/Button/Button.css'
 
 const CompleatTransfer = () => {
     document.title = 'Ímã Pay - Transferência concluída';
-
-    const { accountType, transferDate, agency, account, transferValue } = useContext(imapayContext);
+    
     const navigate = useNavigate();
     
     const items = [<Button
@@ -37,6 +36,44 @@ const CompleatTransfer = () => {
         navigate('/user/transfer')
     }
 
+    const transferData = localStorage.getItem('transferData');
+
+    const transferObject = JSON.parse(transferData);
+    
+    const dataHora = new Date(transferObject.date);
+    
+    const opcoes = { timeZone: 'America/Sao_Paulo' };
+    const dataHoraFormatada = dataHora.toLocaleString('pt-BR', opcoes).replace(',','').slice(0,10);
+
+    const valueTransaction = `R$ ${transferObject.valueTransaction}`.replace('.',',');
+
+    const [data, setData] = useState({});
+    const [error, setError] = useState ({});
+
+    
+    useEffect(() => {
+        const token = localStorage.getItem('token');
+        const request = {
+            method: 'GET',
+            headers: { 'Content-Type': 'application/json', 'token': token },
+        };
+        fetch('https://imapayapi-production.up.railway.app/api/ImaPay/Info', request)
+        .then((response) => {
+            if (response.ok) {
+                return response.json();
+            }
+            throw response;
+        })
+        .then(data => {
+            setData(data);
+        })
+        .catch((error) => {
+            console.error("Error fetching data: ", error);
+            setError(error);
+        })
+    }, [])
+
+
     const compleatTransfer = (
         <div>
             <NavBar items={items} />
@@ -48,15 +85,15 @@ const CompleatTransfer = () => {
                 
                 <div className="transfer-completed">
                     <h2>Tipo de conta</h2>
-                    <p>{accountType}</p>
+                    <p>{transferObject.accountType}</p>
                     <h2>Data de transferência</h2>
-                    <p>{transferDate}</p>
+                    <p>{dataHoraFormatada}</p>
                     <h2>Agência</h2>
-                    <p>{agency}</p>
+                    <p>{transferObject.agency}</p>
                     <h2>Conta</h2>
-                    <p>{account}</p>
+                    <p>{transferObject.account}</p>
                     <h2>Valor da transferência</h2>
-                    <p>{transferValue}</p>
+                    <p>{valueTransaction}</p>
                 </div>
             </div>
 
@@ -75,15 +112,15 @@ const CompleatTransfer = () => {
             <div className="infoCardComponent">
                 <InfoCardComponent
                     title="Conta corrente"
-                    value="5.472,00"
+                    value={data.balance}
                 />
                 <InfoCardComponent
                     title="Investimentos"
-                    value="22.652,00"
+                    value={data.investments}
                 />
                 <InfoCardComponent
                     title="Poupança"
-                    value="642,00"
+                    value={data.savings}
                 />
             </div>
         </div>

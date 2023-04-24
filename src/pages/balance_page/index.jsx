@@ -18,11 +18,12 @@ const BalancePage = () => {
     const [error, setError] = useState ({});
 
     useEffect(() => {
+        const token = localStorage.getItem('token');
         const request = {
             method: 'GET',
-            headers: { 'Content-Type': 'application/json' },
+            headers: { 'Content-Type': 'application/json', 'token': token },
         };
-        fetch('https://imapayapi-production.up.railway.app/swagger/Info', request)
+        fetch('https://imapayapi-production.up.railway.app/api/ImaPay/Info', request)
         .then((response) => {
             if (response.ok) {
                 return response.json();

@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 import Button from '../../components/Button/Button';
 import Form from '../../components/Form/Form';
@@ -9,6 +9,7 @@ import NavBar from '../../components/NavBar/NavBar';
 
 import '../../App.css';
 import './TransferPage.css'
+
 
 const TransferPage = () => {
     document.title = 'Ímã Pay - Nova transferência';
@@ -103,7 +104,41 @@ const TransferPage = () => {
                             }
 
                             alertInvalidFields.current.innerText = '';
-                            navigate('/user/completedTransfer')
+                            
+                            const token = localStorage.getItem('token');
+
+                            const transferValueCharLength = transferAmount.length;
+                            const transferValue = transferAmount.substring(3,transferValueCharLength);
+
+                            let accountToSend = account.replace('-','');
+
+
+                            const requestOptions = {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json', 'token': token },
+                                body: JSON.stringify(
+                                    {
+                                        "date": transferDate,
+                                        "agency": agency,
+                                        "account": accountToSend,
+                                        "accountType": "Conta corrente",
+                                        "valueTransaction": Number.parseFloat(transferValue.replace(',','.'))
+                                    }
+                                )
+                            };
+                            fetch('https://imapayapi-production.up.railway.app/api/ImaPay/Transfer', requestOptions)
+                                .then(response => {
+                                    return response.json();
+                                })
+                                .then((data) => {
+                                    localStorage.setItem('transferData', JSON.stringify(data))
+                                    navigate('/user/completedTransfer')
+                                })
+                                .catch((error) => {
+                                    console.log(error);
+                                }); 
+
+                            
 
                         }}
                     >
@@ -178,21 +213,7 @@ const TransferPage = () => {
                     </Form>
                 </div>
 
-                <p className="saldo-atual"> Saldo atual: </p>
-                <div className="infoCardComponent">
-                    <InfoCardComponent
-                        title="Conta corrente"
-                        value="5.472,00"
-                    />
-                    <InfoCardComponent
-                        title="Investimentos"
-                        value="22.652,00"
-                    />
-                    <InfoCardComponent
-                        title="Poupança"
-                        value="642,00"
-                    />
-                </div>
+                
             </div>
         </>
     )

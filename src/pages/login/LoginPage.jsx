@@ -6,6 +6,7 @@ import Form from '../../components/Form/Form';
 import Input from '../../components/Input/Input';
 import NavBar from '../../components/NavBar/NavBar';
 
+
 import './styles.css';
 
 const LoginPage = () => {
@@ -86,14 +87,11 @@ const LoginPage = () => {
                                         }
                                     )
                                 };
-                                console.log(requestOptions)
                                 fetch('https://imapayapi-production.up.railway.app/api/ImaPay/Login', requestOptions)
                                     .then(async response => {                                   
                                         if(response.ok)
                                         {
-                                            setTimeout(() => {
-                                                navigate('/user/balance');
-                                            }, 1000);
+                                            return response.json();                                            
                                         }
                                         else if (!response.ok) {
                                             errorAlert.current.innerText = 'Error!';
@@ -102,9 +100,13 @@ const LoginPage = () => {
                                             return;
                                         }                         
                                     })
+                                    .then(token => {
+                                        localStorage.setItem('token', token.token);
+                                        setTimeout(() => {
+                                            navigate('/user/balance');
+                                        }, 1000);
+                                    } )
                                     .catch(error => {
-                                        console.log(error);
-                                        this.setState({ errorMessage: error.toString() });
                                         console.error('There was an error!', error);
                                     });                                
                             }                                                                       
