@@ -15,28 +15,33 @@ const TransactionHistory = () => {
   const [tableData, setTableData] = useState([]);
   const [error, setError] = useState ({});
 
+  
   useEffect(() => {
+    const token = localStorage.getItem('token');
     const request = {
         method: 'GET',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', 'token': token },
     };
     fetch('https://imapayapi-production.up.railway.app/api/ImaPay/TransferHistory', request)
     .then((response) => {
         if (response.ok) {
-            return response.json();
+          return response.json();
         }
         throw response;
     })
     .then(data => {
+      console.log(data);
       const table = [
         {
           hasCentralTitle: true,
-          month: data[0].date,
+          month: "Transações",
           head: {
             col1: "Data",
-            col2: "Valor",
+            col2: "Conta",
+            col3: "Status",
+            col4: "Valor"
           },
-          body: data
+          body: data.transactions
         }];
         setTableData(table);
     })
