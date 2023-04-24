@@ -17,11 +17,12 @@ const BalancePage = () => {
     const [error, setError] = useState ({});
 
     useEffect(() => {
+         const token = localStorage.getItem('token');
         const request = {
             method: 'GET',
-            headers: { 'Content-Type': 'application/json' },
+             headers: { 'Content-Type': 'application/json', 'token': token },
         };
-        fetch('https://6442f8f433997d3ef91d4a1b.mockapi.io/api/v1/balance/1', request)
+        fetch('https://imapayapi-production.up.railway.app/api/ImaPay/Info', request)
         .then((response) => {
             if (response.ok) {
                 return response.json();
